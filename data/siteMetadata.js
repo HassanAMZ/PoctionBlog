@@ -20,7 +20,7 @@ const siteMetadata = {
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
     plausibleDataDomain: 'poction.com', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    simpleAnalytics: true, // true or false
+    simpleAnalytics: false, // true or false
     googleAnalyticsId: 'G-TYSDQ9ZLXX', // e.g. UA-000000-2 or G-XXXXXXX
   },
   newsletter: {

@@ -1,9 +1,9 @@
 ---
 title: Upwork Cover Letter for Web Analytics
 date: '2021-07-21'
-tags: ['Upwork', 'Cover Letters']
+tags: ['Upwork', 'Cover Letters', 'Google tag manager', 'big commerce', 'data layer']
 draft: false
-summary: This cover letter i use was inspired by a top rated freelancer on Upwork. However, here is the breakdown of the cover letter, to me, these 8 aspects are the most important when writing the cover letter to a client.
+summary: This cover letter i use was inspired by a top rated freelancer on Upwork. However, here is the breakdown of the cover letter. These 8 aspects are the most important when writing the cover letter to a client for setting up datalayer in bigcommerce store for google tag manager.
 coverImage: '/static/blog/Upwork Cover Letter for Web Analytics.png'
 ---
 
@@ -30,11 +30,9 @@ This cover letter i use was inspired by a top rated freelancer on Upwork, and [h
 ```
 Hi [Name of the Client],
 
-Interesting job posts, too often I just see “need help” in these posts, so the details you provided were great. You are having trouble setting up Facebook Pixel using the google tag manager. I checked the links you provided and the issue seems t be in your website data layer object.
+You are having trouble setting datalayer in your bigcommerce store. Bigcommemrce doesnt provide a built in solution for datalayer object that can be used by Google tag manager. We can setup datalayer using a paid plugin, writing custom javascript code that will make get API calls or check the default UA integuration method.
 
-Tag manager requires a data layer object, which is built either directly on the root of the website, or built using a script, depending on the content management system you are using for your websites such as WordPress, Shopify, or custom websites . Data is passed based on events to Google Analytics or Facebook Brower pixel from Google tag manager. If you are only interested in the browser pixel for Facebook then we do not need to set up the conversion API and google tag manager server containers.
-
-Facebook conversion API is server-based tracking and we require a google tag manager web and server container hosted on www.gtm-server.com which is a paid service. The events are routed from the google tag manager web container to the server container using data tag and data clients, along with an event id to make the duplication of the events.
+I have recorded a shot video for you: [Loom Video link]
 
 Setting up enhanced e-commerce events, web tracking, and testing the setup takes 2-3 days time, and the order usually takes 4 days at my end to be delivered (can be done quicker if there are no other pending projects). For setting up and configuring the browser events, it budgets at 150$ fixed cost, and for Server tracking, it budgets at 250$.
 
@@ -53,21 +51,41 @@ P.s. Be sure to check out my profile, one of my 5-Star reviews is from Paul, whe
 
 Starting the Cover Letter with a greeting such as “Hi” or “Hello” followed by the name of client is appropriate. Do not use greetings such as “Hi Dear”, “Hey Sir/Madam” incase you are not able to find the name of the client. You can find the name of the client if you will scroll down to the bottom of the Job Post and look for client recent Job, there you can find the name of the client. If you failed to find the name Just use “Hi”.
 
+```
+Hi [Name of the Client],
+```
+
 ### Summarizing the client issue
 
 Once, you read the client Job Post, summarize the the whole problem in 1-3 sentences and briefly touch the pain point of the job. This will make the client realize that you understand the problem and can better solve the issue for them.
+
+```
+You are having trouble setting datalayer in your bigcommerce store.
+```
 
 ### Mentioning the reasons for the problem
 
 Once you briefly mention the clients issue, now you can underline the causes for the Problem that the client is facing. This will ensure them about your knowledge in the field and represent you as an expert. However, you do not need to mention all the details, just entice them about your information on the subject and their problem.
 
+```
+Bigcommemrce doesnt provide a built in solution for datalayer object that can be used by Google tag manager.
+```
+
 ### Providing the solution
 
 Now, you can provide them the solution. I have felt that when you provide 2-3 solutions, the client is more likely to respond back and place a contract. As the client is here on Upwork and looking for a freelancer, they are going to hire someone to fix the issue, and not solve it themselves. Therefore, providing the client with a solution also represents you as an expert.
 
+```
+We can setup datalayer using a paid plugin, writing custom javascript code that will make get API calls or check the default UA integuration method.
+```
+
 ### Attaching a Video
 
 If there is some other information that you are required to add and typing it out will be long and time consuming, you can record it in a loom video. Having a video attached to a proposal adds more value to your cover letter and it built a relationship more than words with a client.
+
+```
+I have recorded a shot video for you: [Loom Video link]
+```
 
 ### Talk about expertise and previous work
 
