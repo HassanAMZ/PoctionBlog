@@ -21,7 +21,7 @@ const siteMetadata = {
     // supports plausible, simpleAnalytics or googleAnalytics
     plausibleDataDomain: 'poction.com', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
-    googleAnalyticsId: 'G-TYSDQ9ZLXX', // e.g. UA-000000-2 or G-XXXXXXX
+    googleTagManagerID: 'GTM-MCKP7JK', // e.g. GTM-MCKP7JK
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit
