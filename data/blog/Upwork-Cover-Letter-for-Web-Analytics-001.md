@@ -13,19 +13,18 @@ This cover letter i use was inspired by a top rated freelancer on Upwork, and [h
 
 ## Table Of Content:
 
-0. Example Cover Letter
-1. Client Name
-2. Summarizing the client issue
-3. Mentioning the reasons for the problem
-4. Providing the solution
-5. Attaching a video
-6. Talk about expertise and previous work
-7. Expected time, access required and Budget
-8. Reference to a similar Job
-9. Downloadable PDF
-10. Sample Cover Letter
+0. [Example Cover Letter](#example-cover-letter)
+1. [Client Name](#client-name)
+2. [Summarizing the client issue](#summarizing-the-client-issue)
+3. [Mentioning the reasons for the problem](#mentioning-the-reasons-for-the-problem)
+4. [Providing the solution](#providing-the-solution)
+5. [Attaching a video](#attaching-a-video)
+6. [Talk about expertise and previous work](#talk-about-expertise-and-previous-work)
+7. [Expected time, access required and Budget](#expected-time-access-required-and-budget)
+8. [Reference to a similar Job](#reference-to-a-similar-job)
+9. [Downloadable PDF](#downloadable-pdf)
 
-### This is an exmaple cover letter:
+### Example Cover Letter:
 
 ```
 Hi [Name of the Client],
@@ -113,4 +112,4 @@ P.s. Be sure to check out my profile, one of my 5-Star reviews is from Paul, whe
 
 ### Downloadable PDF
 
-You Can download the sample PDF file from here.
+You Can download the sample PDF file from [here](https://poction.com/static/blog/Upwork-Cover-Letter-for-Web-Analytics-001.pdf).

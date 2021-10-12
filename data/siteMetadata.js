@@ -3,7 +3,7 @@ const siteMetadata = {
   author: 'Shahzada Ali Hassan',
   headerTitle: 'Poction',
 
-  description: 'Make it personalized - Blog and Portfolio',
+  description: 'Blogs and guides by Poction',
   language: 'en-us',
   siteUrl: 'https://poction.com',
   siteRepo: 'https://github.com/HassanAMZ/Personal-Blog-Next-Js',
