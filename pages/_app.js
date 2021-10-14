@@ -12,6 +12,10 @@ export default function App({ Component, pageProps }) {
     <ThemeProvider attribute="class">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta
+          name="google-site-verification"
+          content="s7T9ZCjd-3dRb1v4ju5Lwl6ndBZFEIiI4Ye8oV_MbW4"
+        />
         <Analytics />
       </Head>
 
