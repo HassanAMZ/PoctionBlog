@@ -1,10 +1,10 @@
 ---
-title: Upwork Cover Letter for Web Analytics
+title: Upwork Cover Letter for setting up dataLayer in Bigcommerce Store for Google Tag Manager
 date: '2021-07-21'
 tags: ['Upwork', 'Cover Letters', 'Google tag manager', 'big commerce', 'data layer']
 draft: false
 summary: This cover letter i use was inspired by a top rated freelancer on Upwork. However, here is the breakdown of the cover letter. These 8 aspects are the most important when writing the cover letter to a client for setting up datalayer in bigcommerce store for google tag manager.
-coverImage: '/static/blog/Upwork Cover Letter for Web Analytics.png'
+coverImage: '/static/blog/Upwork-Cover-Letter-for-setting-up-dataLayer-in-Bigcommerce-Store-for-Google-Tag-Manager.png'
 ---
 
 I have been using this cover letter for over 3 months now and this has proven to be successful with a 33% ratio. One out of every three proposals that I send using this template gets me to the client-interview phase. Once I get to the client-interview phase, Upwork awards me with 10 connects, and most likely I win the contract too.
@@ -112,4 +112,4 @@ P.s. Be sure to check out my profile, one of my 5-Star reviews is from Paul, whe
 
 ### Downloadable PDF
 
-You Can download the sample PDF file from [here](https://poction.com/static/blog/Upwork-Cover-Letter-for-Web-Analytics-001.pdf).
+You Can download the sample PDF file from [here](https://poction.com/static/blog/Upwork-Cover-Letter-for-setting-up-dataLayer-in-Bigcommerce-Store-for-Google-Tag-Manager.pdf).
