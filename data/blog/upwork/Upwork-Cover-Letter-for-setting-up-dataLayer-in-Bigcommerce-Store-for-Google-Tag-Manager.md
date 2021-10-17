@@ -112,4 +112,4 @@ P.s. Be sure to check out my profile, one of my 5-Star reviews is from Paul, whe
 
 ### Downloadable PDF
 
-You Can download the sample PDF file from [here](https://poction.com/static/blog/Upwork-Cover-Letter-for-setting-up-dataLayer-in-Bigcommerce-Store-for-Google-Tag-Manager.pdf).
+You Can download the sample PDF file from [here](https://poction.com/static/blog/upwork/Upwork-Cover-Letter-for-setting-up-dataLayer-in-Bigcommerce-Store-for-Google-Tag-Manager.pdf).
