@@ -114,4 +114,4 @@ Thank you
 
 ### Downloadable PDF
 
-You Can download the sample PDF file from here.
+You Can download the sample PDF file from [here](https://poction.com/static/blog/upwork/Study-Plan-For-China.pdf).
