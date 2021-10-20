@@ -4,9 +4,9 @@ avatar: /static/images/avatar.png
 occupation: Freelancer at Upwork & MSc. Control Science & Engineering Student
 company: North Westren PolyTechnical University, Xi'an, China
 email: poctionblog.com
-instagram: https://instagram.com/poctionblog
-twitter: https://twitter.com/poctionblog
-linkedin: https://www.linkedin.com/hassanamz
+instagram: https://instagram.com/officialhassanamz
+twitter: https://twitter.com/shahzadaalihas4
+linkedin: https://www.linkedin.com/in/hassanamz
 github: https://github.com/hassanamz
 ---
 

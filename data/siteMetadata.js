@@ -16,6 +16,7 @@ const siteMetadata = {
   facebook: 'https://facebook.com/poctionblog',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/hassanamz',
+  instagram: 'https://instagram.com/poctionblog',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
