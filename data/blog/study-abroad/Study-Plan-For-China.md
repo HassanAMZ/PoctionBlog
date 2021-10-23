@@ -12,7 +12,7 @@ tags:
   ]
 draft: false
 summary: This content is  from an actual study plan that I submitted to NPU (National Polytechnic University Xi’an) for my Masters in Control Sciences and Engineering in 2021-2023 Session.
-coverImage: '/static/blog/study-abroad/Study-Plan-For-China.png'
+coverImage: '/static/blog/study-abroad/study plan for china.png'
 ---
 
 Study Plan must have following seven sections to get approved by the university and Chinese Scholarship Council in China. I have written this blog as an example, the content used in this is from an actual study plan that I submitted to NPU (National Polytechnic University Xi’an) for my Masters in Control Sciences and Engineering in 2021-2023 Session.
@@ -114,4 +114,4 @@ Thank you
 
 ### Downloadable PDF
 
-You Can download the sample PDF file from [here](https://poction-blog.vercel.app/static/blog/upwork/Study-Plan-For-China.pdf).
+You Can download the sample PDF file from [here](https://poction-blog.vercel.app/static/blog/upwork/study-plan-for-china.pdf).
