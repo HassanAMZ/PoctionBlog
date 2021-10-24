@@ -2,10 +2,11 @@ import Script from 'next/script'
 
 import siteMetadata from '@/data/siteMetadata'
 
-const GAScript = () => {
+const GoogleTagManagerScript = () => {
   return (
     <>
       <Script strategy="lazyOnload" id="ga-script">
+        {' '}
         {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -18,7 +19,7 @@ const GAScript = () => {
   )
 }
 
-export default GAScript
+export default GoogleTagManagerScript
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const logEvent = (action, category, label, value) => {

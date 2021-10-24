@@ -1,4 +1,4 @@
-import GA from './GoogleAnalytics'
+import GoogleTagManagerScript from './GoogleTagManagerScript'
 import Plausible from './Plausible'
 import SimpleAnalytics from './SimpleAnalytics'
 import siteMetadata from '@/data/siteMetadata'
@@ -10,7 +10,7 @@ const Analytics = () => {
     <>
       {isProduction && siteMetadata.analytics.plausibleDataDomain && <Plausible />}
       {isProduction && siteMetadata.analytics.simpleAnalytics && <SimpleAnalytics />}
-      {isProduction && siteMetadata.analytics.googleTagManagerID && <GA />}
+      {isProduction && siteMetadata.analytics.googleTagManagerID && <GoogleTagManagerScript />}
     </>
   )
 }

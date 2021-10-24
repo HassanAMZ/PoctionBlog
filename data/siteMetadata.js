@@ -19,7 +19,7 @@ const siteMetadata = {
   instagram: 'https://instagram.com/poctionblog',
   locale: 'en-US',
   analytics: {
-    // supports plausible, simpleAnalytics or googleAnalytics
+    // supports plausible, simpleAnalytics or GoogleTagManager
     plausibleDataDomain: 'poction.com', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
     googleTagManagerID: 'GTM-MCKP7JK', // e.g. GTM-MCKP7JK
