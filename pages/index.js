@@ -45,7 +45,7 @@ export default function Home({ posts }) {
                         </time>
 
                         <Link href={`/blog/${slug}`}>
-                          <div className=" sm:pr-0 md:pr-0 lg:pr-5 sm:hidden md:hidden lg:block">
+                          <div className=" sm:pr-0 md:pr-0 lg:pr-5 sm:hidden md:hidden lg:hidden xl:block">
                             <Image
                               alt={title}
                               src={coverImage}
