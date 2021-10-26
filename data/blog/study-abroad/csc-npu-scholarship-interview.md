@@ -1,6 +1,7 @@
 ---
 title: CSC Scholarship Interview NPU Xi'an China for MS. Electrical Engineering 2021
 date: '2021-10-26'
+blogID: '00003'
 tags:
   [
     'Scholarship Interview',
