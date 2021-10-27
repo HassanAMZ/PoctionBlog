@@ -22,26 +22,22 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
 
   useEffect((slug, fileName, date, title, tags, coverImage, blogID) => {
-    if (process.env.NODE_ENV == 'production') {
-      let dataLayer = window.dataLayer || []
-      dataLayer.push({
-        event: 'BlogPost',
-        category: blogID,
-        action: title,
-        label: slug,
-        blogDetails: {
-          slug,
-          fileName,
-          date,
-          title,
-          tags,
-          coverImage,
-          blogID,
-        },
-      })
-    } else {
-      return null
-    }
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'BlogPost',
+      category: blogID,
+      action: title,
+      label: slug,
+      blogDetails: {
+        slug,
+        fileName,
+        date,
+        title,
+        tags,
+        coverImage,
+        blogID,
+      },
+    })
   }, [])
 
   return (
