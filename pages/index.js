@@ -44,7 +44,7 @@ export default function Home({ posts }) {
                           {formatDate(date)}
                         </time>
 
-                        <Link href={`/blog/${slug}`}>
+                        {/* <Link href={`/blog/${slug}`}>
                           <div className=" sm:pr-0 md:pr-0 lg:pr-5 sm:hidden md:hidden lg:hidden xl:block">
                             <Image
                               alt={title}
@@ -54,7 +54,7 @@ export default function Home({ posts }) {
                               height={306}
                             />
                           </div>
-                        </Link>
+                        </Link> */}
                       </dd>
                     </dl>
 
