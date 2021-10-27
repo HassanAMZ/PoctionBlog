@@ -4,7 +4,8 @@ const GoogleTagManagerScript = () => {
   const isProduction = process.env.NODE_ENV === 'production'
   return (
     <>
-      {isProduction && (
+      {
+        //isProduction &&
         <script
           id="gtm-script"
           strategy="afterInteractive"
@@ -16,7 +17,7 @@ const GoogleTagManagerScript = () => {
         })(window,document,'script','dataLayer','${siteMetadata.analytics.googleTagManagerID}');`,
           }}
         />
-      )}
+      }
     </>
   )
 }
