@@ -8,6 +8,8 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
+import { useEffect } from 'react'
+
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
@@ -17,7 +19,30 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, tags, coverImage } = frontMatter
+  const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
+
+  useEffect((slug, fileName, date, title, tags, coverImage, blogID) => {
+    if (process.env.NODE_ENV == 'production') {
+      var dataLayer = dataLayer || []
+      dataLayer.push({
+        event: 'BlogPost',
+        category: blogID,
+        action: title,
+        label: slug,
+        blogDetails: {
+          slug,
+          fileName,
+          date,
+          title,
+          tags,
+          coverImage,
+          blogID,
+        },
+      })
+    } else {
+      return null
+    }
+  }, [])
 
   return (
     <SectionContainerPost>

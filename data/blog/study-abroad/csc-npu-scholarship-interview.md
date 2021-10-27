@@ -29,11 +29,6 @@ Pid controllers
 Open and close loop systems
 Graduation university and major
 
-Personal Channel:https://www.youtube.com/channel/UC8ta...
-Other Channel: https://www.youtube.com/channel/UCfB_...
-NPU: https://en.nwpu.edu.cn/
-CSC: https://studyinchina.csc.edu.cn/
-
 <YoutubeEmbed embedId="DZCui2Ob9Pk" />
 
 You can use this guide as a reference and put in your information and credentials and submit the Study Plan in your relevant university for admission. This Study plan has 100% Admission Success Rate.
