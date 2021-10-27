@@ -115,4 +115,4 @@ Thank you
 
 ### Downloadable PDF
 
-You Can download the sample PDF file from [here](https://poction-blog.vercel.app/static/blog/upwork/study-plan-for-china.pdf).
+You Can download the sample PDF file from [here](https://poction-blog.vercel.app/static/blog/study-abroad/study-plan-for-china.pdf).

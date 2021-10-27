@@ -19,113 +19,28 @@ embedId: 'DZCui2Ob9Pk'
 
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 
-This interview was conducted on 14th April 2021 and the purpose of this interview was to determine which scholarship will be awarded to the students, either it will be CSC Chinese scholarship council, the presidential scholarship.
+This interview was conducted on 14th April 2021. The purpose of this interview is to determine which scholarship will be awarded to the students, either it will be the CSC Chinese Scholarship Council, the presidential scholarship, or Road & Belt Scholarship.
 
-The interview just ended. It was a total of 5 minutes
-Introduction
-Any work experience
-Why NPU and what do you know about NPU
-Pid controllers
-Open and close loop systems
-Graduation university and major
+The interview just ended. It was a total of 5 minutes Introduction Any work experience Why NPU and what do you know about NPU Pid controllers Open and close loop systems Graduation university and major
 
 <YoutubeEmbed embedId="DZCui2Ob9Pk" />
 
-You can use this guide as a reference and put in your information and credentials and submit the Study Plan in your relevant university for admission. This Study plan has 100% Admission Success Rate.
-
 ## Table Of Content:
 
-0. [Academic Background](#academic-background)
-1. [Awards and Certifications](#awards-and-certifications)
-2. [Personality](#personality)
-3. [Study Plan in China](#study-plan-in-china)
-4. [Reasons for selecting Control Engineering](#reasons-for-selecting-control-engineering)
-5. [Reasons for selecting China](#reasons-for-selecting-china)
-6. [Career Objectives](#career-objectives)
-7. [Downloadable PDF](#downloadable-pdf)
+0. [Duration of the Interview](#duration-of-thei-nterview)
+1. [Types of Questions](#types-of-questions)
+2. [Non-Acedamic Questions](#non-acedamic-questions)
+3. [Academic Questions](#academic-questions)
+4. [Downloadable PDF](#downloadable-pdf)
 
-### Academic Background
+### Duration of the Interview
 
-I have recently completed my B.Sc. Electrical Engineering in September 2018 from Government College University Lahore with an accumulative GPA of 2.97 out of 4.00. During my study period, I was an active student often involved in extracurricular and cocurricular activities. My batch organized several functions in the department like annual dinner, culture day and quiz competitions in which I was a member of the discipline committee. Outside the university, I have organized an event “Shukriya Pakistan” in Lahore with my team at R&D Youth Connect Punjab on 14th of August (Independence Day of Pakistan).
+### Types of Questions
 
-For my final year project, I led a group of 4 people in modeling an IoT based Device for detection and transmission of Patient Health Parameters to cloud and android application with data logging. It can also be controlled manually using a mobile app (which we designed especially for the robot) via Bluetooth.
+### Non-Acedamic Questions
 
-The system is to be designed to measure the vital health parameters of patients and to transmit it to the peoples concerned like doctors/nurses over the thinger.io app and the thinger.io cloud system. The health in countries which are under developed is a major issue and often neglected in lieu of other facilities. In countries like ours it is of paramount importance to develop and help build a comprehensive patient monitoring system like this to assist in the time of emergency.
-
-During my semesters I have worked on beautiful projects and for digital electronics projects I built a fuzzy controller of DC to DC buck boost converter in order to control the output voltage of the buck boost converter. During 4th semester I have built a 7 segment LED display using combinational logic circuits for digital logic design project to stop the logic circuit is designed with 4 inputs and 7 outputs each representing an input to the display IC.
-
-I have participated in the annual Apex exhibition for a project competition during my graduation. I have done my high school education from a superior group of colleges Sheikhupura with 79% grades. I have been the class coordinator for my college and got certifications for character and Management.
-
-Besides the formal education I have completed 4 certifications on LinkedIn learning related to programming languages such as JavaScript and python.
-
-### Awards And Certifications
-
-APEX Certification
-Linkedin HTML Essential Training
-Linkedin Programming Foundations: Databases
-Linkedin Programming Foundations: Fundamentals
-Linkedin Succeeding in Web Development: Full Stack and Front End
-Upwork Earning Certificate
-Superior College Character Certificate
-Superior College Volunteer and commitment Certificate
-Motorway Driving Certificate
-
-### Personality
-
-I have a competitive personality and I love to talk on various topics and discover the views of other people and cultures. I have a huge interest in language and human psychology in general. I love to read about religion and cultural historic backgrounds. I am physically active and enjoy sports and working out in the gym. I have a huge interest in food and I love to discover different kinds of flavors in different cultures and areas.
-
-I have also taken part in many social and political events which have improved my team management and communication skills a lot and made me an overall better person with a friendly personality.
-
-I have worked in the industry for about six months and that has helped me create a problem solving mind instead of a problem reporting person. My experience in freelance has helped me to work with various clients throughout the world and gain experience from their problems and understand the point of view of different people.
-
-### Study Plan in China
-
-I would like to apply for the Master’s degree in Control Engineering and Computer Vision in China because of undergraduate study, my internship experience and university projects. I came to know a great variety of applications of machine learning nowadays not only in computer transformation but also in the digital world. My aim to work is to explore this field further through theoretical and practical work.
-
-During my studies, with my abilities I will try to come up with the best of everything; to accompany the professors and university colleagues in executing the research and exploring for immense exciting questions in this field.
-
-After completion of my master’s degree I desire to take part in maximizing my country’s research technology in this field to improve its economical state and elevate living standards of my people. I believe that this program will provide me the chance to know Control Engineering and will bestow me the opportunity to use my knowledge in a positive way. I hope that my learning will be vastly increased with this study and I will gain more valuable experience which will help me deal with difficult situations, people and problems.
-
-To gain deeper knowledge within a particular specialized area of control science, and gain insight into literature, research methods and a good handle on current topics within the field specifically the role of machine learning (machine learning control) and artificial intelligence in automation.
-To gain practical experience in automation research.
-To gain experience in critical, scientific based work with practical implementations.
-Lastly, the goal of graduate research is also to prepare for continued activity both within and outside of academia.
-
-### Reasons for selecting Control Engineering
-
-To improve the industrial situation in Pakistan where most of the manufacturing plants are based on machinery built in China and being exported to Pakistan.
-
-In the past year I have worked in the plastic industry of Pakistan in Karachi and I have discovered that 80% of the machines being used are manufactured in China but those models are from the early 2000 and have not been upgraded due to the poor economic situation of my country. Whereas some industries which could afford a modern engineering Masterpiece are from China or not able to understand and fully control the
-use of the machine for their advantages.
-
-The proper learning of control engineering is going to help me in better understanding the fundamentals and working principles of modern machines being used in industry and to introduce Innovation and easiness for the workers and community in the industry. Having a Grasp on modern tools for control engineering can enable me to become a helpful part in the industry in solving problems that have been faced by the plastic
-manufacturing industry in Pakistan.
-
-### Reasons for selecting China
-
-There is a strong bond between Pakistan and China especially nowadays, when a vast number of new projects have started in Pakistan with the help of Chinese companies.
-
-From the newspaper and media, I have come to observe a little bit about the people of China and I am really impressed by their hardworking nature and their festive hospitality. China is a true example for developing countries. The fast-growing economy, technological innovations and global ranking education institutes of China with good reputation makes a good aspiration for students like me for better career perspectives.
-
-This behavior has boosted my confidence greatly and I am highly motivated with my decision to study in China. Furthermore, Chinese diverse cultural values, famous and gentle hospitality and Pakistan-China all weather friendly relations since long, acceptance and peace to both sides in great clarity and harmony make China feel like my second homeland. Also, I have full support of my family over this decision. All these reasons put together makes China an ideal place for me to pursue graduate studies.
-
-China maintains a strong infrastructure for quality education not only in Asia but around the world particularly in engineering sciences. Chinese universities have made their ways to the higher ranks of QS World and Asian Universities rankings and that actually depicts their quality research culture, strong international links and language flexibility for international students.
-China provides quality education at minimal cost and this makes it an attractive destination for me. China Scholarship Council has made large pots of financial support available and additionally the residential facilities it provides, will make me more comfortable and enable me to channel my efforts to research and development.
-Another way in which Chinese universities are catering to international students and aiming to better integrate local and foreign students is to provide more courses taught in English, which opens up more opportunities for greater interactions inside and outside of the classrooms for all students.
-Last but not the least, studying in China will help me gain first-hand experience in a rising world power, prove my readiness to a global educational workplace, build a network of contacts in China and elsewhere, learn Mandarin and experience a cross cultural environment.
-
-### Career Objectives
-
-My career objectives are:
-
-Upon graduation, I plan to immediately opt teaching as a profession. That will serve me two purposes, firstly it will give me a chance to materialize my research that I will undertake in my graduate studies and secondly, I will be able to mentor quality research to the future generation which will be a source of felicitation for me.
-Parallel to my mentoring activities, I aim to pursue an entrepreneurial venture too. Considering the security and surveillance situation of my country, I aim to open an enterprise that will incorporate my knowledge and expertise to devise feasible solutions to the security problems.
-After getting some practical experience, I intend to pursue a doctoral degree as a long-term goal. The world is advancing so rapidly in technology and other aspects, so it is necessary to acquire excellence in order to thrive and keep the pace.
-
-I hope my application will receive your favorable consideration and I will be happy to provide any other information that you may require. I am looking forward to your reply.
-
-Thank you
+### Academic Questions
 
 ### Downloadable PDF
 
-You Can download the sample PDF file from [here](https://poction-blog.vercel.app/static/blog/upwork/study-plan-for-china.pdf).
+[here](https://poction-blog.vercel.app/static/blog/study-abroad/csc-npu-scholarship-interview.pdf).
