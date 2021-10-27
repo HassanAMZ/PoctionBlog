@@ -23,7 +23,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
 
   useEffect((slug, fileName, date, title, tags, coverImage, blogID) => {
     if (process.env.NODE_ENV == 'production') {
-      var dataLayer = dataLayer || []
+      let dataLayer = window.dataLayer || []
       dataLayer.push({
         event: 'BlogPost',
         category: blogID,
