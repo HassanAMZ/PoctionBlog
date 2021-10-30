@@ -39,3 +39,23 @@ pre {
   width: 100%;
   position: absolute;
 }
+
+/* This will work on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: white;
+}
+
+/* Targtes on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(201, 76, 76, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+}
