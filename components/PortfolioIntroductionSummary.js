@@ -14,7 +14,7 @@ export default function PortfolioIntroductionSummary() {
             alt="Poction"
           />
         </div>
-        <div className="m-0 col-start-1 col-end-1 row-start-2 row-end-3  sm:m-4 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2">
+        <div className="m-0 col-start-1 col-end-1 row-start-2 row-end-3 sm:m-4 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2">
           <h2 className="text-xl text-center sm:text-3xl sm:text-left">
             Poction - Web & Server Analyst
           </h2>
