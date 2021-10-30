@@ -22,7 +22,7 @@ export default function PortfolioIntroductionSummary() {
             Plan, develop and manage web tracking for Facebook, Google, Pinterest, HotJar and other
             analytics using Google Tag Manager Web and Server Containers.
           </p>
-          <p className="text-center sm:hidden">Plan, develop & Track</p>
+          <p className="text-center">Plan, develop & Track</p>
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ const AuthorHead = (props) => {
         <PortfolioIntroductionSummary />
       </Container>
       <Box bg="var(--secondary-text-color)">
-        <Container maxW="container.lg" p={4}>
+        <Container maxW="container.lg" p={2}>
           <SkillsGrid />
         </Container>
       </Box>

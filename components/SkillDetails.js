@@ -1,18 +1,14 @@
-import { Heading, Text, GridItem } from '@chakra-ui/react'
-import { fontSizeHeading, fontSizeParagrapgh } from '@/components/FontSizes'
-
-const SkillDetails = ({ title, description, subTitle, columnSpan, rowSpan }) => {
+const SkillDetails = ({ title, description, subTitle, colSpan, rowSpan }) => {
+  const customClasses = `p-0 mt-2 text-center rounded-sm col-span-1 row-span-2 sm:text-left sm:col-span-${colSpan} sm:row-span-${rowSpan} `
   return (
-    <GridItem p={4} bg="white" borderRadius="20px" colSpan={columnSpan} rowSpan={rowSpan}>
-      <Heading m={2} fontSize={fontSizeHeading}>
+    <div className={customClasses}>
+      <h3 className="ml-2 mr-2 text-sm sm:text-lg">
         {title}
         <span>{subTitle}</span>
-      </Heading>
+      </h3>
 
-      <Text m={2} fontSize={fontSizeParagrapgh}>
-        {description}
-      </Text>
-    </GridItem>
+      <p className="ml-2 mr-2 mb-2 text-sm sm:text-lg">{description}</p>
+    </div>
   )
 }
 
