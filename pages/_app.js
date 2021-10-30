@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import GoogleTagManagerScript from '@/components/analytics/GoogleTagManagerScript'
+import MailChimpHeadCode from '@/components/MailChimpHeadCode'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
             content="s7T9ZCjd-3dRb1v4ju5Lwl6ndBZFEIiI4Ye8oV_MbW4"
           />
           <GoogleTagManagerScript />
+          <MailChimpHeadCode />
         </Head>
 
         <LayoutWrapper>
