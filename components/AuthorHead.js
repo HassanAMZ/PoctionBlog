@@ -6,14 +6,12 @@ import Head from 'next/head'
 const AuthorHead = (props) => {
   return (
     <>
-      <Container maxW="container.lg" p={4} mt={'50px'}>
-        <PortfolioIntroductionSummary />
-      </Container>
-      <Box bg="var(--secondary-text-color)">
+      <PortfolioIntroductionSummary />
+      <div>
         <Container maxW="container.lg" p={2}>
           <SkillsGrid />
         </Container>
-      </Box>
+      </div>
     </>
   )
 }

@@ -18,11 +18,11 @@ export default function PortfolioIntroductionSummary() {
           <h2 className="text-xl text-center sm:text-3xl sm:text-left">
             Poction - Web & Server Analyst
           </h2>
+          <span className="text-sm text-center sm:text-md sm:text-left">Plan, develop & Track</span>
           <p className="text-lg text-center hidden sm:text-lg sm:text-left sm:block">
             Plan, develop and manage web tracking for Facebook, Google, Pinterest, HotJar and other
             analytics using Google Tag Manager Web and Server Containers.
           </p>
-          <p className="text-center">Plan, develop & Track</p>
         </div>
       </div>
     </>
