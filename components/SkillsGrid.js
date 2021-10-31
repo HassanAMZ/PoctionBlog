@@ -5,7 +5,7 @@ const SkillsGrid = () => {
   }
   return (
     <>
-      <div className="grid gap-1 sm:grid-col-3 sm:gap-4 ">
+      <div className="grid gap-1  sm:gap-4 " style={gridSpanning}>
         <SkillDetails
           title="Facebook conversion API. "
           subTitle="Server tracking."

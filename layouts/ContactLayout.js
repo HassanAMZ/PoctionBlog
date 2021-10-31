@@ -1,7 +1,8 @@
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
-
+import NewsletterForm from '@/components/NewsletterForm'
+import siteMetadata from '@/data/siteMetadata'
 export default function ContactLayout({ children, frontMatter }) {
   const {
     name,
@@ -17,7 +18,7 @@ export default function ContactLayout({ children, frontMatter }) {
 
   return (
     <>
-      <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
+      <PageSEO title={`About - ${name}`} description={`Contact - ${name}`} />
       <div className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -44,9 +45,19 @@ export default function ContactLayout({ children, frontMatter }) {
               <SocialIcon kind="instagram" href={instagram} />
             </div>
           </div>
-          <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
-            Email: Reactjswebdev@gmail.com <br />
-            Phone: +923354905686
+          <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2 flex flex-col items-center">
+            <div className="hidden p-6 space-x-3  sm:flex">
+              <SocialIcon kind="mail" href={`mailto:${email}`} />
+              <SocialIcon kind="github" href={github} />
+              <SocialIcon kind="linkedin" href={linkedin} />
+              <SocialIcon kind="twitter" href={twitter} />
+              <SocialIcon kind="instagram" href={instagram} />
+            </div>
+            {siteMetadata.newsletter.provider !== '' && (
+              <div className="flex items-center justify-center pt-4">
+                <NewsletterForm />
+              </div>
+            )}
           </div>
         </div>
       </div>
