@@ -32,11 +32,13 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         category: 'NewsletterForm',
         action: 'Submit',
         label: 'Failed',
+        userDetails: {
+          email: inputEl.current.value,
+        },
       })
       return
     }
 
-    inputEl.current.value = ''
     setError(false)
     setSubscribed(true)
     setMessage('Successfully! 🎉 You are now subscribed.')
@@ -46,7 +48,11 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
       category: 'NewsletterForm',
       action: 'Submit',
       label: 'Successfull',
+      userDetails: {
+        email: inputEl.current.value,
+      },
     })
+    inputEl.current.value = ''
   }
 
   return (
