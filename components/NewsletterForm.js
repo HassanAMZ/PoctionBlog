@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
-
 import siteMetadata from '@/data/siteMetadata'
+import { useEffect } from 'react'
 
 const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
   const inputEl = useRef(null)
@@ -22,9 +22,17 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     })
 
     const { error } = await res.json()
+
     if (error) {
       setError(true)
       setMessage('Your e-mail adress is invalid or you are already subscribed!')
+      let dataLayer = window.dataLayer || []
+      dataLayer.push({
+        event: 'NewsletterFormSubmission',
+        category: 'NewsletterForm',
+        action: 'Submit',
+        label: 'Failed',
+      })
       return
     }
 
@@ -32,6 +40,13 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     setError(false)
     setSubscribed(true)
     setMessage('Successfully! 🎉 You are now subscribed.')
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'NewsletterFormSubmission',
+      category: 'NewsletterForm',
+      action: 'Submit',
+      label: 'Successfull',
+    })
   }
 
   return (
