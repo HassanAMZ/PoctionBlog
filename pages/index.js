@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 import Image from '@/components/Image'
 import NewsletterForm from '@/components/NewsletterForm'
 import AuthorHead from '@/components/AuthorHead'
+import { useEffect } from 'react'
 
 const MAX_DISPLAY = 5
 
@@ -17,6 +18,44 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+  useEffect(() => {
+    const [
+      allBlogPostIDs,
+      allBlogPostSlugs,
+      date,
+      title,
+      summary,
+      tags,
+      coverImage,
+      blogDetails,
+    ] = [[], [], [], [], [], [], [], {}]
+    posts.slice(0, MAX_DISPLAY).map((frontMatter, index) => {
+      blogDetails[index] = frontMatter
+      allBlogPostIDs[index] = frontMatter.blogID
+      allBlogPostSlugs[index] = frontMatter.slug
+      date[index] = frontMatter.date
+      title[index] = frontMatter.title
+      summary[index] = frontMatter.summary
+      tags[index] = frontMatter.tags
+      coverImage[index] = frontMatter.coverImage
+    })
+
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'BlogList',
+      category: 'blogList',
+      action: 'homePage',
+      label: allBlogPostIDs,
+      allBlogPostIDs,
+      allBlogPostSlugs,
+      date,
+      title,
+      summary,
+      tags,
+      coverImage,
+      blogDetails,
+    })
+  }, [])
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />

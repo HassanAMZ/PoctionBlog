@@ -25,9 +25,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
     let dataLayer = window.dataLayer || []
     dataLayer.push({
       event: 'BlogPost',
-      category: blogID,
-      action: title,
-      label: slug,
+      category: 'blogPost',
+      action: blogID,
+      label: title,
       blogDetails: {
         slug,
         fileName,
