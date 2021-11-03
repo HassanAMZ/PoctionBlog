@@ -4,18 +4,54 @@ import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
-import Image from 'next/image'
+import { useEffect } from 'react'
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
-
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
+  useEffect(() => {
+    const [
+      allBlogPostIDs,
+      allBlogPostSlugs,
+      date,
+      title,
+      summary,
+      tags,
+      coverImage,
+      blogDetails,
+    ] = [[], [], [], [], [], [], [], {}]
+    displayPosts.map((frontMatter, index) => {
+      blogDetails[index] = frontMatter
+      allBlogPostIDs[index] = frontMatter.blogID
+      allBlogPostSlugs[index] = frontMatter.slug
+      date[index] = frontMatter.date
+      title[index] = frontMatter.title
+      summary[index] = frontMatter.summary
+      tags[index] = frontMatter.tags
+      coverImage[index] = frontMatter.coverImage
+    })
 
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'BlogList',
+      category: 'BlogList',
+      action: 'AllBlogPosts',
+      label: 'BlogPage',
+      allBlogPostIDs,
+      allBlogPostSlugs,
+      date,
+      title,
+      summary,
+      tags,
+      coverImage,
+      blogDetails,
+    })
+  }, [])
   return (
     <>
       <div className="divide-y">
@@ -50,7 +86,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags, coverImage } = frontMatter
+            const { slug, date, title, summary, tags, coverImage, blogID } = frontMatter
+
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
