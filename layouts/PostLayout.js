@@ -21,11 +21,6 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
 
-  var variable_names = {}
-  for (var i = 0; i < tags.length; i++) {
-    variable_names['tag_' + (i + 1)] = tags[i]
-  }
-
   useEffect(() => {
     let dataLayer = window.dataLayer || []
     dataLayer.push({
@@ -39,6 +34,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         date,
         title,
         tags,
+        tags_1: tags[0],
+        tags_2: tags[1],
+        tags_3: tags[2],
         coverImage,
         blogID,
       },
