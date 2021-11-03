@@ -19,27 +19,48 @@ embedId: 'DZCui2Ob9Pk'
 
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 
-This interview was conducted on 14th April 2021. The purpose of this interview is to determine which scholarship will be awarded to the students, either it will be the CSC Chinese Scholarship Council, the presidential scholarship, or Road & Belt Scholarship.
-
-The interview just ended. It was a total of 5 minutes Introduction Any work experience Why NPU and what do you know about NPU Pid controllers Open and close loop systems Graduation university and major
+This interview was conducted on 14th April 2021. The purpose of this interview was to determine which scholarship will be awarded to the students, either it will be the CSC Chinese Scholarship Council, the presidential scholarship, or Road & Belt Scholarship.
 
 <YoutubeEmbed embedId="DZCui2Ob9Pk" />
 
 ## Table Of Content:
 
 0. [Duration of the Interview](#duration-of-thei-nterview)
-1. [Types of Questions](#types-of-questions)
-2. [Non-Acedamic Questions](#non-acedamic-questions)
-3. [Academic Questions](#academic-questions)
-4. [Downloadable PDF](#downloadable-pdf)
+1. [The Interview Pannel](#the-interview-pannel)
+2. [Types of Questions](#types-of-questions)
+3. [Non-Acedamic Questions](#non-acedamic-questions)
+4. [Academic Questions](#academic-questions)
+5. [Downloadable PDF](#downloadable-pdf)
 
 ### Duration of the Interview
 
+```
+The Duration of the Interview interview was 5 minutes
+```
+
+### The Interview Pannel
+
 ### Types of Questions
+
+```
+1. Non-Acedamic Questions
+2. Acedamic Questions
+```
 
 ### Non-Acedamic Questions
 
+```
+1. Introduction
+2. Any work experience
+3. Why NPU and what do you know about NPU
+```
+
 ### Academic Questions
+
+```
+1. Pid controllers Open and close loop systems
+2. Graduation university and major
+```
 
 ### Downloadable PDF
 
