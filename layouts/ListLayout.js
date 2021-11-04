@@ -35,12 +35,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
       tags[index] = frontMatter.tags
       coverImage[index] = frontMatter.coverImage
     })
-
     let dataLayer = window.dataLayer || []
-
     dataLayer.push({
-      event: 'BlogList',
-      category: 'blogList',
+      event: 'AllBlogPosts',
+      category: 'allBlogPosts',
       action: 'blogPage',
       label: allBlogPostIDs,
       allBlogPostIDs,
@@ -52,6 +50,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
       coverImage,
       blogDetails,
     })
+    console.log(dataLayer)
   }, [])
   return (
     <>

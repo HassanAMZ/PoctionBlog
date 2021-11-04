@@ -2,15 +2,7 @@
 title: Study Plan For China
 date: '2021-06-10'
 blogID: '00002'
-tags:
-  [
-    'Study Plan',
-    'CSC Schorlarship',
-    'Chinese Scholarship Council',
-    'NWPU',
-    'NPU',
-    'North Westren PolyTechnical University',
-  ]
+tags: ['Study Plan', 'Chinese Scholarship Council', 'North Westren PolyTechnical University']
 draft: false
 summary: This content is from an actual study plan that I submitted to NPU (National Polytechnic University Xi’an) for my Masters in Control Sciences and Engineering in the 2021-2023 Session.
 coverImage: '/static/blog/study-abroad/study-plan-for-china.png'

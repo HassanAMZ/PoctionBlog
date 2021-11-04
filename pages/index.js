@@ -42,8 +42,8 @@ export default function Home({ posts }) {
 
     let dataLayer = window.dataLayer || []
     dataLayer.push({
-      event: 'BlogList',
-      category: 'blogList',
+      event: 'AllBlogPosts',
+      category: 'allBlogPosts',
       action: 'homePage',
       label: allBlogPostIDs,
       allBlogPostIDs,
@@ -55,6 +55,7 @@ export default function Home({ posts }) {
       coverImage,
       blogDetails,
     })
+    console.log(dataLayer)
   }, [])
   return (
     <>

@@ -3,14 +3,7 @@ title: CSC Scholarship Interview NPU Xi'an China for MS. Electrical Engineering 
 date: '2021-10-26'
 blogID: '00003'
 tags:
-  [
-    'Scholarship Interview',
-    'CSC Schorlarship',
-    'Chinese Scholarship Council',
-    'NWPU',
-    'NPU',
-    'North Westren PolyTechnical University',
-  ]
+  ['Scholarship Interview', 'Chinese Scholarship Council', 'North Westren PolyTechnical University']
 draft: false
 summary: Interview Questions and Answers for Northwestern Polytechnical University Xi'an China for Chinese scholarship council 2021-2023, Masters Ecletcial engineering in control sciences and engineering .
 coverImage: '/static/blog/study-abroad/csc-npu-scholarship-interview.png'
