@@ -41,7 +41,6 @@ const WebinarSimple = ({
       },
     })
   }, [])
-
   let YoutubeVideo = ''
   if (embedId === 'null') {
     YoutubeVideo = (
@@ -67,16 +66,15 @@ const WebinarSimple = ({
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{formatDate(date)}</time>
+                    <br /> <time dateTime={date}>{formatDate(date)}</time>
                   </dd>
                 </div>
               </dl>
               <div>
-                <PageTitle>{title}</PageTitle>
+                <PageTitle>{title}</PageTitle> Webniar ID: {wid}
               </div>
             </div>
           </header>
-
           <div
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 "
             style={{ gridTemplateRows: 'auto 1fr' }}
@@ -93,8 +91,6 @@ const WebinarSimple = ({
                 Host: {host}
                 <br />
                 Speaker: {speaker}
-                <br />
-                Webniar ID: {wid}
                 <br />
               </div>
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{description}</div>
