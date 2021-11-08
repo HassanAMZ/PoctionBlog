@@ -57,7 +57,6 @@ export default function Home({ posts }) {
         blogDetails,
       },
     })
-    console.log(dataLayer)
   }, [])
   return (
     <>

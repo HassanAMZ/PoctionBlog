@@ -40,7 +40,6 @@ const WebinarSimple = ({
         embedId,
       },
     })
-    console.log(dataLayer)
   }, [])
 
   let YoutubeVideo = ''

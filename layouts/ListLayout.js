@@ -52,7 +52,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         blogDetails,
       },
     })
-    console.log(dataLayer)
   }, [])
   return (
     <>

@@ -51,6 +51,7 @@ const Projects = () => {
                 description={d.description}
                 imgSrc={d.imgSrc}
                 href={d.href}
+                pid={d.pid}
               />
             ))}
           </div>
