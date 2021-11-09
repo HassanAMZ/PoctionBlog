@@ -2,8 +2,36 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
+import { useEffect } from 'react'
 
-export default function Projects() {
+const Projects = () => {
+  useEffect(() => {
+    const [allKeys, allTitle, allDescription, allImgSrc, allHref, allPid] = [[], [], [], [], [], []]
+    projectsData.map(({ key, title, description, imgSrc, href, pid }, index) => {
+      allKeys[index] = key
+      allTitle[index] = title
+      allDescription[index] = description
+      allImgSrc[index] = imgSrc
+      allHref[index] = href
+      allPid[index] = pid
+    })
+
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'CustomEvent',
+      category: 'allProjects',
+      action: 'projectPage',
+      label: allPid,
+      details: {
+        allKeys,
+        allTitle,
+        allDescription,
+        allImgSrc,
+        allHref,
+        allPid,
+      },
+    })
+  }, [])
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -31,3 +59,4 @@ export default function Projects() {
     </>
   )
 }
+export default Projects
