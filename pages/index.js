@@ -46,14 +46,16 @@ export default function Home({ posts }) {
       category: 'allBlogPosts',
       action: 'homePage',
       label: allBlogPostIDs,
-      allBlogPostIDs,
-      allBlogPostSlugs,
-      date,
-      title,
-      summary,
-      tags,
-      coverImage,
-      blogDetails,
+      details: {
+        allBlogPostIDs,
+        allBlogPostSlugs,
+        date,
+        title,
+        summary,
+        tags,
+        coverImage,
+        blogDetails,
+      },
     })
     console.log(dataLayer)
   }, [])

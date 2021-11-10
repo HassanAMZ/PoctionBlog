@@ -32,7 +32,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         category: 'NewsletterForm',
         action: 'Submit',
         label: 'Failed',
-        userDetails: {
+        details: {
           email: inputEl.current.value,
         },
       })
@@ -48,7 +48,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
       category: 'NewsletterForm',
       action: 'Submit',
       label: 'Successfull',
-      userDetails: {
+      details: {
         email: inputEl.current.value,
       },
     })

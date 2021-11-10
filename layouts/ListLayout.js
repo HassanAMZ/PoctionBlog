@@ -41,14 +41,16 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
       category: 'allBlogPosts',
       action: 'blogPage',
       label: allBlogPostIDs,
-      allBlogPostIDs,
-      allBlogPostSlugs,
-      date,
-      title,
-      summary,
-      tags,
-      coverImage,
-      blogDetails,
+      details: {
+        allBlogPostIDs,
+        allBlogPostSlugs,
+        date,
+        title,
+        summary,
+        tags,
+        coverImage,
+        blogDetails,
+      },
     })
     console.log(dataLayer)
   }, [])

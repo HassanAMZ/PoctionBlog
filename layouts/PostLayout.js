@@ -28,7 +28,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       category: 'singleBlogPost',
       action: blogID,
       label: title,
-      blogDetails: {
+      details: {
         slug,
         fileName,
         date,

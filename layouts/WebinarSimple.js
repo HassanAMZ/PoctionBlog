@@ -6,6 +6,7 @@ import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import NewsletterForm from '@/components/NewsletterForm'
 import YoutubeEmbed from '@/components/YoutubeEmbed'
+import { useEffect } from 'react'
 
 const WebinarSimple = ({
   title,
@@ -19,6 +20,29 @@ const WebinarSimple = ({
   wid,
   embedId,
 }) => {
+  useEffect(() => {
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'CustomEvent',
+      category: 'singleWebinar',
+      action: wid,
+      label: title,
+      details: {
+        title,
+        description,
+        imgSrc,
+        href,
+        date,
+        time,
+        host,
+        speaker,
+        wid,
+        embedId,
+      },
+    })
+    console.log(dataLayer)
+  }, [])
+
   let YoutubeVideo = ''
   if (embedId === 'null') {
     YoutubeVideo = ''
