@@ -42,7 +42,7 @@ export default function Home({ posts }) {
 
     let dataLayer = window.dataLayer || []
     dataLayer.push({
-      event: 'AllBlogPosts',
+      event: 'CustomEvent',
       category: 'allBlogPosts',
       action: 'homePage',
       label: allBlogPostIDs,

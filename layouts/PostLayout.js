@@ -24,7 +24,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   useEffect(() => {
     let dataLayer = window.dataLayer || []
     dataLayer.push({
-      event: 'SingleBlogPost',
+      event: 'CustomEvent',
       category: 'singleBlogPost',
       action: blogID,
       label: title,

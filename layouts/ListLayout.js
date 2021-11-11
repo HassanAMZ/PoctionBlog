@@ -37,7 +37,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     })
     let dataLayer = window.dataLayer || []
     dataLayer.push({
-      event: 'AllBlogPosts',
+      event: 'CustomEvent',
       category: 'allBlogPosts',
       action: 'blogPage',
       label: allBlogPostIDs,

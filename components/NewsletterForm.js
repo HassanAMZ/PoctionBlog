@@ -28,7 +28,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
       setMessage('Your e-mail adress is invalid or you are already subscribed!')
       let dataLayer = window.dataLayer || []
       dataLayer.push({
-        event: 'NewsletterFormSubmission',
+        event: 'CustomEvent',
         category: 'NewsletterForm',
         action: 'Submit',
         label: 'Failed',
@@ -44,7 +44,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     setMessage('Successfully! 🎉 You are now subscribed.')
     let dataLayer = window.dataLayer || []
     dataLayer.push({
-      event: 'NewsletterFormSubmission',
+      event: 'CustomEvent',
       category: 'NewsletterForm',
       action: 'Submit',
       label: 'Successfull',
