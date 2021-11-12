@@ -2,10 +2,11 @@ import siteMetadata from '@/data/siteMetadata'
 import webinarData from '@/data/webinarData'
 import CardWebinar from '@/components/CardWebinar'
 import { PageSEO } from '@/components/SEO'
-
+import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 export default function Webinars() {
   return (
     <>
+      <ScrollTopAndComment />
       <PageSEO title={`Webinars - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
@@ -31,7 +32,8 @@ export default function Webinars() {
             ))}
           </div>
         </div>
-      </div>
+      </div>{' '}
+      <div id="comment"></div>
     </>
   )
 }

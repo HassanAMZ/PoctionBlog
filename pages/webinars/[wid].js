@@ -2,13 +2,19 @@ import { useRouter } from 'next/router'
 import webinarData from '@/data/webinarData'
 import PageTitle from '@/components/PageTitle'
 import { PageSEO } from '@/components/SEO'
-
+import WebinarSimple from '@/layouts/WebinarSimple'
 const Webinar = () => {
   const router = useRouter()
   const { wid } = router.query
 
   let webinarObject = webinarData.find((object) => object.wid == wid)
-  if (webinarObject === undefined) {
+  if (webinarObject !== undefined) {
+    return (
+      <>
+        <WebinarSimple {...webinarObject} />
+      </>
+    )
+  } else {
     return (
       <>
         <PageSEO title="404 Page" description="No Webinar" />
@@ -19,15 +25,6 @@ const Webinar = () => {
               🚧
             </span>
           </PageTitle>
-        </div>
-      </>
-    )
-  } else {
-    return (
-      <>
-        <PageSEO title={webinarObject.title} description={webinarObject.description} />
-        <div className="mt-24 text-center">
-          <PageTitle>{webinarObject.title}</PageTitle>
         </div>
       </>
     )

@@ -1,5 +1,6 @@
 import Image from './Image'
 import Link from './Link'
+const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : ''
 
 const CardWebinar = ({ title, description, imgSrc, href }) => (
   <div className="p-4 md:w-1/2 md" style={{ maxWidth: '544px' }}>
