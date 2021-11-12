@@ -45,7 +45,11 @@ const WebinarSimple = ({
 
   let YoutubeVideo = ''
   if (embedId === 'null') {
-    YoutubeVideo = ''
+    YoutubeVideo = (
+      <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
+        <Image alt={title} src={imgSrc} width={1080} height={1080} />
+      </div>
+    )
   } else {
     YoutubeVideo = (
       <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
@@ -59,9 +63,6 @@ const WebinarSimple = ({
       <article>
         <div>
           <header>
-            {/* <div className="sm:hidden ">
-              <Image alt={title} src={imgSrc} width={1080} height={1080} />
-            </div> */}
             <div className="pb-10 space-y-1 text-center border-b border-gray-200 dark:border-gray-700">
               <dl>
                 <div>
