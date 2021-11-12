@@ -5,6 +5,7 @@ import formatDate from '@/lib/utils/formatDate'
 import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import NewsletterForm from '@/components/NewsletterForm'
+import YoutubeEmbed from '@/components/YoutubeEmbed'
 export default function PostLayout({
   title,
   description,
@@ -15,6 +16,7 @@ export default function PostLayout({
   host,
   speaker,
   wid,
+  embedId,
 }) {
   return (
     <SectionContainerPost>
@@ -22,9 +24,9 @@ export default function PostLayout({
       <article>
         <div>
           <header>
-            <div className="sm:hidden ">
+            {/* <div className="sm:hidden ">
               <Image alt={title} src={imgSrc} width={1080} height={1080} />
-            </div>
+            </div> */}
             <div className="pb-10 space-y-1 text-center border-b border-gray-200 dark:border-gray-700">
               <dl>
                 <div>
@@ -44,6 +46,9 @@ export default function PostLayout({
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
+              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
+                <YoutubeEmbed embedId="rokGy0huYEA" />
+              </div>
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
                 Title: {title}
                 <br />
