@@ -1,9 +1,9 @@
 import siteMetadata from '@/data/siteMetadata'
 import webinarData from '@/data/webinarData'
-import Card from '@/components/Card'
+import CardWebinar from '@/components/CardWebinar'
 import { PageSEO } from '@/components/SEO'
 
-export default function Webinar() {
+export default function Webinars() {
   return (
     <>
       <PageSEO title={`Webinars - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -17,7 +17,7 @@ export default function Webinar() {
         <div className="container py-12">
           <div className="flex flex-wrap -m-4">
             {webinarData.map((d) => (
-              <Card
+              <CardWebinar
                 key={d.title}
                 title={d.title}
                 description={d.description}
