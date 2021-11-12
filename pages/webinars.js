@@ -32,7 +32,7 @@ export default function Webinars() {
             ))}
           </div>
         </div>
-      </div>{' '}
+      </div>
       <div id="comment"></div>
     </>
   )

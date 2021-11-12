@@ -6,7 +6,8 @@ import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import NewsletterForm from '@/components/NewsletterForm'
 import YoutubeEmbed from '@/components/YoutubeEmbed'
-export default function PostLayout({
+
+const WebinarSimple = ({
   title,
   description,
   imgSrc,
@@ -17,7 +18,17 @@ export default function PostLayout({
   speaker,
   wid,
   embedId,
-}) {
+}) => {
+  let YoutubeVideo = ''
+  if (embedId === 'null') {
+    YoutubeVideo = ''
+  } else {
+    YoutubeVideo = (
+      <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
+        <YoutubeEmbed embedId="rokGy0huYEA" />
+      </div>
+    )
+  }
   return (
     <SectionContainerPost>
       <PageSEO title={title} description={description} />
@@ -41,14 +52,13 @@ export default function PostLayout({
               </div>
             </div>
           </header>
+
           <div
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 "
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
-                <YoutubeEmbed embedId="rokGy0huYEA" />
-              </div>
+              {YoutubeVideo}
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
                 Title: {title}
                 <br />
@@ -78,3 +88,5 @@ export default function PostLayout({
     </SectionContainerPost>
   )
 }
+
+export default WebinarSimple
