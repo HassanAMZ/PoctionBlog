@@ -3,7 +3,59 @@ import webinarData from '@/data/webinarData'
 import CardWebinar from '@/components/CardWebinar'
 import { PageSEO } from '@/components/SEO'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { useEffect } from 'react'
+
 export default function Webinars() {
+  useEffect(() => {
+    const [
+      allTitle,
+      allDescription,
+      alImgSrc,
+      allHref,
+      allDate,
+      allTime,
+      allHost,
+      allSpeaker,
+      allWid,
+      allEmbedId,
+    ] = [[], [], [], [], [], [], [], [], [], []]
+
+    webinarData.map(
+      ({ title, description, imgSrc, href, date, time, host, speaker, wid, embedId }, index) => {
+        allTitle[index] = title
+        allDescription[index] = description
+        alImgSrc[index] = imgSrc
+        allHref[index] = href
+        allDate[index] = date
+        allTime[index] = time
+        allHost[index] = host
+        allSpeaker[index] = speaker
+        allWid[index] = wid
+        allEmbedId[index] = embedId
+      }
+    )
+
+    let dataLayer = window.dataLayer || []
+    dataLayer.push({
+      event: 'CustomEvent',
+      category: 'allWebinar',
+      action: 'webinarPage',
+      label: allWid,
+      details: {
+        allTitle,
+        allDescription,
+        alImgSrc,
+        allHref,
+        allDate,
+        allTime,
+        allHost,
+        allSpeaker,
+        allWid,
+        allEmbedId,
+      },
+    })
+    console.log(dataLayer)
+  }, [])
   return (
     <>
       <ScrollTopAndComment />
@@ -24,10 +76,6 @@ export default function Webinars() {
                 description={d.description}
                 imgSrc={d.imgSrc}
                 href={d.href}
-                date={d.date}
-                time={d.time}
-                host={d.host}
-                speaker={d.speaker}
               />
             ))}
           </div>
