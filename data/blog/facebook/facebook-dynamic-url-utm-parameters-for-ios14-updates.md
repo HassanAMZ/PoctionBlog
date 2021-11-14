@@ -9,6 +9,8 @@ coverImage: '/static/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14
 embedId: 'null'
 ---
 
+Apple now requires apps in the App Store that engage in what Apple defines as "tracking" to obtain permission to "track" users across apps and websites owned by third parties for advertising and measurement purposes through its AppTrackingTransparency (ATT) framework. As a result of these changes, advertisers running campaigns to people using iOS 14.5 or later devices will be affected by limitations on data sharing.
+
 ```
 utm_source=FacebookAds&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{adset.name}}&utm_term={{ad.name}}
 
