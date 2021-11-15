@@ -7,6 +7,7 @@ import siteMetadata from '@/data/siteMetadata'
 import NewsletterForm from '@/components/NewsletterForm'
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 const WebinarSimple = ({
   title,
@@ -19,6 +20,7 @@ const WebinarSimple = ({
   speaker,
   wid,
   embedId,
+  presentation,
 }) => {
   useEffect(() => {
     let dataLayer = window.dataLayer || []
@@ -38,6 +40,7 @@ const WebinarSimple = ({
         speaker,
         wid,
         embedId,
+        presentation,
       },
     })
   }, [])
@@ -51,7 +54,7 @@ const WebinarSimple = ({
   } else {
     YoutubeVideo = (
       <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
-        <YoutubeEmbed embedId="rokGy0huYEA" />
+        <YoutubeEmbed embedId={embedId} />
       </div>
     )
   }
@@ -82,18 +85,34 @@ const WebinarSimple = ({
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
               {YoutubeVideo}
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
-                Title: {title}
-                <br />
-                Date: {date}
-                <br />
-                Time: {time}
-                <br />
-                Host: {host}
-                <br />
-                Speaker: {speaker}
-                <br />
+                <h3>Presentation Slides</h3>
+                <Link href={presentation}>
+                  <a> {title} </a>
+                </Link>
               </div>
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{description}</div>
+              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none ">
+                <div>
+                  <h5>Title:</h5>
+                  {title}
+                </div>
+                <div>
+                  <h5>Date:</h5> {date}
+                </div>
+                <div>
+                  <h5>Time: </h5> {time}
+                </div>
+                <div>
+                  <h5> Host:</h5> {host}
+                </div>
+                <div>
+                  <h5>Speaker:</h5> {speaker}
+                </div>
+              </div>
+              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
+                {' '}
+                <h3>Event Detail</h3>
+                {description}
+              </div>
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">
                 {siteMetadata.newsletter.provider !== '' && (
                   <div className="flex items-center justify-center pt-4">
