@@ -9,7 +9,7 @@ const webinarData = [
     host: 'Rabia Noreen',
     speaker: 'Shahzada Ali Hassan',
     wid: '15112021',
-    embedId: 'null',
+    embedId: '5z79Wl1sjZQ',
     presentation:
       'https://docs.google.com/presentation/d/1-0y87kKwkYQd57xpvZs_YHps7hjxozxm3oHXR8_AxME/edit?usp=sharing',
   },

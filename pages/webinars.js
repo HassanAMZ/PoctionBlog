@@ -71,7 +71,8 @@ export default function Webinars() {
           <div className="flex flex-wrap -m-4">
             {webinarData.map((d) => (
               <CardWebinar
-                key={d.title}
+                wid={d.wid}
+                key={d.wid}
                 title={d.title}
                 description={d.description}
                 imgSrc={d.imgSrc}

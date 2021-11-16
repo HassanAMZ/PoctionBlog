@@ -22,28 +22,6 @@ const WebinarSimple = ({
   embedId,
   presentation,
 }) => {
-  useEffect(() => {
-    let dataLayer = window.dataLayer || []
-    dataLayer.push({
-      event: 'CustomEvent',
-      category: 'singleWebinar',
-      action: wid,
-      label: title,
-      details: {
-        title,
-        description,
-        imgSrc,
-        href,
-        date,
-        time,
-        host,
-        speaker,
-        wid,
-        embedId,
-        presentation,
-      },
-    })
-  }, [])
   let YoutubeVideo = ''
   if (embedId === 'null') {
     YoutubeVideo = (
