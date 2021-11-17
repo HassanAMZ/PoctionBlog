@@ -2,18 +2,16 @@
 title: Upwork Cover Letter for setting up dataLayer in Bigcommerce Store for Google Tag Manager
 date: '2021-07-21'
 blogID: '00001'
-tags: ['Upwork', 'Cover Letters', 'Upwork Biginners Guide']
+tags: ['Upwork', 'Cover Letters', 'Upwork Beginners Guide']
 draft: false
 summary: This cover letter i use was inspired by a top-rated freelancer on Upwork. However, here is the breakdown of the cover letter. These 8 aspects are the most important when writing the cover letter to a client for setting up a datalayer in a bigcommerce store for google tag manager.
 coverImage: '/static/blog/upwork/upwork-cover-letter-for-setting-up-dataLayer-in-bigcommerce-store-for-google-tag-manager.png'
-embedId: 'rokGy0huYEA'
+embedId: 'null'
 ---
-
-import YoutubeEmbed from '@/components/YoutubeEmbed'
 
 I have been using this cover letter for over 3 months now and this has proven to be successful with a 33% ratio. One out of every three proposals that I send using this template gets me to the client-interview phase. Once I get to the client-interview phase, Upwork awards me with 10 connects, and most likely I win the contract too.
 
-<YoutubeEmbed embedId="rokGy0huYEA" />
+![Upwork Cover Letter for setting up dataLayer in Bigcommerce Store for Google Tag Manager](/static/blog/upwork/upwork-cover-letter-for-setting-up-dataLayer-in-bigcommerce-store-for-google-tag-manager.png)
 
 This cover letter i use was inspired by a top-rated freelancer on Upwork, and [here is a link to their YouTube video](https://www.youtube.com/watch?v=iGItwYOYB_E&list=PLCfjqPPfH_dYeX3RNc1JfnEjqKeYbb8A8&index=5). However, here is the breakdown of the cover letter, to me, these 8 aspects are the most important when writing the cover letter to a client.
 
