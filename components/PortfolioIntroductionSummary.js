@@ -12,7 +12,7 @@ export default function PortfolioIntroductionSummary() {
             src="/static/images/summaryPhoto.png"
             alt="Poction"
           />
-          <a href="https://www.freepik.com/vectors/creative">
+          <a className="hidden freepik" href="https://www.freepik.com/vectors/creative">
             Creative vector created by pikisuperstar - www.freepik.com
           </a>
         </div>
