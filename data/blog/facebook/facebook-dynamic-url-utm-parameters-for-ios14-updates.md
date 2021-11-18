@@ -4,7 +4,7 @@ date: '2021-11-17'
 blogID: '00004'
 tags: ['facebook CAPI', 'utm parameters', 'user acquisition']
 draft: false
-summary: To track the traffic acquisition on facebook ads on google analytics for iOS14+ users. This will help the advertisers see the performance of their ads in UA or GA4.
+summary: To track the traffic acquisition on facebook ads on google analytics for iOS14+ users. To track the performance of the facebook ads in UA or GA4 using custom reports and secondary dimensions.
 coverImage: '/static/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates.png'
 embedId: 'null'
 ---
@@ -13,10 +13,11 @@ embedId: 'null'
 
 ## Table Of Content:
 
-0. [Origin of the issue](#origin-of-the-issue)
-1. [Solution to the ATT](#solution-to-the-att)
-   - [Custom Reports](#custom-reports)
-2. [UTM Code](#utm-code)
+1. [Origin of the issue](#origin-of-the-issue)
+2. [Solution to the ATT](#solution-to-the-att)
+3. [Custom Reports](#custom-reports)
+4. [UTM Code](#utm-code)
+5. [Notes](#notes)
 
 ### Origin of the issue
 
@@ -28,17 +29,23 @@ Therefore, when the app user clicks on one of the facebook ads the fbclid is not
 
 ### Solution to the ATT
 
-There is no solution to fix the facebook ads reporting / conversion tracking on facebook ads manager. However we can add UTM paramters in the URL and view the report in UA or GA4. we can build custom reports in UA and GA4 to visualize which facebook ads are performing well.
+There is no solution to fix the facebook ads reporting / conversion tracking on facebook ads manager. We can add UTM paramters in the URL and view the report in UA or GA4. we can build custom reports in UA and GA4 to visualize which facebook ads are performing well. However, the inital step is to add the UTM paramters in each facebook ad at ad set level.
 
-#### Custom Reports
+### Custom Reports
 
-[how to build custom report for UA](/blog/google-analytics/custom-report-for-facebook-ads-in-ua)
-
-[how to build custom report for GA4](/blog/google-analytics/custom-report-for-facebook-ads-in-ga4)
+1. [how to build custom report for UA](/blog/google-analytics/custom-report-for-facebook-ads-in-ua)
+2. [how to build custom report for GA4](/blog/google-analytics/custom-report-for-facebook-ads-in-ga4)
 
 ### UTM Code
+
+We need to update the URL code for all the facebook ads we are on facebook ads manager. Copy the code below and paste it under facebook Campaign> Ad set> ad> Tracking code> URL parameters. Click on "Build a URL parameter" to make sure everything is fine.
 
 ```
 utm_source=FacebookAds&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{adset.name}}&utm_term={{ad.name}}
 
 ```
+
+### Notes
+
+1. Updating the UTM paramter will unpublish the ads and they will be in "Review" for upto 48 hours.
+2. Do not add the UTM parameters facebook Campaign> Ad set> ad> Ads Set UP> Webiste URL
