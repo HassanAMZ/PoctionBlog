@@ -4,7 +4,7 @@ export default function PortfolioIntroductionSummary() {
   return (
     <>
       <div className="grid justify-items-center">
-        <div className="w-72 m-4 col-start-1 col-end-1 row-start-1 row-end-2 sm:w-80 sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-1">
+        <div className="floating w-80 m-4 col-start-1 col-end-1 row-start-1 row-end-2  sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-1">
           <Image
             layout="responsive"
             height={1000}
@@ -16,7 +16,7 @@ export default function PortfolioIntroductionSummary() {
             Creative vector created by pikisuperstar - www.freepik.com
           </a>
         </div>
-        <div className="m-0 text-center col-start-1 col-end-1 row-start-2 row-end-3 sm:text-left sm:m-4 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2">
+        <div className="m-0 flex flex-col justify-center text-center col-start-1 col-end-1 row-start-2 row-end-3 sm:text-left sm:m-4 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2">
           <div className="sm:mb-8">
             <h2 className="text-xl text-center sm:text-3xl sm:text-left">
               Poction - Web & Server Analyst
