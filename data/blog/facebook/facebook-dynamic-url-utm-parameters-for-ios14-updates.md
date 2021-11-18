@@ -9,24 +9,36 @@ coverImage: '/static/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14
 embedId: 'null'
 ---
 
-Apple now requires apps in the App Store that engage in what Apple defines as "tracking" to obtain permission to "track" users across apps and websites owned by third parties for advertising and measurement purposes through its AppTrackingTransparency (ATT) framework. As a result of these changes, advertisers running campaigns to people using iOS 14.5 or later devices will be affected by limitations on data sharing.
+![Facebook dynamic URL UTM parameters for iOS14 updates](/static/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates.png)
+
+## Table Of Content:
+
+0. [Origin of the issue](#origin-of-the-issue)
+1. [Solution to the ATT](#solution-to-the-att)
+   - [Custom Reports](#custom-reports)
+2. [UTM Code](#utm-code)
+
+### Origin of the issue
+
+Apple now requires apps in the App Store that engage in what Apple defines as "tracking" to obtain permission to "track" users across apps and websites owned by third parties for advertising and measurement purposes through its AppTrackingTransparency (ATT) framework.
+
+As a result of these changes, advertisers running campaigns to people using iOS 14.5 or later devices will be affected by limitations on data sharing. The user can opt-out of the tracking.
+
+Therefore, when the app user clicks on one of the facebook ads the fbclid is not passed with the landing page URL. Before these updates, an fbclid parameter was passed with the URL, which is a random string of aphla-numaric characters, containing all the information about facebook ads, campaign, ad group etc.
+
+### Solution to the ATT
+
+There is no solution to fix the facebook ads reporting / conversion tracking on facebook ads manager. However we can add UTM paramters in the URL and view the report in UA or GA4. we can build custom reports in UA and GA4 to visualize which facebook ads are performing well.
+
+#### Custom Reports
+
+[how to build custom report for UA](/blog/google-analytics/custom-report-for-facebook-ads-in-ua)
+
+[how to build custom report for GA4](/blog/google-analytics/custom-report-for-facebook-ads-in-ga4)
+
+### UTM Code
 
 ```
 utm_source=FacebookAds&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{adset.name}}&utm_term={{ad.name}}
 
 ```
-
-![Facebook dynamic URL UTM parameters for iOS14 updates](/static/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates.png)
-
-## Table Of Content:
-
-0. [Example Cover Letter](#example-cover-letter)
-1. [Client Name](#client-name)
-2. [Summarizing the client issue](#summarizing-the-client-issue)
-3. [Mentioning the reasons for the problem](#mentioning-the-reasons-for-the-problem)
-4. [Providing the solution](#providing-the-solution)
-5. [Attaching a video](#attaching-a-video)
-6. [Talk about expertise and previous work](#talk-about-expertise-and-previous-work)
-7. [Expected time, access required and Budget](#expected-time-access-required-and-budget)
-8. [Reference to a similar Job](#reference-to-a-similar-job)
-9. [Downloadable PDF](#downloadable-pdf)
