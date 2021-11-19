@@ -81,7 +81,7 @@ print("Solution Set of the Matrix A for omega ",omega, " = ",phi)
 
 ### Downloadable Python File
 
-You can find the downloadable file [here](https://poction-blog.vercel.app/static/blog/static/blog/numerical-analysis/sor-python-algorithm.py)
+You can find the downloadable file <a href='https://poction-blog.vercel.app/static/blog/static/blog/numerical-analysis/sor-python-algorithm.py' download>here</a>
 
 ### Solution Set for Omega
 
