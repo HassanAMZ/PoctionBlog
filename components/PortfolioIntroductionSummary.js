@@ -4,7 +4,7 @@ export default function PortfolioIntroductionSummary() {
   return (
     <>
       <div className="grid justify-items-center">
-        <div className="floating w-80 m-4 col-start-1 col-end-1 row-start-1 row-end-2  sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-1">
+        <div className="floating w-64 m-4 col-start-1 col-end-1 row-start-1 row-end-2  sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-1">
           <Image
             layout="responsive"
             height={1000}
