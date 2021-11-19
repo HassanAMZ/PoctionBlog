@@ -1,26 +1,26 @@
 const siteMetadata = {
-  title: 'Poction',
+  title: 'ShahzadaAliHassan',
   author: 'Shahzada Ali Hassan',
-  headerTitle: 'Poction',
+  headerTitle: 'ShahzadaAliHassan',
 
-  description: 'Blogs and guides by Poction',
+  description: 'Blogs and guides by ShahzadaAliHassan',
   language: 'en-us',
-  siteUrl: 'https://poction.com',
-  siteRepo: 'https://github.com/HassanAMZ/PoctionBlog',
-  siteLogo: '/static/images/PoctionLogo.jpg',
+  siteUrl: 'https://ShahzadaAliHassan.com',
+  siteRepo: 'https://github.com/HassanAMZ/ShahzadaAliHassan',
+  siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/logo.png',
-  email: 'poctionblog@gmail.com',
+  email: 'ShahzadaAliHassan@gmail.com',
   github: 'https://github.com/HassanAMZ',
   twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com/poctionblog',
+  facebook: 'https://facebook.com/ShahzadaAliHassanblog',
   youtube: 'https://www.youtube.com/channel/UC8tapbraiwvk5nnQW0Eqh9g',
   linkedin: 'https://www.linkedin.com/in/hassanamz',
-  instagram: 'https://instagram.com/poctionblog',
+  instagram: 'https://instagram.com/ShahzadaAliHassanblog',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics or GoogleTagManager
-    plausibleDataDomain: 'poction.com', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    plausibleDataDomain: 'ShahzadaAliHassan.com', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
     googleTagManagerID: 'GTM-MCKP7JK', // e.g. GTM-MCKP7JK
   },

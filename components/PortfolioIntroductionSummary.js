@@ -10,7 +10,7 @@ export default function PortfolioIntroductionSummary() {
             height={1000}
             width={1000}
             src="/static/images/summaryPhoto.png"
-            alt="Poction"
+            alt="ShahzadaAliHassan"
           />
           <a className="hidden freepik" href="https://www.freepik.com/vectors/creative">
             Creative vector created by pikisuperstar - www.freepik.com
@@ -19,7 +19,7 @@ export default function PortfolioIntroductionSummary() {
         <div className="m-0 flex flex-col justify-center text-center col-start-1 col-end-1 row-start-2 row-end-3 sm:text-left sm:m-4 sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2">
           <div className="sm:mb-8">
             <h2 className="text-xl text-center sm:text-3xl sm:text-left">
-              Poction - Web & Server Analyst
+              ShahzadaAliHassan - Web & Server Analyst
             </h2>
             <span className="text-sm text-center sm:text-md sm:text-left">
               Plan, develop & Track
