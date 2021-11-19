@@ -26,7 +26,6 @@ This cover letter i use was inspired by a top-rated freelancer on Upwork, and [h
 6. [Talk about expertise and previous work](#talk-about-expertise-and-previous-work)
 7. [Expected time, access required and Budget](#expected-time-access-required-and-budget)
 8. [Reference to a similar Job](#reference-to-a-similar-job)
-9. [Downloadable PDF](#downloadable-pdf)
 
 ### Example Cover Letter:
 
@@ -113,7 +112,3 @@ This is the closing and here you want to reinforce the client to revisit your pr
 ```
 P.s. Be sure to check out my profile, one of my 5-Star reviews is from Paul, where I completed a job very similar to yours.
 ```
-
-### Downloadable PDF
-
-You Can download the sample PDF file from [here](https://poction-blog.vercel.app/static/blog/upwork/upwork-cover-letter-for-setting-up-dataLayer-in-bigcommerce-store-for-google-tag-manager.pdf).

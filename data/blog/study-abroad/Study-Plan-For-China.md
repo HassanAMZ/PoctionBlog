@@ -23,7 +23,6 @@ You can use this guide as a reference and put in your information and credential
 4. [Reasons for selecting Control Engineering](#reasons-for-selecting-control-engineering)
 5. [Reasons for selecting China](#reasons-for-selecting-china)
 6. [Career Objectives](#career-objectives)
-7. [Downloadable PDF](#downloadable-pdf)
 
 ### Academic Background
 
@@ -106,7 +105,3 @@ After getting some practical experience, I intend to pursue a doctoral degree as
 I hope my application will receive your favorable consideration and I will be happy to provide any other information that you may require. I am looking forward to your reply.
 
 Thank you
-
-### Downloadable PDF
-
-You Can download the sample PDF file from [here](https://poction-blog.vercel.app/static/blog/study-abroad/study-plan-for-china.pdf).
