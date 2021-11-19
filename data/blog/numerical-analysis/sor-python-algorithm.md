@@ -15,8 +15,7 @@ embedId: 'null'
 
 1. [Link to Github Repo](#link-to-github-repo)
 2. [Python Code](#python-code)
-3. [Downloadable Python File](#downloadble-python-file)
-4. [Solution Set for Omega](#solution-set-for-omega)
+3. [Solution Set for Omega](#solution-set-for-omega)
 
 ### Link to github Repo
 
@@ -78,11 +77,6 @@ phi = sor_solver(A, b, omega, initial_guess, residual_convergence)
 print("Solution Set of the Matrix A for omega ",omega, " = ",phi)
 
 ```
-
-### Downloadable Python File
-
-You can find the downloadable file
-<a href='/static/blog/static/blog/numerical-analysis/sor-python-algorithm.py' download>here</a>
 
 ### Solution Set for Omega
 
