@@ -30,7 +30,7 @@ export default function PortfolioIntroductionSummary() {
             analytics using Google Tag Manager Web and Server Containers.
           </p>
           <div className="mt-6 mb-4">
-            <Button href="/contact">Get in Touch</Button>
+            <Button href="/contact">Get in Contact</Button>
           </div>
         </div>
       </div>
