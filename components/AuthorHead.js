@@ -5,11 +5,8 @@ const AuthorHead = (props) => {
   return (
     <>
       <PortfolioIntroductionSummary />
-      <div>
-        <div className="p-2">
-          <SkillsGrid />
-        </div>
-      </div>
+
+      <SkillsGrid />
     </>
   )
 }

@@ -1,11 +1,11 @@
 import SkillDetails from '@/components/SkillDetails'
 const SkillsGrid = () => {
   const gridSpanning = {
-    gridTemplateColumns: 'repeat( auto-fit, minmax(200px, 1fr))',
+    gridTemplateColumns: 'repeat( auto-fit, minmax(180px, 1fr))',
   }
   return (
     <>
-      <div className="grid SkillsGrid gap-1  sm:gap-4 " style={gridSpanning}>
+      <div className="grid SkillsGrid gap-1 sm:gap-4 " style={gridSpanning}>
         <SkillDetails
           title="Facebook conversion API. "
           subTitle="Server tracking."
