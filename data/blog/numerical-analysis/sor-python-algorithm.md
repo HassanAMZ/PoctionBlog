@@ -6,13 +6,22 @@ tags: ['Numerical Analysis', 'SOR algorithem', 'Python']
 draft: false
 summary: In numerical linear algebra, the method of successive over-relaxation (SOR) is a variant of the Gauss–Seidel method for solving a linear system of equations, resulting in faster convergence. A similar method can be used for any slowly converging iterative process. Below is the Python Code for a 50x50 Matrix
 coverImage: '/static/blog/numerical-analysis/sor-python-algorithm.png'
-embedId: 'null'
+embedId: 'NVtcg99Vf2s'
 ---
 
-![SOR Python Algorithm](/static/blog/numerical-analysis/sor-python-algorithm.png)
+import YoutubeEmbed from '@/components/YoutubeEmbed'
+
+In numerical linear algebra, the method of successive over-relaxation (SOR) is a variant of the Gauss–Seidel method for solving a linear system of equations, resulting in faster convergence. A similar method can be used for any slowly converging iterative process. Below is the Python Code for a 50x50 Matrix.
+
+### Youtube Video
+
+<YoutubeEmbed embedId="NVtcg99Vf2s" />
+
+<!-- ![SOR Python Algorithm](/static/blog/numerical-analysis/sor-python-algorithm.png) -->
 
 ## Table Of Content:
 
+0. [Youtube Video](#youtube-video)
 1. [Link to Github Repo](#link-to-github-repo)
 2. [Python Code](#python-code)
 3. [Solution Set for Omega](#solution-set-for-omega)

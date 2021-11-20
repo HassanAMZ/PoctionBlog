@@ -35,24 +35,12 @@ export default function ContactLayout({ children, frontMatter }) {
               className="w-48 h-48 rounded-full"
             />
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
-            <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
-            <div className="text-gray-500 dark:text-gray-400">{company}</div>
-            <div className="flex pt-6 space-x-3">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="twitter" href={twitter} />
-              <SocialIcon kind="instagram" href={instagram} />
+            <div className="text-gray-500 text-center dark:text-gray-400">
+              {occupation}
+              {company}
             </div>
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2 flex flex-col items-center">
-            <div className="hidden p-6 space-x-3  sm:flex">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="twitter" href={twitter} />
-              <SocialIcon kind="instagram" href={instagram} />
-            </div>
             {siteMetadata.newsletter.provider !== '' && (
               <div className="flex items-center justify-center pt-4">
                 <NewsletterForm />

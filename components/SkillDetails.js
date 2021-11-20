@@ -17,9 +17,9 @@ const SkillDetails = ({ title, description, subTitle, colSpan, rowSpan }) => {
         }
       `}</style>
       <div
-        className={`SkillDetail p-4 mt-2 bg-green-100 text-black text-center rounded-lg dark:bg-green-700 dark:text-white sm:text-left`}
+        className={`SkillDetail p-2 mt-1 sm:mt-2 bg-green-100 text-black text-center rounded-lg dark:bg-green-700 dark:text-white sm:p-4 sm:text-left`}
       >
-        <h3 className="ml-2 mr-2 text-sm sm:text-lg SkillDetail_title">
+        <h3 className="ml-2 font-bold mr-2 text-lg sm:text-xl SkillDetail_title">
           {title}
           <span className="SkillDetail_subTitle">{subTitle}</span>
         </h3>
