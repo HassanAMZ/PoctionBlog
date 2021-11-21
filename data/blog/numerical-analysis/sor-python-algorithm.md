@@ -21,12 +21,18 @@ In numerical linear algebra, the method of successive over-relaxation (SOR) is a
 
 0. [Youtube Video](#youtube-video)
 1. [Link to Github Repo](#link-to-github-repo)
-2. [Python Code](#python-code)
-3. [Solution Set for Omega](#solution-set-for-omega)
+2. [Download Python File](#download-python-file)
+3. [Python Code](#python-code)
+4. [Solution Set for Omega](#solution-set-for-omega)
 
 ### Link to github Repo
 
 You can find the Github Repo link [here](https://github.com/HassanAMZ/numerical-analysis/blob/homeowrk001-SOR/SOR.py)
+
+### Download Python File
+
+You can find the Download Python File link
+<a href="/static/blog/numerical-analysis/sor-python-algorithm.py" download>download</a>
 
 ### Python Code
 
