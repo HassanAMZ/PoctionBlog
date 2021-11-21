@@ -17,8 +17,6 @@ In numerical linear algebra, the method of successive over-relaxation (SOR) is a
 
 <YoutubeEmbed embedId="NVtcg99Vf2s" />
 
-<!-- ![SOR Python Algorithm](/static/blog/numerical-analysis/sor-python-algorithm.png) -->
-
 ## Table Of Content:
 
 0. [Youtube Video](#youtube-video)
