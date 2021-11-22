@@ -92,7 +92,7 @@ export const BlogSEO = ({
   const featuredImages = imagesArr.map((img) => {
     return {
       '@type': 'ImageObject',
-      url: `${siteMetadata.siteUrl}${coverImage}`,
+      url: coverImage,
     }
   })
 
@@ -134,7 +134,7 @@ export const BlogSEO = ({
     description: summary,
   }
 
-  const twImageUrl = `${coverImage}?timeStampInSeconds=${timeStampInSeconds}`
+  const twImageUrl = coverImage
 
   return (
     <>
