@@ -6,6 +6,7 @@ const siteMetadata = {
   description: 'Blogs and guides by ShahzadaAliHassan',
   language: 'en-us',
   siteUrl: 'https://ShahzadaAliHassan.com',
+  siteDomain: 'ShahzadaAliHassan.com',
   siteRepo: 'https://github.com/HassanAMZ/ShahzadaAliHassan',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
