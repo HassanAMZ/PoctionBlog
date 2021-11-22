@@ -134,7 +134,7 @@ export const BlogSEO = ({
     description: summary,
   }
 
-  const twImageUrl = `${siteMetadata.siteUrl}${coverImage}?${timeStampInSeconds}`
+  const twImageUrl = `${coverImage}?timeStampInSeconds=${timeStampInSeconds}`
 
   return (
     <>
