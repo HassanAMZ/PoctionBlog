@@ -77,6 +77,8 @@ export const BlogSEO = ({
   images = [],
   coverImage,
 }) => {
+  const timeStampInSecond = new Date() / 1000
+  const timeStampInSeconds = timeStampInSecond.toFixed(0)
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
@@ -132,7 +134,7 @@ export const BlogSEO = ({
     description: summary,
   }
 
-  const twImageUrl = siteMetadata.siteUrl + coverImage
+  const twImageUrl = `${siteMetadata.siteUrl}${coverImage}?${timeStampInSeconds}`
 
   return (
     <>
