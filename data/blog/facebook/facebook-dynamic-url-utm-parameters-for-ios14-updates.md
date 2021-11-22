@@ -5,11 +5,11 @@ blogID: '00004'
 tags: ['facebook CAPI', 'utm parameters', 'user acquisition']
 draft: false
 summary: To track the traffic acquisition on facebook ads on google analytics for iOS14+ users. To track the performance of the facebook ads in UA or GA4 using custom reports and secondary dimensions.
-coverImage: '/static/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates.png'
+coverImage: '/static/blog/00004.png'
 embedId: 'null'
 ---
 
-![Facebook dynamic URL UTM parameters for iOS14 updates](/static/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates.png)
+![Facebook dynamic URL UTM parameters for iOS14 updates](/static/blog/00004.png)
 
 ## Table Of Content:
 

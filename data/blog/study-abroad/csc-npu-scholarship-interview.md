@@ -6,7 +6,7 @@ tags:
   ['Scholarship Interview', 'Chinese Scholarship Council', 'North Westren PolyTechnical University']
 draft: false
 summary: Interview Questions and Answers for Northwestern Polytechnical University Xi'an China for Chinese scholarship council 2021-2023, Masters Ecletcial engineering in control sciences and engineering .
-coverImage: '/static/blog/study-abroad/csc-npu-scholarship-interview.png'
+coverImage: '/static/blog/00003.png'
 embedId: 'DZCui2Ob9Pk'
 ---
 
