@@ -67,7 +67,16 @@ export const TagSEO = ({ title, description }) => {
   )
 }
 
-export const BlogSEO = ({ authorDetails, title, summary, date, lastmod, url, images = [] }) => {
+export const BlogSEO = ({
+  authorDetails,
+  title,
+  summary,
+  date,
+  lastmod,
+  url,
+  images = [],
+  coverImage,
+}) => {
   const router = useRouter()
   const publishedAt = new Date(date).toISOString()
   const modifiedAt = new Date(lastmod || date).toISOString()
@@ -123,7 +132,7 @@ export const BlogSEO = ({ authorDetails, title, summary, date, lastmod, url, ima
     description: summary,
   }
 
-  const twImageUrl = featuredImages[0].url
+  const twImageUrl = siteMetadata.siteUrl + coverImage
 
   return (
     <>
