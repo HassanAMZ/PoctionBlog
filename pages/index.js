@@ -4,9 +4,10 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-import Image from '@/components/Image'
+import SkillsGrid from '@/components/SkillsGrid'
+import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 import NewsletterForm from '@/components/NewsletterForm'
-import AuthorHead from '@/components/AuthorHead'
+
 import { useEffect } from 'react'
 
 const MAX_DISPLAY = 5
@@ -61,7 +62,9 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <AuthorHead />
+      <PortfolioIntroductionSummary />
+
+      <SkillsGrid />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">

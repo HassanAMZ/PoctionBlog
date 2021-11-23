@@ -41,13 +41,13 @@ const SkillsGrid = () => {
           colSpan="24"
           rowSpan="34"
         />
-        {/* <SkillDetails
+        <SkillDetails
           title="You're in good company. "
           subTitle=" Satisfied customers."
           description=""
           colSpan="14"
           rowSpan="45"
-        /> */}
+        />
       </div>
     </>
   )
