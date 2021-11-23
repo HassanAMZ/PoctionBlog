@@ -14,7 +14,7 @@ const siteMetadata = {
   email: 'ShahzadaAliHassan@gmail.com',
   github: 'https://github.com/HassanAMZ',
   twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com/ShahzadaAliHassanblog',
+  facebook: 'https://facebook.com/ShahzadaAliHassan',
   youtube: 'https://www.youtube.com/channel/UC8tapbraiwvk5nnQW0Eqh9g',
   linkedin: 'https://www.linkedin.com/in/hassanamz',
   instagram: 'https://instagram.com/ShahzadaAliHassanblog',
