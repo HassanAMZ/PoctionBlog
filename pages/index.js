@@ -63,7 +63,6 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <PortfolioIntroductionSummary />
-
       <SkillsGrid />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
@@ -79,7 +78,7 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags, coverImage } = frontMatter
             return (
-              <li key={slug} className="lg:py-12 md:py-6 sm:py-3">
+              <li key={slug} className="lg:py-6 md:py-6 sm:py-3">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
