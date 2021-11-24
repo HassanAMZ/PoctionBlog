@@ -21,7 +21,6 @@ embedId: 'null'
 
 ### Setting up the UTM Parameters in Facebook Ads Manager
 
-Before setting up a custom report for universal analytics, make sure you have
-<a href="/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates">added the UTM paramters on the facebook ads manager</a>
+Before setting up a custom report for universal analytics, make sure you have [added the UTM paramters on the facebook ads manager](https://shahzadaalihassan.com/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates)
 
 ### Soution to the ATT
