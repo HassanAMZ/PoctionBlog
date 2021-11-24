@@ -14,7 +14,3 @@ embedId: 'null'
 ## Table Of Content:
 
 0. [Origin of the issue](#origin-of-the-issue)
-
-### Origin of the issue
-
-### Soution to the ATT
