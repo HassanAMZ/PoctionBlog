@@ -79,7 +79,7 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags, coverImage } = frontMatter
             return (
-              <li key={slug} className="lg:py-12 md:py-6 sm:py-3">
+              <li key={slug} className="lg:py-6 md:py-6 sm:py-3">
                 <article>
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
@@ -89,18 +89,6 @@ export default function Home({ posts }) {
                         <time className="pb-3" dateTime={date}>
                           {formatDate(date)}
                         </time>
-
-                        {/* <Link href={`/blog/${slug}`}>
-                          <div className=" sm:pr-0 md:pr-0 lg:pr-5 sm:hidden md:hidden lg:hidden xl:block">
-                            <Image
-                              alt={title}
-                              src={coverImage}
-                              layout="responsive"
-                              width={544}
-                              height={306}
-                            />
-                          </div>
-                        </Link> */}
                       </dd>
                     </dl>
 
