@@ -10,7 +10,3 @@ embedId: 'null'
 ---
 
 ![Custom Report for facebook ads in UA](/static/blog/00005.png)
-
-## Table Of Content:
-
-0. [Origin of the issue](#origin-of-the-issue)
