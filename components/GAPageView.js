@@ -12,7 +12,7 @@ const GAPageView = ({ slug }) => {
   )
   const views = data?.pageViews || 0
   return (
-    <div xlassName="flex flex-row">
+    <div className="flex flex-row gap-2">
       <>
         <Eye />
       </>
