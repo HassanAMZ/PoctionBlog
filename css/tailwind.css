@@ -95,3 +95,14 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+/* borderColorGradient */
+.borderColorGradient {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,
+      rgba(20, 184, 166, var(--tw-text-opacity)),
+      rgba(0, 0, 0, 0)
+    )
+    1 100%;
+}

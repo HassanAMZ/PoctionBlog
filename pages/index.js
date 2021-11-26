@@ -4,11 +4,11 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-import SkillsGrid from '@/components/SkillsGrid'
 import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 import NewsletterForm from '@/components/NewsletterForm'
 import GAPageView from '@/components/GAPageView'
 import { useEffect } from 'react'
+import FeaturedPosts from '@/components/FeaturedPosts'
 
 const MAX_DISPLAY = 5
 
@@ -63,7 +63,7 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <PortfolioIntroductionSummary />
-
+      <FeaturedPosts posts={posts} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="py-6">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
@@ -74,21 +74,21 @@ export default function Home({ posts }) {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags, coverImage } = frontMatter
+            const { slug, date, title, summary, tags, coverImage, blogID } = frontMatter
             return (
-              <li key={slug} className=" lg:py-6 md:py-6 sm:py-3">
-                <article>
+              <li
+                key={slug}
+                className="rounded bg-gradient-to-r p-1 from-[#D8B4FE] to-[#818CF8] mb-4 "
+              >
+                <article className="rounded bg-white dark:bg-gray-900 p-2">
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-
-                      <dd className="flex flex-row justify-between xl:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time className="pb-3" dateTime={date}>
-                          {formatDate(date)}
-                        </time>
+                    <div>
+                      <div className="sr-only">Published on</div>
+                      <div className="flex flex-row justify-between sm:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <time dateTime={date}>{formatDate(date)}</time>
                         <GAPageView slug={slug} />
-                      </dd>
-                    </dl>
+                      </div>
+                    </div>
 
                     <div className="space-y-2 xl:col-span-3">
                       <div className="space-y-2">
