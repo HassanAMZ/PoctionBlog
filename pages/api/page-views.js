@@ -1,6 +1,6 @@
 import { google } from 'googleapis'
 
-const PageViews = async (req, res) => {
+export default async (req, res) => {
   const startDate = req.query.startDate || '2020-01-01'
   const slug = req.query.slug
 
@@ -32,12 +32,7 @@ const PageViews = async (req, res) => {
     return res.status(200).json({
       pageViews,
     })
-
-    res.status(200).json({
-      pageViews: 0,
-    })
   } catch (err) {
     return res.status(500).json({ error: err.message })
   }
 }
-export default PageViews
