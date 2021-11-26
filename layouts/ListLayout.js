@@ -1,6 +1,6 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
-import useSWR from 'swr'
+import GAPageView from '@/components/GAPageView'
 import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
@@ -90,15 +90,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags, coverImage, blogID } = frontMatter
-            const { data } = useSWR(
-              `/api/page-views?slug=/blog/${encodeURIComponent(slug)}`,
-              async (url) => {
-                const res = await fetch(url)
-                return res.json()
-              },
-              { revalidateOnFocus: false }
-            )
-            const views = data?.pageViews || 0
+
             return (
               <li key={slug} className="py-4">
                 <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
@@ -107,10 +99,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>{formatDate(date)}</time> &emsp;
                     </dd>
-
-                    <div> Views {views}</div>
                   </dl>
-
+                  <GAPageView slug={slug} />
                   <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">

@@ -7,7 +7,8 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import useSWR from 'swr'
+
+import GAPageView from '@/components/GAPageView'
 import { useEffect } from 'react'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
@@ -42,15 +43,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       },
     })
   }, [])
-  const { data } = useSWR(
-    `/api/page-views?slug=/blog/${encodeURIComponent(slug)}`,
-    async (url) => {
-      const res = await fetch(url)
-      return res.json()
-    },
-    { revalidateOnFocus: false }
-  )
-  const views = data?.pageViews || 0
+
   return (
     <SectionContainerPost>
       <BlogSEO
@@ -83,9 +76,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)} ||
-                      Views {views}
+                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
+                    &emsp;
+                    <GAPageView slug={slug} />
                   </dd>
                 </div>
               </dl>
