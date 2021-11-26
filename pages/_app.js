@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <meta
             name="google-site-verification"
-            content="s7T9ZCjd-3dRb1v4ju5Lwl6ndBZFEIiI4Ye8oV_MbW4"
+            content="LOmgcQtS3n4SzA1wUbtCUBeOyVp1Kq8d4XWHvWAf51Y"
           />
           <GoogleTagManagerScript />
           <MailChimpHeadCode />
