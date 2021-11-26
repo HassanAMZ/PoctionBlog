@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 export default function PortfolioIntroductionSummary() {
   return (
     <>
@@ -18,7 +17,14 @@ export default function PortfolioIntroductionSummary() {
           </h2>
           <div className="mb-2">
             Top Rated Freelancer at&nbsp;
-            <span className="font-bold ">Upwork</span>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.upwork.com/freelancers/~015b35831b56606433?utm_source=ShahzadaAliHassan&utm_medium=Organic&utm_campaign=ShahzadaAliHassanBlog&utm_term=ShahzadaAliHassan&utm_content=FreelancerAtUpwork"
+              className="font-bold "
+            >
+              Upwork
+            </a>
           </div>
           <p className="font-light text-gray-500  dark:text-gray-400">
             Helping students learn a freelancing. Teaching about web development, web analytics, and
