@@ -1,7 +1,7 @@
 import { google } from 'googleapis'
 
 export default async (req, res) => {
-  const startDate = req.query.startDate || '2020-01-01'
+  const startDate = req.query.startDate || '2021-01-01'
   const slug = req.query.slug
 
   try {
