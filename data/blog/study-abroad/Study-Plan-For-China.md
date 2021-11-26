@@ -2,7 +2,7 @@
 title: Study Plan For China
 date: '2021-06-10'
 blogID: '00002'
-tags: ['Study Plan', 'Chinese Scholarship Council', 'North Westren PolyTechnical University']
+tags: ['Study Abroad', 'Chinese Scholarship Council', 'North Western PolyTechnical University']
 draft: false
 summary: This content is from an actual study plan that I submitted to NPU (National Polytechnic University Xi’an) for my Masters in Control Sciences and Engineering in the 2021-2023 Session.
 coverImage: '/static/blog/00002.png'
@@ -10,7 +10,7 @@ coverImage: '/static/blog/00002.png'
 
 The study Plan must have the following seven sections to get approved by the university and Chinese Scholarship Council in China. I have written this blog as an example, the content used in this is from an actual study plan that I submitted to NPU (National Polytechnic University Xi’an) for my Masters in Control Sciences and Engineering in 2021-2023 Session.
 
-![Study Plan For China](/static/blog/00002.png)
+![Cover Image](/static/blog/00002.png)
 
 You can use this guide as a reference and put in your information and credentials and submit the Study Plan to your relevant university for admission. This Study plan has a 100% Admission Success Rate.
 

@@ -2,14 +2,14 @@
 title: Facebook dynamic URL UTM parameters for iOS14 updates
 date: '2021-11-17'
 blogID: '00004'
-tags: ['facebook CAPI', 'utm parameters', 'user acquisition']
+tags: ['facebook', 'utm parameters', 'server tracking']
 draft: false
-summary: To track the traffic acquisition on facebook ads on google analytics for iOS14+ users. To track the performance of the facebook ads in UA or GA4 using custom reports and secondary dimensions.
+summary: To track the traffic acquisition for facebook ads on google analytics for iOS14+ users. To track the performance of the facebook ads in UA or GA4 using custom reports and secondary dimensions.
 coverImage: '/static/blog/00004.png'
 embedId: 'null'
 ---
 
-![Facebook dynamic URL UTM parameters for iOS14 updates](/static/blog/00004.png)
+![Cover Image](/static/blog/00004.png)
 
 ## Table Of Content:
 
@@ -21,9 +21,7 @@ embedId: 'null'
 
 ### Origin of the issue
 
-Apple now requires apps in the App Store that engage in what Apple defines as "tracking" to obtain permission to "track" users across apps and websites owned by third parties for advertising and measurement purposes through its AppTrackingTransparency (ATT) framework.
-
-As a result of these changes, advertisers running campaigns to people using iOS 14.5 or later devices will be affected by limitations on data sharing. The user can opt-out of the tracking.
+As a result of iOS14 changes, advertisers running campaigns will be affected by limitations on data sharing. The user can opt-out or opt-in of the tracking, either way the source of the traffic is lost.
 
 Therefore, when the app user clicks on one of the facebook ads the fbclid is not passed with the landing page URL. Before these updates, an fbclid parameter was passed with the URL, which is a random string of aphla-numaric characters, containing all the information about facebook ads, campaign, ad group etc.
 
@@ -38,7 +36,7 @@ There is no solution to fix the facebook ads reporting / conversion tracking on 
 
 ### UTM Code
 
-We need to update the URL code for all the facebook ads we are on facebook ads manager. Copy the code below and paste it under facebook Campaign> Ad set> ad> Tracking code> URL parameters. Click on "Build a URL parameter" to make sure everything is fine.
+We need to update the URL code for all the facebook ads, we are running on facebook ads manager. Copy the code below and paste it under facebook Campaign> Ad set> ad> Tracking code> URL parameters. Click on "Build a URL parameter" to make sure everything is fine.
 
 ```
 utm_source=FacebookAds&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{adset.name}}&utm_term={{ad.name}}
