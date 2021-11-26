@@ -53,7 +53,14 @@ const FeaturedPosts = ({ posts }) => {
       }
     })
   })
-  return <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">{blogIDs}</div>
+  return (
+    <div>
+      <h1 className="text-3xl mb-4 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+        Featured Posts
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">{blogIDs}</div>
+    </div>
+  )
 }
 
 export default FeaturedPosts
