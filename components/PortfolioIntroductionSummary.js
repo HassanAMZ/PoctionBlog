@@ -9,12 +9,9 @@ export default function PortfolioIntroductionSummary() {
           <Image
             height={1000}
             width={1000}
-            src="/static/images/summaryPhoto.png"
+            src="/static/images/avatar.png"
             alt="ShahzadaAliHassan"
           />
-          <a className="hidden freepik" href="https://www.freepik.com/vectors/creative">
-            Creative vector created by pikisuperstar - www.freepik.com
-          </a>
         </div>
         <div className="m-0 flex mb-6 justify-center flex-col sm:items-start items-center text-center col-start-1 col-end-1 row-start-2 row-end-3 sm:text-left  sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2">
           <div className="sm:mb-6">
