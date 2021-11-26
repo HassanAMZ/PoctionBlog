@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import Button from '@/components/Button'
 
 export default function PortfolioIntroductionSummary() {
   return (
     <>
-      <div className="grid justify-items-center ">
-        <div className="floating w-auto m-4 col-start-1 col-end-1 row-start-1 row-end-2  sm:col-start-1 sm:col-end-2 sm:row-start-2 sm:row-end-1">
+      <div className="flex flex-col item-left sm:items-center sm:flex-row-reverse my-6 sm:my-3">
+        <div className="w-32 sm:w-64">
           <Image
             height={1000}
             width={1000}
@@ -13,22 +12,18 @@ export default function PortfolioIntroductionSummary() {
             alt="ShahzadaAliHassan"
           />
         </div>
-        <div className="m-0 flex mb-6 justify-center flex-col sm:items-start items-center text-center col-start-1 col-end-1 row-start-2 row-end-3 sm:text-left  sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2">
-          <div className="sm:mb-6">
-            <h2 className="text-xl text-center sm:text-3xl sm:text-left font-bold">
-              ShahzadaAliHassan - Web & Server Analyst
-            </h2>
-            <span className="text-sm text-center sm:text-md sm:text-left">
-              Plan, develop & Track
-            </span>
+        <div className="">
+          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Shahzada A. Hassan
+          </h2>
+          <div className="mb-2">
+            Top Rated Freelancer at&nbsp;
+            <span className="font-bold ">Upwork</span>
           </div>
-          <p className="text-sm text-center hidden sm:text-md sm:text-left sm:block">
-            Plan, develop and manage web tracking for Facebook, Google, Pinterest, HotJar and other
-            analytics using Google Tag Manager Web and Server Containers.
+          <p className="font-light text-gray-500  dark:text-gray-400">
+            Helping students learn a freelancing. Teaching about web development, web analytics, and
+            freelancing.
           </p>
-          <div className="mt-6 mb-4">
-            <Button href="/contact">Get in Contact</Button>
-          </div>
         </div>
       </div>
     </>

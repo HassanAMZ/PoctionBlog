@@ -7,6 +7,20 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontSize: {
+        xs: '.6rem',
+        sm: '.75rem',
+        tiny: '.675rem',
+        base: '0.75rem',
+        lg: '1.rem',
+        xl: '1.125rem',
+        '2xl': '1.25rem',
+        '3xl': '1.5rem',
+        '4xl': '1.75rem',
+        '5xl': '2rem',
+        '6xl': '3rem',
+        '7xl': '4rem',
+      },
       spacing: {
         '9/16': '56.25%',
       },
