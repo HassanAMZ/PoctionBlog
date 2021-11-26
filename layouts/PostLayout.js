@@ -23,6 +23,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
 
   useEffect(() => {
+    function readingTime() {
+      const text = document.getElementById('singleBlogPost').innerText
+      const wpm = 225
+      const words = text.trim().split(/\s+/).length
+      const time = Math.ceil(words / wpm)
+      document.getElementById('time').innerText = time
+    }
+    readingTime()
     let dataLayer = window.dataLayer || []
     dataLayer.push({
       event: 'CustomEvent',
@@ -52,37 +60,22 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         {...frontMatter}
       />
       <ScrollTopAndComment />
-      <article>
+
+      <article id="singleBlogPost">
         <div>
           <header className="pt-6 ">
             <div className="space-y-1 text-center">
-              {/* <dl className="space-y-10">
-                <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <Image
-                      alt={title}
-                      src={coverImage}
-                      className="object-cover object-center lg:h-48 md:h-36"
-                      layout="responsive"
-                      width={544}
-                      height={306}
-                    />
-                  </dd>
+              <div>
+                <div className="flex flex-row items-center justify-between  text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <p>
+                    <span id="time"></span> minute read
+                  </p>
+                  <time dateTime={date}>
+                    {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                  </time>
+                  <GAPageView slug={slug} />
                 </div>
-              </dl> */}
-              <dl className="space-y-10">
-                <div>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                    </time>
-                    &emsp;
-                    <GAPageView slug={slug} />
-                  </dd>
-                </div>
-              </dl>
+              </div>
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
