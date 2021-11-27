@@ -27,12 +27,12 @@ In numerical linear algebra, the method of successive over-relaxation (SOR) is a
 
 ### Link to github Repo
 
-You can find the Github Repo link [here](https://github.com/HassanAMZ/numerical-analysis/blob/homeowrk001-SOR/SOR.py)
+You can find the Github Repo link [here](https://github.com/HassanAMZ/numerical-analysis/)
 
 ### Download Python File
 
 You can find the Download Python File link
-<a href="/static/blog/00007.py" download>download</a>
+<a href="/static/blog/00007_1.py" download>download</a>
 
 ### Python Code
 
