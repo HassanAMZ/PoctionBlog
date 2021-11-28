@@ -4,10 +4,12 @@ date: '2021-11-28'
 blogID: '00006'
 tags: ['Google analytics', 'custom reports', 'facebook CAPI']
 draft: false
-summary: To track the traffic acquisition on facebook ads on google analytics for iOS14+ users. This will help the advertisers see the performance of their ads in GA4.
+summary: To track the traffic acquisition for Facebook ads on GA4 for iOS14+ users using custom reports in google analytics 4.
 coverImage: '/static/blog/00006.png'
 embedId: 'null'
 ---
+
+To track the traffic acquisition for Facebook ads on GA4 for iOS14+ users using custom reports in google analytics 4, we will walk through the steps to create a custom report and filter the data to view the trasnactions and analyze the performance of the FB Ad campaigns.
 
 ![Cover Image](/static/blog/00006.png)
 
