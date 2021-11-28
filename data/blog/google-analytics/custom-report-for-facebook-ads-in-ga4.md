@@ -1,20 +1,59 @@
 ---
 title: Custom Report for facebook ads in GA4
-date: '2021-11-18'
+date: '2021-11-28'
 blogID: '00006'
 tags: ['Google analytics', 'custom reports', 'facebook CAPI']
-draft: true
-summary: To track the traffic acquisition on facebook ads on google analytics for iOS14+ users. This will help the advertisers see the performance of their ads in UA or GA4.
+draft: false
+summary: To track the traffic acquisition on facebook ads on google analytics for iOS14+ users. This will help the advertisers see the performance of their ads in GA4.
 coverImage: '/static/blog/00006.png'
 embedId: 'null'
 ---
 
-![Custom Report for facebook ads in GA4](/static/blog/00006.png)
+![Cover Image](/static/blog/00006.png)
 
 ## Table Of Content:
 
-0. [Origin of the issue](#origin-of-the-issue)
+1. [Origin of the issue](#origin-of-the-issue)
+   - [Facebook dynamic URL UTM parameters for iOS14 updates](#origin-of-the-issue)
+   - [Google Ads URL suffixes for dynamic UTM parameters](#origin-of-the-issue)
+2. [Custom GA4 Report](#custom-ga4-report)
+3. [Dimensions and Metrics](#dimensions-and-metrics)
+4. [Rows, Columns and Values](#rows-columns-and-values)
+5. [Filters](#filters)
+6. [Final Report](#final-report)
 
 ### Origin of the issue
 
-### Soution to the ATT
+As a result of iOS14 changes, advertisers running campaigns will be affected by limitations on data sharing. The user can opt-out or opt-in of the tracking, either way the source of the traffic is lost. To setup the UTM parameters on facebook, follow the link:
+
+1. [Facebook dynamic URL UTM parameters for iOS14 updates](/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates)
+2. [Google Ads URL suffixes for dynamic UTM parameters](/blog/google-ads/google-ads-url-suffixes-utm-for-dynamic-paramters)
+
+### Custom GA4 Report
+
+Once, the UTMs has been published in the facebook ads manager, it takes google aanlytics 24hours to process the data into report. however we can process and setup the setup the reports. Go to Explore> Free Form Reports.
+
+![Picture of free form report](/static/blog/00006_1.png)
+
+### Dimensions and Metrics
+
+Under the first column of VARIABLES, click on the + icon next to DIMENSIONS to add the "source", "medium" and "campaign" DIMENSIONS to the report. To add METRICS to the report click on the + icon next to METRICS to add the "sessions" and "transactions".
+
+![Picture of Dimensions and Metrics](/static/blog/00006_2.png)
+
+### Rows, Columns and Values
+
+Under the seoond column of Tab Settings, click on the "drop or select dimensions" under ROWS to add the "source", "medium" and "campaign" DIMENSIONS to the report. To add METRICS to the report, click on the "drop or select meterics" under Values to add the "sessions" and "transactions".
+![Picture of Rows, Columns, Values, and Filters](/static/blog/00006_3.png)
+
+### Filters
+
+To only see the facebook sales, click on the "drop or select dimension or meterics" under Filters to add the "source", "exactly matches", "FacebookAds" that will only show the values from the source [setup in this article](/blog/facebook/facebook-dynamic-url-utm-parameters-for-ios14-updates).
+
+![Picture of Rows, Columns, Values, and Filters](/static/blog/00006_4.png)
+
+### Final Report
+
+Once everything is setup, wait for 24hours for some data to be processed and then you can check the performce of the Facebook Ads campaign in GA4.
+
+![Picture of Final Report](/static/blog/00006_5.png)
