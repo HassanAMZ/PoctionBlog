@@ -23,7 +23,7 @@ In numerical analysis, predictor–corrector methods belong to a class of algori
 1. [Link to Github Repo](#link-to-github-repo)
 2. [Download Python File](#download-python-file)
 3. [Python Code](#python-code)
-4. [Grapgh Plots](#grapgh-plots)
+4. [Graph Plots](#graph-plots)
 
 ### Question Statement
 
@@ -98,6 +98,6 @@ ax2.set_ylabel('Z')
 plt.show()
 ```
 
-### Grapgh Plots
+### Graph Plots
 
-![Grapgh Plots](/static/blog/00011_2.png)
+![Graph Plots](/static/blog/00011_2.png)
