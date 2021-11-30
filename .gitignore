@@ -19,6 +19,7 @@ public/sitemap.xml
 *.xml
 # rss feed
 /public/feed.xml 
+/public/coursefeed.xml 
 
 # misc
 .DS_Store
