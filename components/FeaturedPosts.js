@@ -4,7 +4,7 @@ import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
 
 const FeaturedPosts = ({ posts }) => {
-  let featuredBlogIDs = ['00003', '00004', '00009']
+  let featuredBlogIDs = ['00003', '00008', '00009']
   let blogIDs = []
   posts.map((frontMatter, index) => {
     const { slug, date, title, summary, tags, blogID } = frontMatter
