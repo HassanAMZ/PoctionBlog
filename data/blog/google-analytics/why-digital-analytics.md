@@ -1,10 +1,10 @@
 ---
-title: Why digital analytics
+title: Why digital analytics?
 date: '2021-12-02'
 blogID: '00012'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
-draft: true
-summary:
+draft: false
+summary: We have the concept of a purchasing funnel in marketing. Within the funnel, there are various stages that characterize consumer interactions. Let's start with a definition of "digital analytics" and why it's necessary.
 coverImage: '/static/blog/00012.png'
 embedId: 'null'
 ---
