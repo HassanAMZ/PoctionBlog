@@ -21,7 +21,7 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
-
+  const { avatar, name, instagram } = authorDetails[0]
   useEffect(() => {
     function readingTime() {
       const text = document.getElementById('singleBlogPost').innerText
@@ -63,21 +63,37 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
 
       <article id="singleBlogPost">
         <div>
-          <header>
-            <div className="space-y-1 text-center">
-              <div>
-                <div className="flex flex-row items-center justify-between  text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                  <p>
-                    <span id="time"></span> minute read
-                  </p>
+          <header className="flex flex-col items-left">
+            <div className="py-3 sm:py-5">
+              <PageTitle>{title}</PageTitle>
+            </div>
+            <div className=" flex flex-row gap-2 items-left text-gray-700 text-base dark:text-gray-400">
+              <Link href={instagram}>
+                <Image
+                  src={avatar}
+                  width="38px"
+                  height="38px"
+                  alt="avatar"
+                  className="w-8 h-8 rounded-full"
+                />
+              </Link>
+              <div className="flex flex-col text-xs sm:text-base justify-center">
+                <div className="flex flex-row gap-1 sm:justify-between items-center">
+                  <Link href={instagram}>
+                    <div>{name}</div>
+                  </Link>
+                  {`  •  `}
                   <time dateTime={date}>
                     {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                   </time>
+                </div>
+                <div className="flex flex-row gap-1 items-center">
+                  <div>
+                    <span id="time"></span> min read
+                  </div>
+                  {` • `}
                   <GAPageView slug={slug} />
                 </div>
-              </div>
-              <div className="pt-4">
-                <PageTitle>{title}</PageTitle>
               </div>
             </div>
           </header>
@@ -85,46 +101,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             className="divide-y divide-gray-200  dark:divide-gray-700 "
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <div className="py-6">
-              <div className="sr-only">Authors</div>
-              <div>
-                <ul className="flex justify-center space-x-8  ">
-                  {authorDetails.map((author) => (
-                    <li className="flex items-center space-x-2" key={author.name}>
-                      {author.avatar && (
-                        <Image
-                          src={author.avatar}
-                          width="38px"
-                          height="38px"
-                          alt="avatar"
-                          className="w-10 h-10 rounded-full"
-                        />
-                      )}
-                      <div className="text-sm flex flex-col font-medium leading-5 whitespace-nowrap">
-                        <div className="sr-only">Name</div>
-                        <div className="text-gray-900 dark:text-gray-100">{author.name}</div>
-                        <div className="sr-only">Instagram</div>
-                        <div>
-                          {author.instagram && (
-                            <Link
-                              href={author.instagram}
-                              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                            >
-                              {author.instagram.replace('https://instagram.com/', '@')}
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 ">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none text-base">
+              <div className="py-6 prose dark:prose-dark max-w-none text-left  text-sm sm:text-base">
                 {children}
               </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+              <div className="py-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
                 </Link>

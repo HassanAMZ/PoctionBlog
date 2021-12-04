@@ -6,7 +6,7 @@ tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
 summary: In this section, we will discuss how Google Analytics works and how to setup a GA account. Universal analytics tracking code, overview of reporting and processing.
 coverImage: '/static/blog/00013.png'
-embedId: 'null'
+embedId: 'null '
 ---
 
 ## The procedure for gathering data for analytics

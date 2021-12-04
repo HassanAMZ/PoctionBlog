@@ -13,12 +13,9 @@ const GAPageView = ({ slug }) => {
   const views = data?.pageViews || 0
   return (
     <>
-      <div className="flex flex-row gap-2">
-        <>
-          <Eye />
-        </>
-        <div className="text-gray-900 dark:text-gray-100">{views}</div>
-      </div>
+      {/* <Eye /> */}
+
+      <div>{views} views</div>
     </>
   )
 }

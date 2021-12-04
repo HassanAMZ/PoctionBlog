@@ -27,7 +27,7 @@ export default function PortfolioIntroductionSummary() {
             </a>
           </div>
           <p className="font-light text-gray-500  dark:text-gray-400">
-            Helping students learn a freelancing. Teaching about web development, web analytics, and
+            Helping students learn freelancing. Teaching about web development, web analytics, and
             freelancing.
           </p>
         </div>
