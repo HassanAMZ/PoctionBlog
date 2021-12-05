@@ -63,7 +63,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
 
       <article id="singleBlogPost">
         <div>
-          <header className="pt-6 ">
+          <header>
             <div className="space-y-1 text-center">
               <div>
                 <div className="flex flex-row items-center justify-between  text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -76,18 +76,18 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <GAPageView slug={slug} />
                 </div>
               </div>
-              <div>
+              <div className="pt-4">
                 <PageTitle>{title}</PageTitle>
               </div>
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200  dark:divide-gray-700 "
+            className="divide-y divide-gray-200  dark:divide-gray-700 "
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <dl className="pt-6 pb-10 ">
-              <dt className="sr-only">Authors</dt>
-              <dd>
+            <div className="py-6">
+              <div className="sr-only">Authors</div>
+              <div>
                 <ul className="flex justify-center space-x-8  ">
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-x-2" key={author.name}>
@@ -100,11 +100,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                           className="w-10 h-10 rounded-full"
                         />
                       )}
-                      <dl className="text-sm font-medium leading-5 whitespace-nowrap">
-                        <dt className="sr-only">Name</dt>
-                        <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
-                        <dt className="sr-only">Instagram</dt>
-                        <dd>
+                      <div className="text-sm flex flex-col font-medium leading-5 whitespace-nowrap">
+                        <div className="sr-only">Name</div>
+                        <div className="text-gray-900 dark:text-gray-100">{author.name}</div>
+                        <div className="sr-only">Instagram</div>
+                        <div>
                           {author.instagram && (
                             <Link
                               href={author.instagram}
@@ -113,15 +113,17 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                               {author.instagram.replace('https://instagram.com/', '@')}
                             </Link>
                           )}
-                        </dd>
-                      </dl>
+                        </div>
+                      </div>
                     </li>
                   ))}
                 </ul>
-              </dd>
-            </dl>
+              </div>
+            </div>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 ">
-              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
+              <div className="pt-10 pb-8 prose dark:prose-dark max-w-none text-base">
+                {children}
+              </div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
