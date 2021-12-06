@@ -2,7 +2,7 @@ import Image from 'next/image'
 export default function PortfolioIntroductionSummary() {
   return (
     <>
-      <div className="flex flex-col item-left sm:items-center sm:flex-row-reverse my-6 sm:my-3">
+      <div className="flex flex-col item-left sm:items-center sm:flex-row-reverse py-2">
         <div className="w-32 sm:w-64">
           <Image
             height={1000}
@@ -26,7 +26,7 @@ export default function PortfolioIntroductionSummary() {
               Upwork
             </a>
           </div>
-          <p className="font-light text-gray-500  dark:text-gray-400">
+          <p className="font-light text-gray-500  dark:text-gray-400 text-sm sm:text-base">
             Helping students learn freelancing. Teaching about web development, web analytics, and
             freelancing.
           </p>

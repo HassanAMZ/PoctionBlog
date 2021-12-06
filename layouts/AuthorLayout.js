@@ -26,10 +26,12 @@ export default function AuthorLayout({ children, frontMatter }) {
           </h1>
         </div>
         <div className="items-start space-y-2">
-          <div className="flex flex-col items-center py-6 space-x-2">
+          <div className="flex flex-col items-center space-x-2">
             <PortfolioIntroductionSummary />
           </div>
-          <div className="prose dark:prose-dark max-w-none sm:text-justify">{children}</div>
+          <div className="prose dark:prose-dark max-w-none sm:text-justify text-sm sm:text-base">
+            {children}
+          </div>
         </div>
       </div>
     </>
