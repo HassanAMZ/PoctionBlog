@@ -1,11 +1,11 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import GAPageView from '@/components/GAPageView'
-import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 import { useEffect } from 'react'
+
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
@@ -57,7 +57,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <div className="pt-6 pb-8 space-y-2 md:space-y-5">
+      <div className="py-6 space-y-2 md:space-y-5">
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
           {title}
         </h1>
