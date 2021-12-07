@@ -35,7 +35,7 @@ There is no solution to fix the Google ads reporting / conversion tracking on Go
 We need to update the URL code for all the google ads, we are running on google ads manager. Copy the code below and paste it under Google Campaign> Settings> Additional Settings> Campaign URL options> Final URL Suffix. Click on "TEST" to make sure everything is fine.
 
 ```
-utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_content={adgroupid}&utm_term={keyword}
+{lpurl}?utm_placement={ifcontent:{placement}}&utm_device={device}-{devicemodel}&utm_keyword={keyword}&utm_matchtype={matchtype}&utm_network={network}&utm_sourceid={sourceid}&utm_medium=cpc&utm_source=google&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}&v2={targetid}&v3={gclid}
 
 ```
 
