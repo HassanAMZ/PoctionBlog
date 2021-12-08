@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 4: How to set up account views with filters'
+title: '[Unit 1] Lesson 4: How to set up account views with filters'
 date: '2021-12-09'
 blogID: '00015'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']

@@ -1,5 +1,5 @@
 ---
-title: 'Lesson 3: Google Analytics setup'
+title: '[Unit 1] Lesson 3: Google Analytics setup'
 date: '2021-12-06'
 blogID: '00014'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
