@@ -1,5 +1,5 @@
 ---
-title: '[Unit 1] Lesson 2: How Google Analytics works?'
+title: '[Unit 1] - Lesson 2: How Google Analytics works?'
 date: '2021-12-05'
 blogID: '00013'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']

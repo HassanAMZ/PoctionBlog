@@ -1,5 +1,5 @@
 ---
-title: '[Unit 1] Lesson 1: Why digital analytics?'
+title: '[Unit 1] - Lesson 1: Why digital analytics?'
 date: '2021-12-02'
 blogID: '00012'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
