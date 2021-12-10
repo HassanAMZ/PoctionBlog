@@ -110,4 +110,4 @@ Thank you
 ### Download PDF File
 
 You can find the Download PDF File link
-<a href="/static/blog/study-abroad/study-plan-for-china.pdf" download>download</a>
+<a href="/static/blog/00002_1.pdf" download>download</a>

@@ -117,4 +117,4 @@ P.s. Be sure to check out my profile, one of my 5-Star reviews is from Paul, whe
 ### Download PDF File
 
 You can find the Download PDF File link
-<a href="/static/blog/upwork/upwork-cover-letter-for-setting-up-dataLayer-in-bigcommerce-store-for-google-tag-manager.pdf" download>download</a>
+<a href="/static/blog/00001_1.pdf" download>download</a>
