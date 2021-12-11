@@ -4,7 +4,7 @@ date: '2021-12-09'
 blogID: '00015'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
-summary:
+summary: You can create several "views" of the data you've collected in Google Analytics. Within each view, you can apply filters to select what data will be available. Different views might help you focus on subsets of data or grant access to specific views to other people.
 coverImage: '/static/blog/00015.png'
 embedId: 'null'
 ---
