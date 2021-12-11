@@ -64,10 +64,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <article id="singleBlogPost">
         <div>
           <header className="flex flex-col items-left">
-            <div className="py-3 sm:py-5">
+            <div className="pb-3 ">
               <PageTitle>{title}</PageTitle>
             </div>
-            <div className=" flex flex-row gap-2 items-left text-gray-700 text-base dark:text-gray-400">
+            <div className=" flex flex-row gap-2 items-left text-gray-700 pb-3 text-base dark:text-gray-400">
               <Link href={instagram}>
                 <Image
                   src={avatar}
@@ -95,7 +95,16 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <GAPageView slug={slug} />
                 </div>
               </div>
-            </div>
+            </div>{' '}
+            {tags && (
+              <div>
+                <div className="flex flex-wrap">
+                  {tags.map((tag) => (
+                    <Tag key={tag} text={tag} />
+                  ))}
+                </div>
+              </div>
+            )}
           </header>
           <div
             className="divide-y divide-gray-200  dark:divide-gray-700 "
@@ -116,18 +125,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </div>
             <footer>
               <div className="text-sm font-medium leading-5 divide-gray-200  dark:divide-gray-700">
-                {tags && (
-                  <div className="py-4">
-                    <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                      Tags
-                    </h2>
-                    <div className="flex flex-wrap">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
-                      ))}
-                    </div>
-                  </div>
-                )}
                 {(next || prev) && (
                   <div className="flex justify-between py-4 ">
                     {prev && (

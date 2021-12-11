@@ -4,10 +4,12 @@ date: '2021-12-09'
 blogID: '00015'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
-summary: You can create several "views" of the data you've collected in Google Analytics. Within each view, you can apply filters to select what data will be available. Different views might help you focus on subsets of data or grant access to specific views to other people.
+summary: You can create several "views" of the data you've collected in Google Analytics. Within each view, you can apply filters to select what data will be available.
 coverImage: '/static/blog/00015.png'
 embedId: 'null'
 ---
+
+You can create several "views" of the data you've collected in Google Analytics. Within each view, you can apply filters to select what data will be available. Different views might help you focus on subsets of data or grant access to specific views to other people.
 
 ![Cover Image](/static/blog/00015.png)
 
@@ -118,4 +120,5 @@ The filter is now applied to the "Master View," as you can see.
 
 It's worth noting that if you apply several filters to a view, they'll be applied in the order in which they appear in your filter settings. As a result, if you have two filters, the data will go through the first one before moving on to the second. As a result, pay attention to the sequence in which you apply your filters.
 
-It's that simple to create or add predefined filters to views to ensure you're gathering and safeguarding the information you require.
+It's that easy to create or add predefined filters to views to guarantee you're collecting and securing the data you need.
+You will not be able to recover any data that was filtered out or reprocess historical data from before the filter was applied once you have applied a filter on data that you have collected in a view. So make sure you test any data you want to filter first in your Test view.
