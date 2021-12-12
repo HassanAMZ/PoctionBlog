@@ -1,13 +1,15 @@
 ---
-title: understanding-overview-reports
+title: '[Unit 2] - Lesson 2: Understanding overview reports'
 date: '2021-12-01'
 blogID: '00017'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: true
-summary:
+summary: 'There are two kinds of reports in Google Analytics: “Overview” reports and “Full” reports. Let’s first walk through a guided tour of the Audience Overview report in Universal analytics [UA].'
 coverImage: '/static/blog/00017.png'
 embedId: 'null'
 ---
+
+There are two kinds of reports in Google Analytics: “Overview” reports and “Full” reports. Let’s first walk through a guided tour of the Audience Overview report.
 
 ![Cover Image](/static/blog/00017.png)
 
