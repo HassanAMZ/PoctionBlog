@@ -9,15 +9,15 @@ coverImage: '/static/blog/00016.png'
 embedId: 'null'
 ---
 
-![Cover Image](/static/blog/00016.png)
+## Welcome to a tour of the Account/Property/View switcher in the Google Analytics interface.
 
 Now that you know how Google Analytics works, let’s take a guided tour of the interface.
 
-## Welcome to a tour of the Account/Property/View switcher in the Google Analytics interface.
+![Cover Image](/static/blog/00016.png)
 
-### If you have numerous accounts, properties, or views set up,
+### If you have numerous accounts, properties, or views set up
 
-you can easily switch between them by selecting the pulldown menu in the upper-left corner that contains the title of your View.
+You can easily switch between them by selecting the pulldown menu in the upper-left corner that contains the title of your View.
 
 ![Explanation Picture](/static/blog/00016_1.png)
 
