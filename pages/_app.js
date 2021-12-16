@@ -17,15 +17,19 @@ export default function App({ Component, pageProps }) {
             name="google-site-verification"
             content="LOmgcQtS3n4SzA1wUbtCUBeOyVp1Kq8d4XWHvWAf51Y"
           />
-
+          <script
+            data-ad-client="ca-pub-1593692039645752"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          ></script>
           <GoogleTagManagerScript />
           <MailChimpHeadCode />
         </Head>
-        <Script
+        {/* <Script
           data-ad-client="ca-pub-1593692039645752"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        />
+        /> */}
         <LayoutWrapper>
           <Component {...pageProps} />
         </LayoutWrapper>
