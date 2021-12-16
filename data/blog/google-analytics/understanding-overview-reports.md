@@ -13,7 +13,7 @@ There are two kinds of reports in Google Analytics: “Overview” reports and �
 
 ![Cover Image](/static/blog/00017.png)
 
-### range of dates
+### Range of dates
 
 Every report has a date range at the top. You can use this to specify the time frame over which you want to study report data. To use the date range selection, click the date range.
 

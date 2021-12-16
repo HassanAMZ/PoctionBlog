@@ -1,6 +1,6 @@
 ---
 title: '[Unit 2] - Lesson 1: Navigating Google Analytics'
-date: '2021-12-16'
+date: '2021-12-15'
 blogID: '00016'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
