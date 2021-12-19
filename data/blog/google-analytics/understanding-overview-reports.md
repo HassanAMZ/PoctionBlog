@@ -1,6 +1,6 @@
 ---
 title: '[Unit 2] - Lesson 2: Understanding overview reports'
-date: '2021-12-16'
+date: '2021-12-15'
 blogID: '00017'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false

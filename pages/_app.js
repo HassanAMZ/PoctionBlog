@@ -25,11 +25,6 @@ export default function App({ Component, pageProps }) {
           <GoogleTagManagerScript />
           <MailChimpHeadCode />
         </Head>
-        {/* <Script
-          data-ad-client="ca-pub-1593692039645752"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        /> */}
         <LayoutWrapper>
           <Component {...pageProps} />
         </LayoutWrapper>
