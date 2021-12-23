@@ -1,6 +1,6 @@
 ---
 title: '[Unit 2] - Lesson: 4: How to share Reports'
-date: '2021-12-19'
+date: '2021-12-18'
 blogID: '00019'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
