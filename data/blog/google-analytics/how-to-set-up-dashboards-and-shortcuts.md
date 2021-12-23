@@ -1,6 +1,6 @@
 ---
 title: '[Unit 2] - Lesson 5: How to Set Up Dashboard and Shortcuts'
-date: '2021-12-20'
+date: '2021-12-19'
 blogID: '00020'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
