@@ -6,7 +6,7 @@ tags: ['Numerical Analysis', 'Eular Method ', 'Python']
 draft: false
 summary: In Numerical Analysis, the Euler method (also called forward Euler method) is a first-order numerical procedure for solving ordinary differential equations (ODEs) with a given initial value. Below is the python code for the Forward Eular method.
 coverImage: '/static/blog/00010.png'
-embedId: 'xP7YBWlOKHA'
+embedId: 'kDfBqaEBjpg'
 ---
 
 import YoutubeEmbed from '@/components/YoutubeEmbed'
@@ -15,7 +15,7 @@ In Numerical Analysis, the Euler method (also called forward Euler method) is a 
 
 ### Youtube Video
 
-<YoutubeEmbed embedId="xP7YBWlOKHA" />
+<YoutubeEmbed embedId="kDfBqaEBjpg" />
 
 ## Table Of Content:
 
