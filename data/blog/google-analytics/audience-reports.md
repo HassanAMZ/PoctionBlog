@@ -4,7 +4,7 @@ date: '2021-12-20'
 blogID: '00021'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
-summary: Some of the most useful reports in Google Analytics are Audience reports, which offer information about the users visiting your website.
+summary: Some of the most useful reports in Google Analytics are Audience reports, which offer information about the users visiting your website. Lets understand the Universal Analytics Audiance Reports.
 coverImage: '/static/blog/00021.png'
 embedId: 'null'
 ---
