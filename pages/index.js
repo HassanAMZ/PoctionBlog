@@ -8,16 +8,22 @@ import NewsletterForm from '@/components/NewsletterForm'
 import GAPageView from '@/components/GAPageView'
 import { useEffect } from 'react'
 import FeaturedPosts from '@/components/FeaturedPosts'
+import ListLayout from '@/layouts/ListLayout'
 
+export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
-
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
+  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE)
+  const pagination = {
+    currentPage: 1,
+    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
+  }
 
-  return { props: { posts } }
+  return { props: { initialDisplayPosts, posts, pagination } }
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, initialDisplayPosts, pagination }) {
   useEffect(() => {
     const [
       allBlogPostIDs,
@@ -63,70 +69,13 @@ export default function Home({ posts }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
 
       <FeaturedPosts posts={posts} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="py-6">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg text-gray-500 dark:text-gray-400">{siteMetadata.description}</p>
-        </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags, coverImage, blogID } = frontMatter
-            return (
-              <li
-                key={slug}
-                className="rounded bg-gradient-to-r p-1 from-[#D8B4FE] to-[#818CF8] mb-4 "
-              >
-                <article className="rounded bg-white dark:bg-gray-900 p-2">
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                    <div>
-                      <div className="sr-only">Published on</div>
-                      <div className="flex flex-row justify-between sm:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date)}</time>
-                        <GAPageView slug={slug} />
-                      </div>
-                    </div>
+      <ListLayout
+        posts={posts}
+        initialDisplayPosts={initialDisplayPosts}
+        pagination={pagination}
+        title="All Posts"
+      />
 
-                    <div className="space-y-2 xl:col-span-3">
-                      <div className="space-y-2">
-                        <div>
-                          <h2 className="text-xl font-bold tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap ">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className=" text-sm text-gray-500 max-w-none dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
