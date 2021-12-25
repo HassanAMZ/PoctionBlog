@@ -14,7 +14,7 @@ const LayoutWrapper = ({ children }) => {
       <div className="flex flex-col justify-between h-screen">
         <header
           style={{ display: 'flex' }}
-          className="flex-row justify-between items-center  sm:py-10 py-2"
+          className="flex-row justify-between items-center  sm:pt-10 py-5"
         >
           <div className="hidden sm:block">
             {headerNavLinks.map((link) => (
