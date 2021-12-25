@@ -9,11 +9,9 @@ coverImage: '/static/blog/00021.png'
 embedId: 'null'
 ---
 
-Some of the most useful reports in Google Analytics are Audience reports, which offer information about the users visiting your website.
-
 ![Cover Image](/static/blog/00021.png)
 
-### Overview of audience reports
+## Overview of audience reports
 
 Audience reports can be found in the left-hand navigation under "Audience." These reports can help you better understand your users' characteristics. This can contain information such as the nations they're from, the languages they speak, and the technology they're using to visit your website. However, it can also include information such as their age and gender, as well as their engagement and loyalty, as well as some of their interests.
 
