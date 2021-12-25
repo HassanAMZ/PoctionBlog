@@ -4,7 +4,6 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 import NewsletterForm from '@/components/NewsletterForm'
 import GAPageView from '@/components/GAPageView'
 import { useEffect } from 'react'
@@ -62,7 +61,7 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <PortfolioIntroductionSummary />
+
       <FeaturedPosts posts={posts} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="py-6">

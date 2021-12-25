@@ -7,13 +7,14 @@ import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 
+import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
         <header
           style={{ display: 'flex' }}
-          className="flex-row justify-between items-center  lg:py-10 py-5"
+          className="flex-row justify-between items-center  sm:py-10 py-2"
         >
           <div className="hidden sm:block">
             {headerNavLinks.map((link) => (
@@ -29,7 +30,7 @@ const LayoutWrapper = ({ children }) => {
           <ThemeSwitch />
           <MobileNav />
         </header>
-
+        <PortfolioIntroductionSummary />
         <main className="mb-auto">{children}</main>
         <Footer />
       </div>
