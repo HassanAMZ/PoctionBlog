@@ -68,15 +68,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <PageTitle>{title}</PageTitle>
             </div>
             <div className=" flex flex-row gap-2 items-left text-gray-700 pb-3 text-base dark:text-gray-400">
-              <Link href={instagram}>
-                {/* <Image
-                  src={avatar}
-                  width="38px"
-                  height="38px"
-                  alt="avatar"
-                  className="w-8 h-8 rounded-full"
-                /> */}
-              </Link>
               <div className="flex sm:flex-row flex-col text-xs gap-1 sm:text-base justify-center">
                 <div className="flex flex-row gap-1 sm:justify-between items-center">
                   <Link href={instagram}>
