@@ -2,7 +2,7 @@ import Image from 'next/image'
 export default function PortfolioIntroductionSummary() {
   return (
     <>
-      <div className="flex flex-col item-left sm:items-center sm:flex-row-reverse pb-2">
+      <div className="flex flex-col justify-between item-left sm:items-center sm:flex-row-reverse pb-2">
         <div className="w-32 sm:w-64">
           <Image
             height={1000}
@@ -12,7 +12,7 @@ export default function PortfolioIntroductionSummary() {
           />
         </div>
         <div className="">
-          <h2 className="text-3xl  leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h2 className="text-3xl  leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl sm:leading-10 ">
             Shahzada A. Hassan
           </h2>
           <div className="mb-2">
