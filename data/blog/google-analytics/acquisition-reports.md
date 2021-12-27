@@ -1,6 +1,6 @@
 ---
-title: acquisition-reports
-date: '2021-12-01'
+title: Acquisition Reports
+date: '2021-12-26'
 blogID: '00022'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: true
