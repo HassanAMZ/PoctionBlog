@@ -9,6 +9,8 @@ coverImage: '/static/blog/00022.png'
 embedId: 'null'
 ---
 
+Acquisition statistics may reveal how users find your website and how well your digital marketing and advertising campaigns are doing across various channels such as email, search, and display ads. These are some of Google Analytics' most useful and actionable reports.
+
 ![Cover Image](/static/blog/00022.png)
 
 ### Overview of acquisition reports

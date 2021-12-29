@@ -9,6 +9,8 @@ coverImage: '/static/blog/00023.png'
 embedId: 'null'
 ---
 
+Users' interactions with your website are displayed in behaviour reports. This can encompass a variety of factors, including as the information that users view and how they navigate between pages. Let's look at a few of the most helpful Behavior reports.
+
 ![Cover Image](/static/blog/00023.png)
 
 ### Overview of behavior reports
