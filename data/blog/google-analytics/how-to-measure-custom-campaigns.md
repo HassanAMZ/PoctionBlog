@@ -1,5 +1,5 @@
 ---
-title: '[Unit 3] - Lesson 2: How to Measure Custom Campaigns'
+title: '[Unit 4] - Lesson 1: How to Measure Custom Campaigns'
 date: '2021-12-29'
 blogID: '00024'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
