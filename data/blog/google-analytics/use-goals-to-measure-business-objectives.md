@@ -1,6 +1,6 @@
 ---
-title: use-goals-to-measure-business-objectives
-date: '2021-12-01'
+title: '[Unit 4] - Lesson 3: Use Goals to Measure Business Objectives'
+date: '2021-12-31'
 blogID: '00026'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: false
@@ -8,6 +8,8 @@ summary: Google Analytics goals allow you to link metrics in your reports to spe
 coverImage: '/static/blog/00026.png'
 embedId: 'null'
 ---
+
+### Goals in UA
 
 Google Analytics goals allow you to link metrics in your reports to specific business objectives. This is a fantastic approach to use data to figure out if you're on track to fulfil your company objectives.
 
