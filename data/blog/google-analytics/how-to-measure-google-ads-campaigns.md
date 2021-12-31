@@ -4,12 +4,12 @@ date: '2022-01-01'
 blogID: '00027'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
 draft: true
-summary: Google Analytics goals allow you to link metrics in your reports to specific business objectives. This is a fantastic approach to use data to figure out if you're on track to fulfil your company objectives.
+summary: Google Ads is a great tool for promoting your business on Google's web domains. To measure the impact of ad campaigns on your business, integrate your Analytics account with Google Ads.
 coverImage: '/static/blog/00027.png'
 embedId: 'null'
 ---
 
-Google Analytics goals allow you to link metrics in your reports to specific business objectives. This is a fantastic approach to use data to figure out if you're on track to fulfil your company objectives.
+Google Ads is a great tool for promoting your business on Google's web domains. To measure the impact of ad campaigns on your business, integrate your Analytics account with Google Ads.
 
 ![Cover Image](/static/blog/00027.png)
 
