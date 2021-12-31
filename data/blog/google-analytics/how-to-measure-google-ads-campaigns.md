@@ -1,5 +1,5 @@
 ---
-title: how-to-measure-google-ads-campaignshow-to-measure-google-ads-campaigns
+title: '[Unit 4] - Lesson 4: How to measure Google Ads Campaigns'
 date: '2022-01-01'
 blogID: '00027'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
