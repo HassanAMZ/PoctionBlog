@@ -4,7 +4,7 @@ date: '2021-11-26'
 blogID: '00009'
 tags: ['google ads', 'utm parameters', 'server tracking']
 draft: false
-summary: To track the traffic acquisition for google ads on google analytics for iOS14+ users. To track the performance of the google ads in UA or GA4 using traffic acquisition reports
+summary: To track the traffic acquisition for google ads (gads) on google analytics for iOS14+ users. To track the performance of the google ads in UA or GA4 using traffic acquisition reports
 coverImage: '/static/blog/00009.png'
 embedId: 'null'
 ---
