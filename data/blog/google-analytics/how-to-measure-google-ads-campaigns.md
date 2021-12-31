@@ -3,7 +3,7 @@ title: '[Unit 4] - Lesson 4: How to measure Google Ads Campaigns'
 date: '2022-01-01'
 blogID: '00027'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
-draft: true
+draft: false
 summary: Google Ads is a great tool for promoting your business on Google's web domains. To measure the impact of ad campaigns on your business, integrate your Analytics account with Google Ads.
 coverImage: '/static/blog/00027.png'
 embedId: 'null'
