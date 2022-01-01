@@ -1,9 +1,9 @@
 ---
 title: '[Unit 4] - Lesson 5: Course Review and next Steps'
-date: '2022-01-01'
+date: '2022-01-02'
 blogID: '00028'
 tags: ['Google Analytics', 'Free Course', 'Google Analytics for Beginners']
-draft: true
+draft: false
 summary: Congratulations on completing the course! Let's go over what we've learned so far and talk about how to acquire even more actionable insights from your data.
 coverImage: '/static/blog/00028.png'
 embedId: 'null'
