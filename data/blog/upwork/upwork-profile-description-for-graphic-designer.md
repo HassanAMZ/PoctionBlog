@@ -1,6 +1,6 @@
 ---
 title: Upwork Profile Description for Graphic Designer
-date: '2021-12-31'
+date: '2021-01-03'
 blogID: '00029'
 tags: ['Upwork', 'Profile Description', 'Upwork Beginners Guide']
 draft: false
