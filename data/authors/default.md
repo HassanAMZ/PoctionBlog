@@ -5,7 +5,7 @@ occupation: Freelancer at Upwork & MSc. Control Science & Engineering Student
 company: North Westren PolyTechnical University, Xi'an, China
 email: ShahzadaAliHassanblog.com
 instagram: https://instagram.com/shahzadaalihassan_
-twitter: https://twitter.com/shahzadaalihas4
+twitter: https://twitter.com/shahzada_A
 linkedin: https://www.linkedin.com/in/hassanamz
 github: https://github.com/hassanamz
 ---

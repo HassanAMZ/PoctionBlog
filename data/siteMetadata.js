@@ -2,7 +2,6 @@ const siteMetadata = {
   title: 'ShahzadaAliHassan',
   author: 'Shahzada Ali Hassan',
   headerTitle: 'ShahzadaAliHassan',
-
   description: 'Blogs and guides by ShahzadaAliHassan',
   language: 'en-us',
   siteUrl: 'https://ShahzadaAliHassan.com',
@@ -13,7 +12,7 @@ const siteMetadata = {
   socialBanner: '/static/images/logo.png',
   email: 'ShahzadaAliHassan@gmail.com',
   github: 'https://github.com/HassanAMZ',
-  twitter: 'https://twitter.com/Twitter',
+  twitter: 'https://twitter.com/shahzada_A',
   facebook: 'https://facebook.com/ShahzadaAliHassan',
   youtube: 'https://www.youtube.com/channel/UC8tapbraiwvk5nnQW0Eqh9g',
   linkedin: 'https://www.linkedin.com/in/hassanamz',

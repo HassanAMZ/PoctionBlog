@@ -1,20 +1,7 @@
-import SocialIcon from '@/components/social-icons'
-import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
-import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 
 export default function AuthorLayout({ children, frontMatter }) {
-  const {
-    name,
-    avatar,
-    occupation,
-    company,
-    email,
-    twitter,
-    linkedin,
-    instagram,
-    github,
-  } = frontMatter
+  const { name } = frontMatter
 
   return (
     <>
