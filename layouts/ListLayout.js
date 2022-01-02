@@ -42,7 +42,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     event: 'CustomEvent',
     data: {
       category: 'allBlogPosts',
-      action: 'blogPage',
+      action: 'allBlogPosts',
       label: allBlogPostIDs,
       details: {
         allBlogPostIDs,

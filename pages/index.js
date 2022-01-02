@@ -8,7 +8,6 @@ import FeaturedPosts from '@/components/FeaturedPosts'
 import ListLayout from '@/layouts/ListLayout'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
-import { trackEvent } from '@phntms/react-gtm'
 
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
@@ -27,44 +26,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
   const sortedTags = Object.keys(tags).sort((a, b) => tags[b] - tags[a])
-  const [
-    allBlogPostIDs,
-    allBlogPostSlugs,
-    date,
-    titleList,
-    summary,
-    tagsList,
-    coverImage,
-    blogDetails,
-  ] = [[], [], [], [], [], [], [], {}]
-  posts.slice(0, MAX_DISPLAY).map((frontMatter, index) => {
-    blogDetails[index] = frontMatter
-    allBlogPostIDs[index] = frontMatter.blogID
-    allBlogPostSlugs[index] = frontMatter.slug
-    date[index] = frontMatter.date
-    titleList[index] = frontMatter.title
-    summary[index] = frontMatter.summary
-    tagsList[index] = frontMatter.tags
-    coverImage[index] = frontMatter.coverImage
-  })
-  trackEvent({
-    event: 'CustomEvent',
-    data: {
-      category: 'allBlogPosts',
-      action: 'homePage',
-      label: allBlogPostIDs,
-      details: {
-        allBlogPostIDs,
-        allBlogPostSlugs,
-        date,
-        titleList,
-        summary,
-        tagsList,
-        coverImage,
-        blogDetails,
-      },
-    },
-  })
+
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
