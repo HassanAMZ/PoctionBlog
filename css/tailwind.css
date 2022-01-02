@@ -22,6 +22,7 @@ code {
 }
 pre {
   overflow-x: hidden !important;
+  background-color: #262626 !important;
 }
 
 /* Youtube Embed For mobile responsiveness  */
