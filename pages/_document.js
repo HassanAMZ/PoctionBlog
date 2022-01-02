@@ -1,8 +1,15 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { TrackingHeadScript } from '@phntms/react-gtm'
 import siteMetadata from '@/data/siteMetadata'
-const GA_TRACKING_ID = siteMetadata.analytics.googleTagManagerID || ''
+
+let GA_TRACKING_ID = siteMetadata.analytics.googleTagManagerID || ''
 const isProduction = process.env.NODE_ENV === 'production'
+
+if (isProduction) {
+  GA_TRACKING_ID = siteMetadata.analytics.googleTagManagerID || ''
+} else {
+  GA_TRACKING_ID = 'GTM-123456'
+}
 class MyDocument extends Document {
   render() {
     return (
@@ -39,6 +46,7 @@ class MyDocument extends Document {
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <Main />
+
           <NextScript />
         </body>
       </Html>

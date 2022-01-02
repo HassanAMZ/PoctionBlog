@@ -4,6 +4,14 @@ import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 import { trackEvent } from '@phntms/react-gtm'
 
+let GA_TRACKING_ID = ''
+const isProduction = process.env.NODE_ENV === 'production'
+
+if (isProduction) {
+  GA_TRACKING_ID = siteMetadata.analytics.googleTagManagerID || ''
+} else if (!isProduction) {
+  GA_TRACKING_ID = 'GTM-123456'
+}
 const Projects = () => {
   const [allKeys, allTitle, allDescription, allImgSrc, allHref, allPid] = [[], [], [], [], [], []]
   projectsData.map(({ key, title, description, imgSrc, href, pid }, index) => {
@@ -32,6 +40,7 @@ const Projects = () => {
   })
   return (
     <>
+      {console.log('isProduction Project', isProduction, 'GA_TRACKING_ID', GA_TRACKING_ID)}
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
