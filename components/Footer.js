@@ -21,7 +21,7 @@ export default function Footer() {
 
           <div>{` • `}</div>
         </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+        <div className=" text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
             Shahzada Ali Hassan Blog
           </Link>
