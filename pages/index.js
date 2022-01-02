@@ -101,17 +101,15 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
             {sortedTags.map((t) => {
               if (tags[t] > 3) {
                 return (
-                  <>
-                    <div key={t} className="my-1 sm:my-2 mr-5">
-                      <Tag text={t} />
-                      <Link
-                        href={`/tags/${kebabCase(t)}`}
-                        className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
-                      >
-                        {` (${tags[t]})`}
-                      </Link>
-                    </div>
-                  </>
+                  <div key={t} className="my-1 sm:my-2 mr-5">
+                    <Tag text={t} />
+                    <Link
+                      href={`/tags/${kebabCase(t)}`}
+                      className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
+                    >
+                      {` (${tags[t]})`}
+                    </Link>
+                  </div>
                 )
               } else {
                 return <></>

@@ -3,11 +3,7 @@ import '@/css/prism.css'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 import LayoutWrapper from '@/components/LayoutWrapper'
-import GoogleTagManagerScript from '@/components/analytics/GoogleTagManagerScript'
 import MailChimpHeadCode from '@/components/MailChimpHeadCode'
-import Script from 'next/script'
-
-import Wave from 'react-wavify'
 import StyleWaves from '@/components/StyleWaves'
 export default function App({ Component, pageProps }) {
   return (
@@ -24,7 +20,7 @@ export default function App({ Component, pageProps }) {
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           ></script>
-          <GoogleTagManagerScript />
+
           <MailChimpHeadCode />
         </Head>
 

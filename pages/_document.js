@@ -1,4 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { TrackingHeadScript } from '@phntms/react-gtm'
+import siteMetadata from '@/data/siteMetadata'
+const GA_TRACKING_ID = siteMetadata.analytics.googleTagManagerID || ''
+const isProduction = process.env.NODE_ENV === 'production'
 class MyDocument extends Document {
   render() {
     return (
@@ -31,6 +35,7 @@ class MyDocument extends Document {
             integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"
             crossOrigin="anonymous"
           />
+          {isProduction && <TrackingHeadScript id={GA_TRACKING_ID} />}
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <Main />
