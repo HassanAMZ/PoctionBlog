@@ -2,14 +2,13 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainerPost from '@/components/SectionContainerPost'
 import { BlogSEO } from '@/components/SEO'
-import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-
 import GAPageView from '@/components/GAPageView'
 import { useEffect } from 'react'
+import { trackEvent } from '@phntms/react-gtm'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -21,19 +20,9 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
-  const { avatar, name, instagram } = authorDetails[0]
-  useEffect(() => {
-    function readingTime() {
-      const text = document.getElementById('singleBlogPost').innerText
-      const wpm = 225
-      const words = text.trim().split(/\s+/).length
-      const time = Math.ceil(words / wpm)
-      document.getElementById('time').innerText = time
-    }
-    readingTime()
-    let dataLayer = window.dataLayer || []
-    dataLayer.push({
-      event: 'CustomEvent',
+  trackEvent({
+    event: 'CustomEvent',
+    data: {
       category: 'singleBlogPost',
       action: blogID,
       label: title,
@@ -49,7 +38,18 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         coverImage,
         blogID,
       },
-    })
+    },
+  })
+  const { avatar, name, instagram } = authorDetails[0]
+  useEffect(() => {
+    function readingTime() {
+      const text = document.getElementById('singleBlogPost').innerText
+      const wpm = 225
+      const words = text.trim().split(/\s+/).length
+      const time = Math.ceil(words / wpm)
+      document.getElementById('time').innerText = time
+    }
+    readingTime()
   }, [])
 
   return (

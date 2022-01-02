@@ -4,41 +4,43 @@ import GAPageView from '@/components/GAPageView'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
-import { useEffect } from 'react'
+import { trackEvent } from '@phntms/react-gtm'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
+
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
+
   // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
-  useEffect(() => {
-    const [
-      allBlogPostIDs,
-      allBlogPostSlugs,
-      date,
-      title,
-      summary,
-      tags,
-      coverImage,
-      blogDetails,
-    ] = [[], [], [], [], [], [], [], {}]
-    displayPosts.map((frontMatter, index) => {
-      blogDetails[index] = frontMatter
-      allBlogPostIDs[index] = frontMatter.blogID
-      allBlogPostSlugs[index] = frontMatter.slug
-      date[index] = frontMatter.date
-      title[index] = frontMatter.title
-      summary[index] = frontMatter.summary
-      tags[index] = frontMatter.tags
-      coverImage[index] = frontMatter.coverImage
-    })
-    let dataLayer = window.dataLayer || []
-    dataLayer.push({
-      event: 'CustomEvent',
+
+  const [
+    allBlogPostIDs,
+    allBlogPostSlugs,
+    date,
+    titleList,
+    summary,
+    tags,
+    coverImage,
+    blogDetails,
+  ] = [[], [], [], [], [], [], [], {}]
+  displayPosts.map((frontMatter, index) => {
+    blogDetails[index] = frontMatter
+    allBlogPostIDs[index] = frontMatter.blogID
+    allBlogPostSlugs[index] = frontMatter.slug
+    date[index] = frontMatter.date
+    titleList[index] = frontMatter.title
+    summary[index] = frontMatter.summary
+    tags[index] = frontMatter.tags
+    coverImage[index] = frontMatter.coverImage
+  })
+  trackEvent({
+    event: 'CustomEvent',
+    data: {
       category: 'allBlogPosts',
       action: 'blogPage',
       label: allBlogPostIDs,
@@ -46,14 +48,14 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         allBlogPostIDs,
         allBlogPostSlugs,
         date,
-        title,
+        titleList,
         summary,
         tags,
         coverImage,
         blogDetails,
       },
-    })
-  }, [])
+    },
+  })
 
   return (
     <>

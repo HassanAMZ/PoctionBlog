@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
-import { useEffect } from 'react'
+import { trackEvent } from '@phntms/react-gtm'
 
 const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
   const inputEl = useRef(null)
@@ -26,14 +26,15 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     if (error) {
       setError(true)
       setMessage('Your e-mail adress is invalid or you are already subscribed!')
-      let dataLayer = window.dataLayer || []
-      dataLayer.push({
+      trackEvent({
         event: 'CustomEvent',
-        category: 'NewsletterForm',
-        action: 'Submit',
-        label: 'Failed',
-        details: {
-          email: inputEl.current.value,
+        data: {
+          category: 'NewsletterForm',
+          action: 'Submit',
+          label: 'Failed',
+          details: {
+            email: inputEl.current.value,
+          },
         },
       })
       return
@@ -42,14 +43,15 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     setError(false)
     setSubscribed(true)
     setMessage('Successfully! 🎉 You are now subscribed.')
-    let dataLayer = window.dataLayer || []
-    dataLayer.push({
+    trackEvent({
       event: 'CustomEvent',
-      category: 'NewsletterForm',
-      action: 'Submit',
-      label: 'Successfull',
-      details: {
-        email: inputEl.current.value,
+      data: {
+        category: 'NewsletterForm',
+        action: 'Submit',
+        label: 'Successfull',
+        details: {
+          email: inputEl.current.value,
+        },
       },
     })
     inputEl.current.value = ''
