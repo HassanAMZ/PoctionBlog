@@ -28,11 +28,11 @@ To work with clients, usually i require some access to platforms that are necess
 
 You can check the official links for each platform! Kindly use the details mentioned below for access:
 
-First Name: Hassan
+**First Name: Hassan**
 
-Last Name: Upwork
+**Last Name: Upwork**
 
-Email: reactjswebdev@gmail.com
+**Email: reactjswebdev@gmail.com**
 
 ### Google Tag Manager
 
