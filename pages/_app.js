@@ -7,6 +7,15 @@ import MailChimpHeadCode from '@/components/MailChimpHeadCode'
 import StyleWaves from '@/components/StyleWaves'
 import { GtmTrackingID } from '@/lib/googleTagManagerEvents'
 import Script from 'next/script'
+import siteMetadata from '@/data/siteMetadata'
+
+let GTM_Tracking_ID = siteMetadata.analytics.googleTagManagerID || ''
+const isProduction = process.env.NODE_ENV === 'production'
+if (isProduction) {
+  GTM_Tracking_ID = siteMetadata.analytics.googleTagManagerID || ''
+} else {
+  GTM_Tracking_ID = 'GTM-XXXXXXX'
+}
 
 export default function App({ Component, pageProps }) {
   return (
@@ -21,7 +30,7 @@ export default function App({ Component, pageProps }) {
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer', '${GtmTrackingID}');
+          })(window,document,'script','dataLayer', '${GTM_Tracking_ID}');
         `,
         }}
       />
@@ -44,7 +53,7 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
           <noscript>
             <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GtmTrackingID}`}
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_Tracking_ID}`}
               height="0"
               width="0"
               style={{ display: 'none', visibility: 'hidden' }}
