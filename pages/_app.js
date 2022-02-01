@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }) {
     <>
       {/* Google Tag Manager - Global base code */}
       <Script
+        id="gtm-script"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
