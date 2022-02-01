@@ -4,7 +4,7 @@ import GAPageView from '@/components/GAPageView'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
-import { gtmEvent } from '@/lib/googleTagManagerEvents'
+import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
@@ -41,7 +41,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   })
 
   useEffect(() => {
-    gtmEvent('allBlogPosts', 'allBlogPosts', allBlogPostIDs, {
+    GtmEvent('allBlogPosts', 'allBlogPosts', allBlogPostIDs, {
       allBlogPostIDs,
       allBlogPostSlugs,
       date,

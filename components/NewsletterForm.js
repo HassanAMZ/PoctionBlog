@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
-import { gtmEvent } from '@/lib/googleTagManagerEvents'
+import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
 
 const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
@@ -28,7 +28,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
       setError(true)
       setMessage('Your e-mail adress is invalid or you are already subscribed!')
       useEffect(() => {
-        gtmEvent('NewsletterForm', 'Submit', 'Failed', {
+        GtmEvent('NewsletterForm', 'Submit', 'Failed', {
           email: inputEl.current.value,
         })
       }, [])
@@ -39,7 +39,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     setSubscribed(true)
     setMessage('Successfully! 🎉 You are now subscribed.')
     useEffect(() => {
-      gtmEvent('NewsletterForm', 'Submit', 'Successfull', {
+      GtmEvent('NewsletterForm', 'Submit', 'Successfull', {
         email: inputEl.current.value,
       })
     }, [])

@@ -2,7 +2,7 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
-import { gtmEvent } from '@/lib/googleTagManagerEvents'
+import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
 
 const Projects = () => {
@@ -16,7 +16,7 @@ const Projects = () => {
     allPid[index] = pid
   })
   useEffect(() => {
-    gtmEvent('allProjects', 'projectPage', allPid, {
+    GtmEvent('allProjects', 'projectPage', allPid, {
       allKeys,
       allTitle,
       allImgSrc,

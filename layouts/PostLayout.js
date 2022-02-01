@@ -7,7 +7,7 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import GAPageView from '@/components/GAPageView'
-import { gtmEvent } from '@/lib/googleTagManagerEvents'
+import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
@@ -22,7 +22,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
 
   useEffect(() => {
-    gtmEvent('singleBlogPost', blogID, title, {
+    GtmEvent('singleBlogPost', blogID, title, {
       slug,
       fileName,
       date,
