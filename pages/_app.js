@@ -42,6 +42,14 @@ export default function App({ Component, pageProps }) {
         </Head>
         <LayoutWrapper>
           <Component {...pageProps} />
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GtmTrackingID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
         </LayoutWrapper>
         <StyleWaves />
       </ThemeProvider>

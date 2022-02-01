@@ -35,16 +35,7 @@ class MyDocument extends Document {
           />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GtmTrackingID}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            />
-          </noscript>
           <Main />
-
           <NextScript />
         </body>
       </Html>
