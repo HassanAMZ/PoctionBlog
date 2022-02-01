@@ -4,7 +4,8 @@ import GAPageView from '@/components/GAPageView'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
-import { trackEvent } from '@phntms/react-gtm'
+import { gtmEvent } from '@/lib/googleTagManagerEvents'
+import { useEffect } from 'react'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -38,24 +39,18 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
     tags[index] = frontMatter.tags
     coverImage[index] = frontMatter.coverImage
   })
-  trackEvent({
-    event: 'CustomEvent',
-    data: {
-      category: 'allBlogPosts',
-      action: 'allBlogPosts',
-      label: allBlogPostIDs,
-      details: {
-        allBlogPostIDs,
-        allBlogPostSlugs,
-        date,
-        titleList,
-        summary,
-        tags,
-        coverImage,
-        blogDetails,
-      },
-    },
-  })
+
+  useEffect(() => {
+    gtmEvent('allBlogPosts', 'allBlogPosts', allBlogPostIDs, {
+      allBlogPostIDs,
+      allBlogPostSlugs,
+      date,
+      titleList,
+
+      tags,
+      coverImage,
+    })
+  }, [])
 
   return (
     <>

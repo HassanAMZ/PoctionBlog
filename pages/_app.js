@@ -5,9 +5,25 @@ import Head from 'next/head'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import MailChimpHeadCode from '@/components/MailChimpHeadCode'
 import StyleWaves from '@/components/StyleWaves'
+import { GtmTrackingID } from '@/lib/googleTagManagerEvents'
+import Script from 'next/script'
+
 export default function App({ Component, pageProps }) {
   return (
     <>
+      {/* Google Tag Manager - Global base code */}
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer', '${GtmTrackingID}');
+        `,
+        }}
+      />
       <ThemeProvider attribute="class">
         <Head>
           <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -23,7 +39,6 @@ export default function App({ Component, pageProps }) {
 
           <MailChimpHeadCode />
         </Head>
-
         <LayoutWrapper>
           <Component {...pageProps} />
         </LayoutWrapper>

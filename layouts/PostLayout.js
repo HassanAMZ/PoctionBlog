@@ -7,8 +7,8 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import GAPageView from '@/components/GAPageView'
+import { gtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
-import { trackEvent } from '@phntms/react-gtm'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -20,26 +20,22 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, fileName, date, title, tags, coverImage, blogID } = frontMatter
-  trackEvent({
-    event: 'CustomEvent',
-    data: {
-      category: 'singleBlogPost',
-      action: blogID,
-      label: title,
-      details: {
-        slug,
-        fileName,
-        date,
-        title,
-        tags,
-        tags_1: tags[0],
-        tags_2: tags[1],
-        tags_3: tags[2],
-        coverImage,
-        blogID,
-      },
-    },
-  })
+
+  useEffect(() => {
+    gtmEvent('singleBlogPost', blogID, title, {
+      slug,
+      fileName,
+      date,
+      title,
+      tags,
+      tags_1: tags[0],
+      tags_2: tags[1],
+      tags_3: tags[2],
+      coverImage,
+      blogID,
+    })
+  }, [])
+
   const { avatar, name, instagram } = authorDetails[0]
   useEffect(() => {
     function readingTime() {
