@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GtmTrackingID } from '@/lib/googleTagManagerEvents'
-import Script from 'next/script'
+
 class MyDocument extends Document {
   render() {
     return (
