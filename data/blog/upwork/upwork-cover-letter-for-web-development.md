@@ -1,7 +1,7 @@
 ---
 title: Upwork Cover Letter for Web Development Niche
 date: '2022-02-04'
-blogID: '00032 '
+blogID: '00032'
 tags: ['Upwork', 'Cover Letters', 'Upwork Beginners Guide', 'web development']
 draft: false
 summary: This cover letter i use was inspired by a top-rated freelancer on Upwork. However, here is the breakdown of the cover letter. These 8 aspects are the most important when writing the cover letter to a web development  job.
