@@ -44,7 +44,7 @@ pre {
 /* This will work on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: white;
+  scrollbar-color: grey;
 }
 
 /* Targtes on Chrome, Edge, and Safari */
@@ -57,7 +57,7 @@ pre {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: grey;
   border-radius: 20px;
 }
 
