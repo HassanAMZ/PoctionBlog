@@ -4,10 +4,10 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import NewsletterForm from '@/components/NewsletterForm'
-import FeaturedPosts from '@/components/FeaturedPosts'
 import ListLayout from '@/layouts/ListLayout'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
+import Courses from '@/components/Courses'
 
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
@@ -30,8 +30,7 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-
-      <FeaturedPosts posts={posts} />
+      <Courses posts={posts} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
