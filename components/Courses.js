@@ -35,9 +35,15 @@ const Courses = ({ posts }) => {
             </Box>
             {/* <Image borderRadius="full" src={coverImage} alt={title} />  */}
             <Box>
-              <Heading as="h2" fontSize={['xl']} lineHeight="110%" letterSpacing="-5%">
+              <Heading
+                color="teal"
+                as="h2"
+                fontSize={['xl', '3xl']}
+                lineHeight="110%"
+                letterSpacing="-5%"
+              >
                 <NextLink href={`/blog/${slug}`} passHref>
-                  <Link textTransform="capitalize">{title}</Link>
+                  <Link textTransform="uppercase">{title}</Link>
                 </NextLink>
               </Heading>
               <Flex direction={'row'} my={[1]}>
