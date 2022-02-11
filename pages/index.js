@@ -8,7 +8,7 @@ import ListLayout from '@/layouts/ListLayout'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import Courses from '@/components/Courses'
-
+import { Flex } from '@chakra-ui/react'
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
 
@@ -49,6 +49,7 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
           </Link>
         </div>
       )}
+
       <>
         <div className="flex flex-col justify-left my-4">
           <div className="py-3 space-x-2 md:space-y-5">
@@ -58,17 +59,13 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
           </div>
           <div className="flex flex-wrap max-w-3xl">
             {Object.keys(tags).length === 0 && 'No tags found.'}
-            {sortedTags.map((t) => {
+            {sortedTags.map((t, index) => {
               if (tags[t] > 3) {
                 return (
-                  <div key={t} className="my-1 sm:my-2 mr-5">
-                    <Tag text={t} />
-                    <Link
-                      href={`/tags/${kebabCase(t)}`}
-                      className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
-                    >
-                      {` (${tags[t]})`}
-                    </Link>
+                  <div key={t}>
+                    <Flex justifyContent={'center'} alignItems={'center'}>
+                      <Tag text={t} key={index} icon={` (${tags[t]})`} />
+                    </Flex>
                   </div>
                 )
               } else {

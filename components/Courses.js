@@ -1,69 +1,85 @@
 import GAPageView from '@/components/GAPageView'
-import Link from '@/components/Link'
+import NextLink from 'next/link'
 import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+import {
+  Container,
+  Grid,
+  Flex,
+  Heading,
+  Box,
+  VisuallyHidden,
+  Button,
+  Link,
+  Image,
+} from '@chakra-ui/react'
 
 const Courses = ({ posts }) => {
   let coursesIDs = ['00008']
   let blogIDs = []
   posts.map((frontMatter, index) => {
-    const { slug, date, title, summary, tags, blogID } = frontMatter
+    const { slug, date, title, summary, tags, blogID, coverImage } = frontMatter
     coursesIDs.map((coursesID, indexA) => {
       if (blogID == coursesID) {
         blogIDs[indexA] = (
-          <article
-            key={index}
-            className="flex sm:flex-col flex-col-reverse justify-between borderColorGradient rounded bg-white dark:bg-gray-900 p-2"
-          >
-            <div className="">
-              <div className="sr-only">Published on</div>
-              <div className="flex sm:flex-row  justify-between  text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                <time className="pb-3 sm:block hidden" dateTime={date}>
+          <Container maxW="container.3xl" as="article" key={index} direction={['column']} p="0">
+            <Box>
+              <VisuallyHidden>Published on</VisuallyHidden>
+              <Flex justify={['space-between']} direction={['row']} fontSize={['xs', 'sm']}>
+                <Box as="time" dateTime={date}>
                   {formatDate(date)}
-                </time>
+                </Box>
                 <GAPageView slug={slug} />
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-xl font-semibold tracking-tight">
-                <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                  {title}
-                </Link>
-              </h2>
-
-              <div className="flex flex-wrap sm:block hidden ">
-                {tags.map((tag) => (
-                  <Tag key={tag} text={tag} />
+              </Flex>
+            </Box>
+            {/* <Image borderRadius="full" src={coverImage} alt={title} />  */}
+            <Box>
+              <Heading as="h2" fontSize={['xl']} lineHeight="110%" letterSpacing="-5%">
+                <NextLink href={`/blog/${slug}`} passHref>
+                  <Link textTransform="capitalize">{title}</Link>
+                </NextLink>
+              </Heading>
+              <Flex direction={'row'} my={[1]}>
+                {tags.map((tag, index) => (
+                  <Tag key={index} text={tag} icon={<ExternalLinkIcon />} />
                 ))}
-              </div>
-            </div>
-
-            <div className=" sm:block hidden text-sm text-gray-500 max-w-none dark:text-gray-400">
+              </Flex>
+            </Box>
+            <Box as="p" fontSize={['sm']} isTruncated>
               {summary}
-            </div>
-
-            <div className="text-base sm:block hidden font-medium leading-6">
-              <Link
-                href={`/blog/${slug}`}
-                className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                aria-label={`Read "${title}"`}
-              >
-                Read more &rarr;
-              </Link>
-            </div>
-          </article>
+            </Box>
+            <Box>
+              <NextLink href={`/blog/${slug}`} passHref aria-label={`Read "${title}"`}>
+                <Link textTransform={'uppercase'}>
+                  <Button
+                    colorScheme="teal"
+                    size="sm"
+                    my={'2'}
+                    textTransform={'uppercase'}
+                    variant="solid"
+                  >
+                    <Flex justifyContent={'center'} alignItems={'center'}>
+                      <Box textTransform={'capitalize'} fontSize={'sm'}>
+                        Get the course &rarr;
+                      </Box>
+                    </Flex>
+                  </Button>
+                </Link>
+              </NextLink>
+            </Box>
+          </Container>
         )
       }
     })
   })
   return (
-    <div>
-      <h1 className="py-3 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+    <Box>
+      <Heading as="h1" py="3">
         Courses
-      </h1>
-      <div className="grid grid-cols-1 gap-1">{blogIDs}</div>
-    </div>
+      </Heading>
+      <Grid className="grid grid-cols-1 gap-1">{blogIDs}</Grid>
+    </Box>
   )
 }
 

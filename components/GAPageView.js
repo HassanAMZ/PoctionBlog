@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import Eye from '../public/static/favicons/eye.svg'
+import { Box, Flex } from '@chakra-ui/react'
 
 const GAPageView = ({ slug }) => {
   const { data } = useSWR(
@@ -13,9 +13,16 @@ const GAPageView = ({ slug }) => {
   const views = data?.pageViews || 0
   return (
     <>
-      {/* <Eye /> */}
-
-      <div>{views} views</div>
+      <Flex
+        direction="row"
+        justifyContetn="center"
+        alignItems="center"
+        gap="1"
+        fontSize={['xs', 'sm']}
+      >
+        <Box>{views}</Box>
+        <Box>Readers</Box>
+      </Flex>
     </>
   )
 }

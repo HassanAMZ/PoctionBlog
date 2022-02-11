@@ -1,13 +1,21 @@
-import Link from 'next/link'
+import { Box, Link, Button, Flex } from '@chakra-ui/react'
 import kebabCase from '@/lib/utils/kebabCase'
+import NextLink from 'next/link'
 
-const Tag = ({ text }) => {
+const Tag = ({ text, icon }) => {
   return (
-    <Link href={`/tags/${kebabCase(text)}`}>
-      <a className="mr-3 text-sm font-small uppercase text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-        {text.split(' ').join('-')}
-      </a>
-    </Link>
+    <>
+      <NextLink href={`/tags/${kebabCase(text)}`} passHref>
+        <Link isExternal mr={'3'} my={'1'} ml={'0'}>
+          <Flex justifyContent={'center'} alignItems={'center'} opacity={'75%'}>
+            <Box textTransform={'uppercase'} fontSize={'xs'} mr="2">
+              {text.split(' ').join('-')}
+            </Box>
+            {icon}
+          </Flex>
+        </Link>
+      </NextLink>
+    </>
   )
 }
 
