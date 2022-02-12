@@ -19,17 +19,17 @@ const LayoutWrapper = ({ children }) => {
             pt="6"
             pb="3"
           >
-            <div className="hidden sm:block">
+            <Flex direction={'row'} className="hidden sm:block">
               {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="py-2 font-medium text-gray-900 sm:pr-4  dark:text-gray-100"
-                >
-                  {link.title}
-                </Link>
+                <>
+                  <Link key={link.title} href={link.href}>
+                    <a>
+                      <Text pr="2">{link.title}</Text>
+                    </a>
+                  </Link>
+                </>
               ))}
-            </div>
+            </Flex>
             <Link href="/">
               <a>
                 <Box borderRadius="100" w="8" bgColor="teal">
