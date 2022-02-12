@@ -1,11 +1,11 @@
 import headerNavLinks from '@/data/headerNavLinks'
-
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
-import { Box, Link, Image, Flex } from '@chakra-ui/react'
-import NextLink from 'next/link'
+import { Box, Image, Flex, Text } from '@chakra-ui/react'
+import Link from 'next/link'
+
 const LayoutWrapper = ({ children }) => {
   return (
     <div className="flex flex-col">
@@ -30,13 +30,13 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <NextLink href="/" passHref>
-              <Link textTransform="capitalize">
+            <Link href="/">
+              <a>
                 <Box borderRadius="100" w="8" bgColor="teal">
                   <Image src="/static/images/avatar.png" />
                 </Box>
-              </Link>
-            </NextLink>
+              </a>
+            </Link>
 
             <MobileNav />
           </Flex>

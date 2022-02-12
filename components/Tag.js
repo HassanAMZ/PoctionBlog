@@ -1,6 +1,6 @@
-import { Box, Link, Button, Flex, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Text } from '@chakra-ui/react'
 import kebabCase from '@/lib/utils/kebabCase'
-import NextLink from 'next/link'
+import Link from 'next/link'
 
 const Tag = ({ text, icon }) => {
   const getRandomColor = () => {
@@ -10,18 +10,20 @@ const Tag = ({ text, icon }) => {
 
   return (
     <Box pr="2" py="1">
-      <NextLink href={`/tags/${kebabCase(text)}`} passHref>
-        <Link isExternal>
-          <Button size={'xs'} color={getRandomColor()} variant="solid">
-            <Flex justifyContent={'center'} alignItems={'center'} fontSize={['xs', 'sm']}>
-              <Text textTransform={'uppercase'} mr="2">
-                {text.split(' ').join('-')}
-              </Text>
-              <Box>{icon}</Box>
-            </Flex>
-          </Button>
-        </Link>
-      </NextLink>
+      <Link href={`/tags/${kebabCase(text)}`}>
+        <a>
+          <Text>
+            <Button size={'xs'} color={getRandomColor()} variant="solid">
+              <Flex justifyContent={'center'} alignItems={'center'} fontSize={['xs', 'sm']}>
+                <Text textTransform={'uppercase'} mr="2">
+                  {text.split(' ').join('-')}
+                </Text>
+                <Box>{icon}</Box>
+              </Flex>
+            </Button>
+          </Text>
+        </a>
+      </Link>
     </Box>
   )
 }

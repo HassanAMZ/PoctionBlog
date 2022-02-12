@@ -1,9 +1,9 @@
 import GAPageView from '@/components/GAPageView'
-import NextLink from 'next/link'
+import Link from 'next/link'
 import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Grid, Flex, Heading, Box, VisuallyHidden, Button, Link, Image } from '@chakra-ui/react'
+import { Grid, Flex, Heading, Box, VisuallyHidden, Button, Text, Image } from '@chakra-ui/react'
 
 const Courses = ({ posts }) => {
   let coursesIDs = ['00008']
@@ -26,9 +26,11 @@ const Courses = ({ posts }) => {
             {/* <Image borderRadius="full" src={coverImage} alt={title} />  */}
             <Box>
               <Heading as="h2" fontSize={['xl']}>
-                <NextLink href={`/blog/${slug}`} passHref>
-                  <Link textTransform="capitalize">{title}</Link>
-                </NextLink>
+                <Link href={`/blog/${slug}`}>
+                  <a>
+                    <Text textTransform="capitalize">{title}</Text>
+                  </a>
+                </Link>
               </Heading>
               <Flex direction={'row'} flexWrap="wrap" my={[1]}>
                 {tags.map((tag, index) => (
@@ -40,23 +42,25 @@ const Courses = ({ posts }) => {
               {summary}
             </Box>
             <Box>
-              <NextLink href={`/blog/${slug}`} passHref aria-label={`Read "${title}"`}>
-                <Link textTransform={'uppercase'}>
-                  <Button
-                    colorScheme="teal"
-                    size="sm"
-                    my={'2'}
-                    textTransform={'uppercase'}
-                    variant="solid"
-                  >
-                    <Flex justifyContent={'center'} alignItems={'center'}>
-                      <Box textTransform={'capitalize'} fontSize={'sm'}>
-                        Get the course &rarr;
-                      </Box>
-                    </Flex>
-                  </Button>
-                </Link>
-              </NextLink>
+              <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
+                <a>
+                  <Text textTransform={'uppercase'}>
+                    <Button
+                      colorScheme="teal"
+                      size="sm"
+                      my={'2'}
+                      textTransform={'uppercase'}
+                      variant="solid"
+                    >
+                      <Flex justifyContent={'center'} alignItems={'center'}>
+                        <Box textTransform={'capitalize'} fontSize={'sm'}>
+                          Get the course &rarr;
+                        </Box>
+                      </Flex>
+                    </Button>
+                  </Text>
+                </a>
+              </Link>
             </Box>
           </Flex>
         )

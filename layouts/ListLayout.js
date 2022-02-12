@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import Link from 'next/link'
 import Tag from '@/components/Tag'
 import GAPageView from '@/components/GAPageView'
 import Pagination from '@/components/Pagination'
@@ -6,7 +6,6 @@ import formatDate from '@/lib/utils/formatDate'
 import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect, useState } from 'react'
 import {
-  Link,
   Box,
   Heading,
   Input,
@@ -114,9 +113,11 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                     gap="2"
                     py="1"
                   >
-                    <NextLink href={`/blog/${slug}`} passHref>
-                      <Link textTransform="capitalize">{title}</Link>
-                    </NextLink>
+                    <Link href={`/blog/${slug}`}>
+                      <a>
+                        <Text textTransform="capitalize">{title}</Text>
+                      </a>
+                    </Link>
                   </Flex>
                 </Heading>
 

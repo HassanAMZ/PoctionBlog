@@ -1,6 +1,6 @@
-import { Box, Flex, Heading, Image, Link, Text } from '@chakra-ui/react'
-import NextLink from 'next/link'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import Link from 'next/link'
+import { ExternalLinkIcon, LinkIcon } from '@chakra-ui/icons'
 export default function PortfolioIntroductionSummary() {
   return (
     <>
@@ -14,18 +14,19 @@ export default function PortfolioIntroductionSummary() {
           </Heading>
           <Flex>
             <Box mb="2">Top Rated Freelancer at&nbsp;</Box>
-            <NextLink
+            <Link
               href="https://www.upwork.com/freelancers/~015b35831b56606433"
-              passHref
               aria-label="Upwork Profile of Shahzada Ali Hassan"
             >
-              <Link textTransform={'uppercase'} isExternal fontWeight="bold">
-                <Flex direction={'row'} justifyContent="center" alignItems={'center'}>
-                  <Box pr="1">Upwork</Box>
-                  <ExternalLinkIcon />
-                </Flex>
-              </Link>
-            </NextLink>
+              <a>
+                <Text textTransform={'uppercase'} fontWeight="bold">
+                  <Flex direction={'row'} justifyContent="center" alignItems={'center'}>
+                    <Box pr="1">Upwork</Box>
+                    <ExternalLinkIcon />
+                  </Flex>
+                </Text>
+              </a>
+            </Link>
           </Flex>
           <Text fontWeight={'light'} opacity="75%">
             Educating about web development, analytics, and freelancing.

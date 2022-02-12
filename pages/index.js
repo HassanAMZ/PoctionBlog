@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -8,7 +8,7 @@ import RecentPosts from '@/components/RecentPosts'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import Courses from '@/components/Courses'
-import { Flex, Box, Heading, Link } from '@chakra-ui/react'
+import { Flex, Box, Heading, Text } from '@chakra-ui/react'
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
 
@@ -40,9 +40,11 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
 
       {posts.length > MAX_DISPLAY && (
         <Flex justifyContent={'flex-end'} py={[2, 3]}>
-          <NextLink href="/blog" passHref aria-label="all posts">
-            <Link textTransform={'uppercase'}>All Posts &rarr;</Link>
-          </NextLink>
+          <Link href="/blog" aria-label="all posts">
+            <a>
+              <Text textTransform={'uppercase'}>All Posts &rarr;</Text>
+            </a>
+          </Link>
         </Flex>
       )}
 
@@ -69,9 +71,11 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
         </Flex>
         {
           <Flex justifyContent={'flex-end'} py={[2, 3]}>
-            <NextLink href="/blog" passHref aria-label="all posts">
-              <Link textTransform={'uppercase'}>All Tags &rarr;</Link>
-            </NextLink>
+            <Link href="/blog" aria-label="all posts">
+              <a>
+                <Text textTransform={'uppercase'}>All Tags &rarr;</Text>
+              </a>
+            </Link>
           </Flex>
         }
       </>
