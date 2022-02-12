@@ -12,7 +12,7 @@ const Tag = ({ text, icon }) => {
     <Box pr="2" py="1">
       <NextLink href={`/tags/${kebabCase(text)}`} passHref>
         <Link isExternal>
-          <Button size={'xs'} color={getRandomColor()} variant="outline">
+          <Button size={'xs'} color={getRandomColor()} variant="solid">
             <Flex justifyContent={'center'} alignItems={'center'} fontSize={['xs', 'sm']}>
               <Text textTransform={'uppercase'} mr="2">
                 {text.split(' ').join('-')}

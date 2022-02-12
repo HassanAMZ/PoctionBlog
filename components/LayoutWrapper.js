@@ -1,21 +1,22 @@
-import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
-import Link from './Link'
+
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
 import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
-
+import { Box, Link, Image, Flex } from '@chakra-ui/react'
+import NextLink from 'next/link'
 const LayoutWrapper = ({ children }) => {
   return (
     <div className="flex flex-col">
       <SectionContainer>
         <div className="flex flex-col justify-between">
-          <header
-            style={{ display: 'flex' }}
-            className="flex-row justify-between items-center  sm:pt-10 py-5"
+          <Flex
+            as="header"
+            direction="row "
+            justifyContent="space-between"
+            alignItems="center"
+            py="4"
           >
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
@@ -28,9 +29,16 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
+            <NextLink href="/" passHref>
+              <Link textTransform="capitalize">
+                <Box borderRadius="100" w="8" bgColor="teal">
+                  <Image src="/static/images/avatar.png" />
+                </Box>
+              </Link>
+            </NextLink>
 
             <MobileNav />
-          </header>
+          </Flex>
           <PortfolioIntroductionSummary />
           <main className="mb-auto">{children}</main>
           <Footer />

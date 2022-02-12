@@ -9,4 +9,4 @@
 [Youtube](https://www.youtube.com/channel/UC8tapbraiwvk5nnQW0Eqh9g)
 [siteRepo](https://github.com/HassanAMZ/shahzadaalihassan)
 [image](https://shahzadaalihassan.com/static/images/avatar.png)
-[socialBanner](https://shahzadaalihassan.com/static/images/logo.png)
+[socialBanner](https://shahzadaalihassan.com/static/images/avatar.png)
