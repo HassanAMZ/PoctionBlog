@@ -3,17 +3,7 @@ import NextLink from 'next/link'
 import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import {
-  Container,
-  Grid,
-  Flex,
-  Heading,
-  Box,
-  VisuallyHidden,
-  Button,
-  Link,
-  Image,
-} from '@chakra-ui/react'
+import { Grid, Flex, Heading, Box, VisuallyHidden, Button, Link, Image } from '@chakra-ui/react'
 
 const Courses = ({ posts }) => {
   let coursesIDs = ['00008']

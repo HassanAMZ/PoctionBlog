@@ -16,7 +16,8 @@ const LayoutWrapper = ({ children }) => {
             direction="row "
             justifyContent="space-between"
             alignItems="center"
-            py="4"
+            pt="6"
+            pb="3"
           >
             <div className="hidden sm:block">
               {headerNavLinks.map((link) => (

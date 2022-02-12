@@ -16,6 +16,7 @@ import {
   UnorderedList,
   ListItem,
   Text,
+  VisuallyHidden,
 } from '@chakra-ui/react'
 import { SearchIcon, ExternalLinkIcon } from '@chakra-ui/icons'
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
@@ -93,11 +94,15 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             >
               <Box className="p-3 bg-white dark:bg-gray-900">
                 <Box>
-                  <dt className="sr-only">Published on</dt>
-                  <dd className=" flex flex-row justify-between xl:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                    <time dateTime={date}>{formatDate(date)}</time>
-                    <GAPageView slug={slug} />
-                  </dd>
+                  <Box>
+                    <VisuallyHidden>Published on</VisuallyHidden>
+                    <Flex justify={['space-between']} direction={['row']} fontSize={['xs', 'sm']}>
+                      <Box as="time" dateTime={date}>
+                        {formatDate(date)}
+                      </Box>
+                      <GAPageView slug={slug} />
+                    </Flex>
+                  </Box>
                 </Box>
 
                 <Heading as="h2" fontSize={['xl']}>
