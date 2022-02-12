@@ -7,7 +7,6 @@ import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import MailChimpHeadCode from '@/components/MailChimpHeadCode'
-import StyleWaves from '@/components/StyleWaves'
 import Script from 'next/script'
 import siteMetadata from '@/data/siteMetadata'
 import { ChakraProvider } from '@chakra-ui/react'
@@ -66,7 +65,6 @@ export default function App({ Component, pageProps }) {
               />
             </noscript>
           </LayoutWrapper>
-          <StyleWaves />
         </ChakraProvider>
       </ThemeProvider>
     </>

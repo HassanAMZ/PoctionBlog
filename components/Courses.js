@@ -23,7 +23,7 @@ const Courses = ({ posts }) => {
     coursesIDs.map((coursesID, indexA) => {
       if (blogID == coursesID) {
         blogIDs[indexA] = (
-          <Container maxW="container.3xl" as="article" key={index} direction={['column']} p="0">
+          <Flex as="article" key={indexA} direction={['column']} p="0">
             <Box>
               <VisuallyHidden>Published on</VisuallyHidden>
               <Flex justify={['space-between']} direction={['row']} fontSize={['xs', 'sm']}>
@@ -35,24 +35,18 @@ const Courses = ({ posts }) => {
             </Box>
             {/* <Image borderRadius="full" src={coverImage} alt={title} />  */}
             <Box>
-              <Heading
-                color="teal"
-                as="h2"
-                fontSize={['xl', '3xl']}
-                lineHeight="110%"
-                letterSpacing="-5%"
-              >
+              <Heading as="h2" fontSize={['xl']}>
                 <NextLink href={`/blog/${slug}`} passHref>
-                  <Link textTransform="uppercase">{title}</Link>
+                  <Link textTransform="capitalize">{title}</Link>
                 </NextLink>
               </Heading>
-              <Flex direction={'row'} my={[1]}>
+              <Flex direction={'row'} flexWrap="wrap" my={[1]}>
                 {tags.map((tag, index) => (
                   <Tag key={index} text={tag} icon={<ExternalLinkIcon />} />
                 ))}
               </Flex>
             </Box>
-            <Box as="p" fontSize={['sm']} isTruncated>
+            <Box as="p" fontSize={['sm']} noOfLines={[3]}>
               {summary}
             </Box>
             <Box>
@@ -74,15 +68,15 @@ const Courses = ({ posts }) => {
                 </Link>
               </NextLink>
             </Box>
-          </Container>
+          </Flex>
         )
       }
     })
   })
   return (
     <Box>
-      <Heading as="h1" py="3">
-        Courses
+      <Heading as="h2" py="3" fontSize={['xl']}>
+        Learn Universal Analytics By Google
       </Heading>
       <Grid className="grid grid-cols-1 gap-1">{blogIDs}</Grid>
     </Box>

@@ -15,7 +15,7 @@ const GAPageView = ({ slug }) => {
     <>
       <Flex
         direction="row"
-        justifyContetn="center"
+        justifyContent="center"
         alignItems="center"
         gap="1"
         fontSize={['xs', 'sm']}

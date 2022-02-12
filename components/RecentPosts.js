@@ -15,9 +15,10 @@ import {
   Flex,
   UnorderedList,
   ListItem,
-  Text,
+  Button,
 } from '@chakra-ui/react'
-import { SearchIcon, ExternalLinkIcon } from '@chakra-ui/icons'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
 
@@ -68,70 +69,73 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <Heading as="h2" py="3" fontSize={['xl']}>
           {title}
         </Heading>
-        <InputGroup size="md">
-          <Input
-            type="text"
-            onChange={(e) => setSearchValue(e.target.value)}
-            aria-label="Search articles"
-            placeholder="Search articles"
-            colorScheme="teal"
-          />
-          <InputRightElement width="2rem">
-            <SearchIcon />
-          </InputRightElement>
-        </InputGroup>
       </Box>
-      <UnorderedList listStyleType="none" m="0">
+      <UnorderedList listStyleType="none" ml="0">
         {!filteredBlogPosts.length && 'No posts found.'}
         {displayPosts.map((frontMatter, index) => {
           const { slug, date, title, summary, tags } = frontMatter
 
+          let orderNumber = 0
+          if (index === 0) {
+            orderNumber = (
+              <Button
+                fontSize={'sm'}
+                colorScheme="teal"
+                textTransform={'uppercase'}
+                variant="solid"
+              >
+                New
+              </Button>
+            )
+          } else {
+            orderNumber = (
+              <Button
+                fontSize={'sm'}
+                colorScheme="teal"
+                textTransform={'uppercase'}
+                variant="outline"
+              >
+                00{index}
+              </Button>
+            )
+          }
+
           return (
-            <ListItem
-              key={index}
-              className="rounded bg-gradient-to-r p-1  from-[#D8B4FE] to-[#818CF8] mb-4"
-            >
-              <Box className="p-3 bg-white dark:bg-gray-900">
-                <Box>
+            <ListItem key={index}>
+              {/* <Box>
                   <dt className="sr-only">Published on</dt>
                   <dd className=" flex flex-row justify-between xl:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date)}</time>
                     <GAPageView slug={slug} />
                   </dd>
-                </Box>
+                </Box> */}
 
-                <Heading as="h2" fontSize={['xl']}>
-                  <Flex
-                    as="article"
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    direction="row"
-                    gap="2"
-                    py="1"
-                  >
-                    <NextLink href={`/blog/${slug}`} passHref>
-                      <Link textTransform="capitalize">{title}</Link>
-                    </NextLink>
-                  </Flex>
-                </Heading>
-
-                <Flex flexWrap={'wrap'}>
-                  {tags.map((tag) => (
-                    <Tag icon={<ExternalLinkIcon />} key={tag} text={tag} />
-                  ))}
+              <Heading as="h2" fontSize={['md', 'xl']}>
+                <Flex as="article" alignItems="center" direction="row" gap="2" py="1">
+                  <NextLink href={`/blog/${slug}`} passHref>
+                    <Link textTransform="capitalize" isExternal>
+                      <Flex as="article" justifyContent="space-between" alignItems="center" gap="2">
+                        <> {orderNumber}</>
+                        <Box>{title}</Box>
+                        <ExternalLinkIcon />
+                      </Flex>
+                    </Link>
+                  </NextLink>
                 </Flex>
-                <Text fontSize={'sm'} fontWeight="light" noOfLines={[2]}>
-                  {summary}
-                </Text>
-              </Box>
+              </Heading>
+
+              {/* <div className="flex flex-wrap">
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
+                    </div> */}
+              {/* <div className="prose text-sm text-gray-500 max-w-none dark:text-gray-400">
+                    {summary}
+                  </div> */}
             </ListItem>
           )
         })}
       </UnorderedList>
-
-      {pagination && pagination.totalPages > 1 && !searchValue && (
-        <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
-      )}
     </>
   )
 }

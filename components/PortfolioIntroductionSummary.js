@@ -1,36 +1,37 @@
-import Image from 'next/image'
+import { Box, Flex, Heading, Image, Link, Text } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 export default function PortfolioIntroductionSummary() {
   return (
     <>
-      <div className="flex flex-col justify-left sm:gap-5 items-left sm:items-center sm:flex-row pb-2">
-        <div className="w-32">
-          <Image
-            height={1000}
-            width={1000}
-            src="/static/images/avatar.png"
-            alt="ShahzadaAliHassan"
-          />
-        </div>
-        <div className="">
-          <h2 className="text-3xl leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:leading-10 ">
+      <Flex direction={'column'} gap="5" alignItems={'left'} py="2">
+        <Box width="32">
+          <Image src="/static/images/avatar.png" alt="Shahzada Ali Hassan" />
+        </Box>
+        <Flex direction="column">
+          <Heading as="h1" fontSize={['3xl']}>
             Shahzada A. Hassan
-          </h2>
-          <div className="mb-2">
-            Top Rated Freelancer at&nbsp;
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.upwork.com/freelancers/~015b35831b56606433?utm_source=ShahzadaAliHassan&utm_medium=Organic&utm_campaign=ShahzadaAliHassanBlog&utm_term=ShahzadaAliHassan&utm_content=FreelancerAtUpwork"
-              className="font-bold "
+          </Heading>
+          <Flex>
+            <Box mb="2">Top Rated Freelancer at&nbsp;</Box>
+            <NextLink
+              href="https://www.upwork.com/freelancers/~015b35831b56606433"
+              passHref
+              aria-label="Upwork Profile of Shahzada Ali Hassan"
             >
-              Upwork
-            </a>
-          </div>
-          <p className="font-light text-gray-500  dark:text-gray-400 text-sm sm:text-base">
+              <Link textTransform={'uppercase'} isExternal fontWeight="bold">
+                <Flex direction={'row'} justifyContent="center" alignItems={'center'}>
+                  <Box pr="1">Upwork</Box>
+                  <ExternalLinkIcon />
+                </Flex>
+              </Link>
+            </NextLink>
+          </Flex>
+          <Text fontWeight={'light'} opacity="75%">
             Educating about web development, analytics, and freelancing.
-          </p>
-        </div>
-      </div>
+          </Text>
+        </Flex>
+      </Flex>
     </>
   )
 }

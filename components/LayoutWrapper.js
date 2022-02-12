@@ -28,7 +28,7 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <ThemeSwitch />
+
             <MobileNav />
           </header>
           <PortfolioIntroductionSummary />

@@ -1,11 +1,11 @@
 html {
   scroll-behavior: smooth;
 }
-a {
-  text-decoration: none;
-}
 a:hover {
   text-decoration: none;
+}
+a {
+  text-decoration: none !important;
 }
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,

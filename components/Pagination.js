@@ -1,36 +1,41 @@
 import Link from '@/components/Link'
-
+import { Box, Button, Flex } from '@chakra-ui/react'
 export default function Pagination({ totalPages, currentPage }) {
   const prevPage = parseInt(currentPage) - 1 > 0
   const nextPage = parseInt(currentPage) + 1 <= parseInt(totalPages)
 
   return (
-    <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-      <nav className="flex justify-between">
+    <Box py="6">
+      <Flex
+        as="nav"
+        direction="row"
+        justifyContent="justify-between"
+        className="flex justify-between"
+      >
         {!prevPage && (
-          <button rel="previous" className="cursor-auto disabled:opacity-50" disabled={!prevPage}>
+          <Button rel="previous" isDisabled={!prevPage}>
             Previous
-          </button>
+          </Button>
         )}
         {prevPage && (
           <Link href={currentPage - 1 === 1 ? `/blog/` : `/blog/page/${currentPage - 1}`}>
-            <button rel="previous">Previous</button>
+            <Button rel="previous">Previous</Button>
           </Link>
         )}
         <span>
           {currentPage} of {totalPages}
         </span>
         {!nextPage && (
-          <button rel="next" className="cursor-auto disabled:opacity-50" disabled={!nextPage}>
+          <Button rel="next" isDisabled={!nextPage}>
             Next
-          </button>
+          </Button>
         )}
         {nextPage && (
           <Link href={`/blog/page/${currentPage + 1}`}>
-            <button rel="next">Next</button>
+            <Button rel="next">Next</Button>
           </Link>
         )}
-      </nav>
-    </div>
+      </Flex>
+    </Box>
   )
 }

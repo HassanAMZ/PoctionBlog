@@ -1,14 +1,14 @@
-import Link from '@/components/Link'
+import NextLink from 'next/link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import NewsletterForm from '@/components/NewsletterForm'
-import ListLayout from '@/layouts/ListLayout'
+import RecentPosts from '@/components/RecentPosts'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import Courses from '@/components/Courses'
-import { Flex } from '@chakra-ui/react'
+import { Flex, Box, Heading, Link } from '@chakra-ui/react'
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
 
@@ -31,7 +31,7 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <Courses posts={posts} />
-      <ListLayout
+      <RecentPosts
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
@@ -39,57 +39,46 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
       />
 
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
-          </Link>
-        </div>
+        <Flex justifyContent={'flex-end'} py={[2, 3]}>
+          <NextLink href="/blog" passHref aria-label="all posts">
+            <Link textTransform={'uppercase'}>All Posts &rarr;</Link>
+          </NextLink>
+        </Flex>
       )}
 
       <>
-        <div className="flex flex-col justify-left my-4">
-          <div className="py-3 space-x-2 md:space-y-5">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-              Top Tags
-            </h1>
-          </div>
-          <div className="flex flex-wrap max-w-3xl">
+        <Flex direction={'column'} justifyContent={'left'} my={4}>
+          <Heading as="h2" py="3" fontSize={['xl']}>
+            Top Tags
+          </Heading>
+
+          <Flex flexWrap={'wrap'}>
             {Object.keys(tags).length === 0 && 'No tags found.'}
-            {sortedTags.map((t, index) => {
-              if (tags[t] > 3) {
+            {sortedTags.map((tag, index) => {
+              if (tags[tag] > 2) {
                 return (
-                  <div key={t}>
+                  <Box key={tag}>
                     <Flex justifyContent={'center'} alignItems={'center'}>
-                      <Tag text={t} key={index} icon={` (${tags[t]})`} />
+                      <Tag text={tag} key={index} icon={` (${tags[tag]})`} />
                     </Flex>
-                  </div>
+                  </Box>
                 )
-              } else {
-                return <></>
               }
             })}
-          </div>
-        </div>
+          </Flex>
+        </Flex>
         {
-          <div className="flex justify-end text-base font-medium leading-6">
-            <Link
-              href="/tags"
-              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-              aria-label="all tags"
-            >
-              All Tags &rarr;
-            </Link>
-          </div>
+          <Flex justifyContent={'flex-end'} py={[2, 3]}>
+            <NextLink href="/blog" passHref aria-label="all posts">
+              <Link textTransform={'uppercase'}>All Tags &rarr;</Link>
+            </NextLink>
+          </Flex>
         }
       </>
       {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
+        <Flex alignItems={'center'} justifyContent={'center'} py={[2, 4]}>
           <NewsletterForm />
-        </div>
+        </Flex>
       )}
     </>
   )
