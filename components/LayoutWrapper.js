@@ -38,7 +38,7 @@ const LayoutWrapper = ({ children }) => {
               </a>
             </Link>
 
-            <MobileNav />
+            {/* <MobileNav /> */}
           </Flex>
           <PortfolioIntroductionSummary />
           <main className="mb-auto">{children}</main>
