@@ -14,7 +14,11 @@ const Tag = ({ text, icon }) => {
         <a>
           <Text>
             <Button size={'xs'} color={getRandomColor()} variant="solid">
-              <Flex justifyContent={'center'} alignItems={'center'} fontSize={['xs', 'sm']}>
+              <Flex
+                justifyContent={'center'}
+                alignItems={'center'}
+                fontSize={['x-small', 'xs', 'sm']}
+              >
                 <Text textTransform={'uppercase'} mr="2">
                   {text.split(' ').join('-')}
                 </Text>

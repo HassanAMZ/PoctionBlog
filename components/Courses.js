@@ -16,7 +16,11 @@ const Courses = ({ posts }) => {
           <Flex as="article" key={indexA} direction={['column']} p="0">
             <Box>
               <VisuallyHidden>Published on</VisuallyHidden>
-              <Flex justify={['space-between']} direction={['row']} fontSize={['xs', 'sm']}>
+              <Flex
+                justify={['space-between']}
+                direction={['row']}
+                fontSize={['x-small', 'xs', 'sm']}
+              >
                 <Box as="time" dateTime={date}>
                   {formatDate(date)}
                 </Box>
@@ -25,7 +29,7 @@ const Courses = ({ posts }) => {
             </Box>
             {/* <Image borderRadius="full" src={coverImage} alt={title} />  */}
             <Box>
-              <Heading as="h2" fontSize={['xl']}>
+              <Heading as="h2" fontSize={['md', 'xl']}>
                 <Link href={`/blog/${slug}`}>
                   <a>
                     <Text textTransform="capitalize">{title}</Text>
@@ -38,7 +42,7 @@ const Courses = ({ posts }) => {
                 ))}
               </Flex>
             </Box>
-            <Box as="p" fontSize={['sm']} noOfLines={[3]}>
+            <Box fontSize={['sm']} noOfLines={[3]}>
               {summary}
             </Box>
             <Box>

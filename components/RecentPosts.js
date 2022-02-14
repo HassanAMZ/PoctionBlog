@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import {
   Box,
   Heading,
+  Divider,
   Text,
   InputGroup,
   InputRightElement,
@@ -15,6 +16,8 @@ import {
   UnorderedList,
   ListItem,
   Button,
+  Grid,
+  GridItem,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 
@@ -78,10 +81,12 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           if (index === 0) {
             orderNumber = (
               <Button
-                fontSize={'sm'}
+                size={['x-small', 'sm']}
                 colorScheme="teal"
                 textTransform={'uppercase'}
                 variant="solid"
+                px="2"
+                py="1"
               >
                 New
               </Button>
@@ -89,19 +94,22 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           } else {
             orderNumber = (
               <Button
-                fontSize={'sm'}
+                size={['x-small', 'sm']}
                 colorScheme="teal"
                 textTransform={'uppercase'}
                 variant="outline"
+                px="2"
+                py="1"
               >
-                00{index}
+                &nbsp; 0{index} &nbsp;
               </Button>
             )
           }
 
           return (
-            <ListItem key={index}>
-              {/* <Box>
+            <>
+              <ListItem key={index} py="2">
+                {/* <Box>
                   <dt className="sr-only">Published on</dt>
                   <dd className=" flex flex-row justify-between xl:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date)}</time>
@@ -109,36 +117,48 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                   </dd>
                 </Box> */}
 
-              <Heading as="h2" fontSize={['md', 'xl']}>
-                <Flex as="article" alignItems="center" direction="row" gap="2" py="1">
+                <>
                   <Link href={`/blog/${slug}`}>
                     <a>
-                      <Text textTransform="capitalize">
+                      <Flex
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="space-between"
+                        gap="2"
+                      >
                         <Flex
-                          as="article"
-                          justifyContent="space-between"
+                          direction="row"
                           alignItems="center"
-                          gap="2"
+                          justifyContent="space-between"
+                          gap="3"
                         >
-                          <> {orderNumber}</>
-                          <Box>{title}</Box>
-                          <ExternalLinkIcon />
+                          <Box> {orderNumber}</Box>
+                          <Heading
+                            as="h2"
+                            fontSize={['sm', 'md', 'xl']}
+                            textTransform="capitalize"
+                            noOfLines={'1'}
+                          >
+                            {title}
+                          </Heading>
                         </Flex>
-                      </Text>
+                        <ExternalLinkIcon />
+                      </Flex>
                     </a>
                   </Link>
-                </Flex>
-              </Heading>
+                </>
 
-              {/* <div className="flex flex-wrap">
+                {/* <div className="flex flex-wrap">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />
                       ))}
                     </div> */}
-              {/* <div className="prose text-sm text-gray-500 max-w-none dark:text-gray-400">
+                {/* <div className="prose text-sm text-gray-500 max-w-none dark:text-gray-400">
                     {summary}
                   </div> */}
-            </ListItem>
+              </ListItem>
+              <Divider />
+            </>
           )
         })}
       </UnorderedList>
