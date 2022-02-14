@@ -6,7 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import NewsletterForm from '@/components/NewsletterForm'
 import RecentPosts from '@/components/RecentPosts'
 import { getAllTags } from '@/lib/tags'
-import kebabCase from '@/lib/utils/kebabCase'
+import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 import Courses from '@/components/Courses'
 import { Flex, Box, Heading, Text, Button } from '@chakra-ui/react'
 
@@ -31,6 +31,7 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <PortfolioIntroductionSummary />
       <Courses posts={posts} />
       <RecentPosts
         posts={posts}

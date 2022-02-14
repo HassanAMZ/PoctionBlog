@@ -1,5 +1,5 @@
 import { PageSEO } from '@/components/SEO'
-
+import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 export default function AuthorLayout({ children, frontMatter }) {
   const { name } = frontMatter
 
@@ -8,6 +8,7 @@ export default function AuthorLayout({ children, frontMatter }) {
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
       <div className="divide-y">
         <div className="pb-6 space-y-2 md:space-y-5">
+          <PortfolioIntroductionSummary />
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             A quick intro
           </h1>

@@ -1,8 +1,6 @@
 import headerNavLinks from '@/data/headerNavLinks'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-import MobileNav from './MobileNav'
-import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 import { Box, Image, Flex, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 
@@ -40,7 +38,6 @@ const LayoutWrapper = ({ children }) => {
 
             {/* <MobileNav /> */}
           </Flex>
-          <PortfolioIntroductionSummary />
           <Box as="main" className="mb-auto">
             {children}
           </Box>
