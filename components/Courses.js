@@ -21,9 +21,7 @@ const Courses = ({ posts }) => {
                 direction={['row']}
                 fontSize={['x-small', 'xs', 'sm']}
               >
-                <Box as="time" dateTime={date}>
-                  {formatDate(date)}
-                </Box>
+                <Box dateTime={date}>{formatDate(date)}</Box>
                 <GAPageView slug={slug} />
               </Flex>
             </Box>
@@ -48,21 +46,19 @@ const Courses = ({ posts }) => {
             <Box>
               <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
                 <a>
-                  <Text textTransform={'uppercase'}>
-                    <Button
-                      colorScheme="teal"
-                      size="sm"
-                      my={'2'}
-                      textTransform={'uppercase'}
-                      variant="solid"
-                    >
-                      <Flex justifyContent={'center'} alignItems={'center'}>
-                        <Box textTransform={'capitalize'} fontSize={'sm'}>
-                          Get the course &rarr;
-                        </Box>
-                      </Flex>
-                    </Button>
-                  </Text>
+                  <Button
+                    colorScheme="teal"
+                    size="sm"
+                    my={'2'}
+                    textTransform={'uppercase'}
+                    variant="solid"
+                  >
+                    <Flex justifyContent={'center'} alignItems={'center'}>
+                      <Box textTransform={'capitalize'} fontSize={'sm'}>
+                        Get the course &rarr;
+                      </Box>
+                    </Flex>
+                  </Button>
                 </a>
               </Link>
             </Box>

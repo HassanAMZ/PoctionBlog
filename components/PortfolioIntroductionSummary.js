@@ -19,12 +19,12 @@ export default function PortfolioIntroductionSummary() {
               aria-label="Upwork Profile of Shahzada Ali Hassan"
             >
               <a>
-                <Text textTransform={'uppercase'} fontWeight="bold">
+                <Box textTransform={'uppercase'} fontWeight="bold">
                   <Flex direction={'row'} justifyContent="center" alignItems={'center'}>
-                    <Box pr="1">Upwork</Box>
+                    <Text pr="1">Upwork</Text>
                     <ExternalLinkIcon />
                   </Flex>
-                </Text>
+                </Box>
               </a>
             </Link>
           </Flex>

@@ -41,7 +41,9 @@ const LayoutWrapper = ({ children }) => {
             {/* <MobileNav /> */}
           </Flex>
           <PortfolioIntroductionSummary />
-          <main className="mb-auto">{children}</main>
+          <Box as="main" className="mb-auto">
+            {children}
+          </Box>
           <Footer />
         </div>
       </SectionContainer>

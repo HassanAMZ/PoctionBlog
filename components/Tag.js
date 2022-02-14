@@ -12,20 +12,18 @@ const Tag = ({ text, icon }) => {
     <Box pr="2" py="1">
       <Link href={`/tags/${kebabCase(text)}`}>
         <a>
-          <Text>
-            <Button size={'xs'} color={getRandomColor()} variant="solid">
-              <Flex
-                justifyContent={'center'}
-                alignItems={'center'}
-                fontSize={['x-small', 'xs', 'sm']}
-              >
-                <Text textTransform={'uppercase'} mr="2">
-                  {text.split(' ').join('-')}
-                </Text>
-                <Box>{icon}</Box>
-              </Flex>
-            </Button>
-          </Text>
+          <Button size={'xs'} color={getRandomColor()} variant="solid">
+            <Flex
+              justifyContent={'center'}
+              alignItems={'center'}
+              fontSize={['x-small', 'xs', 'sm']}
+            >
+              <Text textTransform={'uppercase'} mr="2">
+                {text.split(' ').join('-')}
+              </Text>
+              <Box>{icon}</Box>
+            </Flex>
+          </Button>
         </a>
       </Link>
     </Box>
