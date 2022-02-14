@@ -87,6 +87,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 variant="solid"
                 px="2"
                 py="1"
+                key={index}
               >
                 New
               </Button>
@@ -100,6 +101,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 variant="outline"
                 px="2"
                 py="1"
+                key={index}
               >
                 &nbsp; 0{index} &nbsp;
               </Button>

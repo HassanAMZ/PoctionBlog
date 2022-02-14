@@ -20,9 +20,9 @@ const LayoutWrapper = ({ children }) => {
             pb="3"
           >
             <Flex direction={'row'} className="hidden sm:block">
-              {headerNavLinks.map((link) => (
+              {headerNavLinks.map((link, index) => (
                 <>
-                  <Link key={link.title} href={link.href}>
+                  <Link key={index} href={link.href}>
                     <a>
                       <Text pr="2">{link.title}</Text>
                     </a>
