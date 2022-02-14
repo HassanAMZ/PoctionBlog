@@ -8,7 +8,8 @@ import RecentPosts from '@/components/RecentPosts'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
 import Courses from '@/components/Courses'
-import { Flex, Box, Heading, Text } from '@chakra-ui/react'
+import { Flex, Box, Heading, Text, Button } from '@chakra-ui/react'
+
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
 
@@ -42,7 +43,15 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
         <Flex justifyContent={'flex-end'} py={[2, 3]}>
           <Link href="/blog" aria-label="all posts">
             <a>
-              <Text textTransform={'uppercase'}>All Posts &rarr;</Text>
+              <Button
+                colorScheme="teal"
+                size="sm"
+                my={'2'}
+                textTransform={'uppercase'}
+                variant="solid"
+              >
+                All Posts &rarr;
+              </Button>
             </a>
           </Link>
         </Flex>
@@ -73,7 +82,15 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
           <Flex justifyContent={'flex-end'} py={[2, 3]}>
             <Link href="/blog" aria-label="all posts">
               <a>
-                <Text textTransform={'uppercase'}>All Tags &rarr;</Text>
+                <Button
+                  colorScheme="teal"
+                  size="sm"
+                  my={'2'}
+                  textTransform={'uppercase'}
+                  variant="solid"
+                >
+                  All Tags &rarr;
+                </Button>
               </a>
             </Link>
           </Flex>
