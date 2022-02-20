@@ -11,8 +11,6 @@ embedId: 'null'
 
 Users' interactions with your website are displayed in behaviour reports. This can encompass a variety of factors, including as the information that users view and how they navigate between pages. Let's look at a few of the most helpful Behavior reports.
 
-![Cover Image](/static/blog/00023.png)
-
 ### Overview of behavior reports
 
 The "Behavior" reports can be found in the left-hand navigation under "Behavior." Understanding how Google Analytics calculates behavior data is critical. If you recall, Analytics collects data from your website using a short piece of Javascript code. This tracking code creates a "pageview" in Google Analytics every time a user loads a page on your website. Many of the metrics in the Behavior reports are calculated using this. The "Total Pageviews" metric, for example, is just the total of each time a person loads a page on your website.

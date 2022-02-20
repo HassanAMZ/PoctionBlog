@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useTheme } from 'next-themes'
-
+import { Text, Flex } from '@chakra-ui/react'
 import siteMetadata from '@/data/siteMetadata'
 
 const Utterances = ({ issueTerm }) => {
@@ -42,10 +42,10 @@ const Utterances = ({ issueTerm }) => {
 
   // Added `relative` to fix a weird bug with `utterances-frame` position
   return (
-    <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
+    <Flex justify="center" align="center">
       {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
       <div className="relative utterances-frame" id={COMMENTS_ID} />
-    </div>
+    </Flex>
   )
 }
 

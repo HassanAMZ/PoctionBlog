@@ -13,14 +13,21 @@ export default function PortfolioIntroductionSummary() {
             Shahzada A. Hassan
           </Heading>
           <Flex>
-            <Box mb="2">Top Rated Freelancer at&nbsp;</Box>
+            <Box mb="2" fontSize={['xs', 'sm', 'md']}>
+              Top Rated Freelancer at&nbsp;
+            </Box>
             <Link
               href="https://www.upwork.com/freelancers/~015b35831b56606433"
               aria-label="Upwork Profile of Shahzada Ali Hassan"
             >
               <a>
                 <Box textTransform={'uppercase'} fontWeight="bold">
-                  <Flex direction={'row'} justifyContent="center" alignItems={'center'}>
+                  <Flex
+                    direction={'row'}
+                    justifyContent="center"
+                    alignItems={'center'}
+                    fontSize={['xs', 'sm', 'md']}
+                  >
                     <Text pr="1">Upwork</Text>
                     <ExternalLinkIcon />
                   </Flex>
@@ -28,7 +35,7 @@ export default function PortfolioIntroductionSummary() {
               </a>
             </Link>
           </Flex>
-          <Text fontWeight={'light'} opacity="75%">
+          <Text fontSize={['xs', 'sm', 'md']}>
             Educating about web development, analytics, and freelancing.
           </Text>
         </Flex>

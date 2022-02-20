@@ -3,16 +3,18 @@ import kebabCase from '@/lib/utils/kebabCase'
 import Link from 'next/link'
 
 const Tag = ({ text, icon }) => {
-  const getRandomColor = () => {
-    let color = 'hsl(' + Math.random() * 360 + ', 100%, 75%)'
+  function getDarkColor() {
+    var color = '#'
+    for (var i = 0; i < 6; i++) {
+      color += Math.floor(Math.random() * 10)
+    }
     return color
   }
-
   return (
     <Box pr="2" py="1">
       <Link href={`/tags/${kebabCase(text)}`}>
         <a>
-          <Button size={'xs'} color={getRandomColor()} variant="solid">
+          <Button size={'xs'} color={getDarkColor()} variant="outline" borderColor={getDarkColor()}>
             <Flex
               justifyContent={'center'}
               alignItems={'center'}

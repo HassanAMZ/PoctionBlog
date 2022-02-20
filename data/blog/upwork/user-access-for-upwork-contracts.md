@@ -11,8 +11,6 @@ embedId: 'null'
 
 To work with clients, usually i require some access to platforms that are necessary for the Web analytics and development work. Usually the employee/ developer access works with proper assets.
 
-![Cover Image](/static/blog/00031.png)
-
 ## Table Of Content:
 
 1. [Google Tag Manager](#google-tag-manager)

@@ -11,8 +11,6 @@ embedId: 'null'
 
 ## Navigating full reports: Part 1
 
-![Cover Image](/static/blog/00018.png)
-
 ### Introduction
 
 A high-level version of the "Audience Overview" report was previously shown to you. There's a link to "see full report" at the bottom of that report, which takes you to expanded versions of each Audience report in the left-hand menu.

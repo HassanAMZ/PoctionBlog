@@ -1,56 +1,54 @@
-import Image from './Image'
-import Link from './Link'
+import Link from 'next/Link'
+import { Flex, Container, Heading, Text, Button, Image } from '@chakra-ui/react'
 
 const Card = ({ title, description, imgSrc, href, pid }) => (
-  <div className="p-4 md:w-1/2 md" style={{ maxWidth: '544px' }}>
-    <div className="h-full overflow-hidden border-2 border-gray-200 rounded-md border-opacity-60 dark:border-gray-700">
+  <Flex direction="column" pb="5">
+    <Container maxW="container.md" px="0">
       {href ? (
         <Link href={href} aria-label={`Link to ${title}`}>
-          <Image
-            alt={title}
-            src={imgSrc}
-            className="object-cover object-center lg:h-48 md:h-36"
-            width={544}
-            height={306}
-          />
+          <a>
+            <Image alt={title} src={imgSrc} />
+          </a>
         </Link>
       ) : (
-        <Image
-          alt={title}
-          src={imgSrc}
-          className="object-cover object-center lg:h-48 md:h-36"
-          width={544}
-          height={306}
-        />
+        <Image alt={title} src={imgSrc} />
       )}
-      <div className="p-6">
-        <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
-          {href ? (
-            <>
-              <p className="mb-3 prose text-gray-500 max-w-none dark:text-gray-400">
-                Project ID: {pid}
-              </p>
-              <Link href={href} aria-label={`Link to ${title}`}>
-                {title}
-              </Link>
-            </>
-          ) : (
-            title
-          )}
-        </h2>
-        <p className="mb-3 prose text-gray-500 max-w-none dark:text-gray-400">{description}</p>
-        {href && (
-          <Link
-            href={href}
-            className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label={`Link to ${title}`}
-          >
-            Learn more &rarr;
-          </Link>
+    </Container>
+
+    <Container maxW="container.md" py="4">
+      <Heading as="h2" py="3" fontSize={['lg', 'xl']}>
+        {href ? (
+          <>
+            <Link href={href} aria-label={`Link to ${title}`}>
+              <a>
+                <Text>{title}</Text>
+              </a>
+            </Link>
+          </>
+        ) : (
+          <Text>{title}</Text>
         )}
-      </div>
-    </div>
-  </div>
+      </Heading>
+      <Text noOfLines="3" as="p" my="4">
+        {description}
+      </Text>
+      {href && (
+        <Link py="3" href={href} aria-label={`Link to ${title}`}>
+          <a>
+            <Button
+              colorScheme="teal"
+              size="sm"
+              my={'4'}
+              textTransform={'uppercase'}
+              variant="solid"
+            >
+              Learn more &rarr;
+            </Button>
+          </a>
+        </Link>
+      )}
+    </Container>
+  </Flex>
 )
 
 export default Card

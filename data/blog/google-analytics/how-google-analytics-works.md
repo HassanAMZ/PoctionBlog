@@ -13,8 +13,6 @@ embedId: 'null '
 
 Google Analytics is a data collection technology that aggregates information into helpful reports.
 
-![Cover Image](/static/blog/00013.png)
-
 ### Keeping track of a website
 
 You must first register a Google Analytics account in order to track a website. Then, on each page of your site, put a little bit of JavaScript tracking code. The tracking code will collect anonymous information on how a user engaged with a webpage every time that user sees it.

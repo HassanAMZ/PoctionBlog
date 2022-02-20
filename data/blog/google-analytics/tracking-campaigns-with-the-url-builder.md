@@ -11,8 +11,6 @@ embedId: 'null'
 
 To track Custom Campaigns, Google Analytics includes a tool called "The URL Builder," which allows you to easily add campaign parameters to URLs.
 
-![Cover Image](/static/blog/00025.png)
-
 ## Using URL Builder to track campaigns
 
 Click the link at the end of this lesson to go to the URL builder in the Help Center, then scroll down to the URL builder form.

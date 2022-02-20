@@ -13,8 +13,6 @@ Hello, my name is Shahzada Ali Hassan. On Upwork, I work as a web analyst. Googl
 
 ## Welcome to Google Analytics for Beginners
 
-![Cover Image](/static/blog/00008.png)
-
 ### **Introduction**
 
 I'll walk you through setting up an account, creating views and filters, reading basic reports, creating dashboards, performing basic analysis, and setting up goals and campaign monitoring.

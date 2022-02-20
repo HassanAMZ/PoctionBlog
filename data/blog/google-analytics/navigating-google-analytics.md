@@ -13,8 +13,6 @@ embedId: 'null'
 
 Now that you know how Google Analytics works, let’s take a guided tour of the interface.
 
-![Cover Image](/static/blog/00016.png)
-
 ### If you have numerous accounts, properties, or views set up
 
 You can easily switch between them by selecting the pulldown menu in the upper-left corner that contains the title of your View.

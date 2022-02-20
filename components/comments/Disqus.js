@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { Text, Flex } from '@chakra-ui/react'
 import siteMetadata from '@/data/siteMetadata'
 
 const Disqus = ({ frontMatter }) => {
@@ -27,10 +27,10 @@ const Disqus = ({ frontMatter }) => {
   }
 
   return (
-    <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
+    <Flex justify="center" align="center">
       {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
       <div className="disqus-frame" id={COMMENTS_ID} />
-    </div>
+    </Flex>
   )
 }
 

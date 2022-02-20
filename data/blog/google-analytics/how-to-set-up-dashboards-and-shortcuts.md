@@ -11,8 +11,6 @@ embedId: 'null'
 
 Dashboards and shortcuts offer two ways of saving reports and metrics, so you can easily revisit them later. Lets understand the Universal Analytics Dashboard.
 
-![Cover Image](/static/blog/00020.png)
-
 ### Dashboards and shortcuts are introduced.
 
 As we've gone over numerous reports, it's become evident that some of these indicators will be more relevant to your company than others. In some circumstances, you may wish to monitor certain data on a regular basis to assess the health of your company or a specific marketing campaign. You may find these metrics fast by using dashboards and shortcuts rather than going to a single report.

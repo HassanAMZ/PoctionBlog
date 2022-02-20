@@ -1,16 +1,17 @@
 import '@/css/tailwind.css'
 import '@/css/global.css'
 import '@/css/prism.css'
-import '@fontsource/raleway/300.css'
-import '@fontsource/open-sans/600.css'
+import '@fontsource/raleway/400.css'
+import '@fontsource/open-sans/700.css'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
-import LayoutWrapper from '@/components/LayoutWrapper'
 import MailChimpHeadCode from '@/components/MailChimpHeadCode'
 import Script from 'next/script'
 import siteMetadata from '@/data/siteMetadata'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from '@/lib/utils/theme'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
 let GTM_Tracking_ID = siteMetadata.analytics.googleTagManagerID || ''
 const isProduction = process.env.NODE_ENV === 'production'
@@ -53,18 +54,20 @@ export default function App({ Component, pageProps }) {
 
             <MailChimpHeadCode />
           </Head>
-          <LayoutWrapper>
-            <Component {...pageProps} />
-            <noscript>
-              <iframe
-                src={`https://www.googletagmanager.com/ns.html?id=${GTM_Tracking_ID}`}
-                height="0"
-                width="0"
-                style={{ display: 'none', visibility: 'hidden' }}
-                title="GTM Script"
-              />
-            </noscript>
-          </LayoutWrapper>
+
+          <NavBar />
+          <Component {...pageProps} />
+
+          <Footer />
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_Tracking_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+              title="GTM Script"
+            />
+          </noscript>
         </ChakraProvider>
       </ThemeProvider>
     </>

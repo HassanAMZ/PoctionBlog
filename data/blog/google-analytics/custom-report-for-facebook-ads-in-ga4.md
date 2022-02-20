@@ -11,8 +11,6 @@ embedId: 'null'
 
 To track the traffic acquisition for Facebook ads on GA4 for iOS14+ users using custom reports in google analytics 4. In this article, we will walk through the steps to create a custom report and filter the data to view the transactions and analyze the performance of the FB Ad campaigns.
 
-![Cover Image](/static/blog/00006.png)
-
 ## Table Of Content:
 
 1. [Origin of the issue](#origin-of-the-issue)

@@ -1,24 +1,29 @@
 import { PageSEO } from '@/components/SEO'
 import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
+import { Box, Flex, Text, Heading } from '@chakra-ui/react'
+import Link from 'next/link'
+
 export default function AuthorLayout({ children, frontMatter }) {
   const { name } = frontMatter
 
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
-      <div className="divide-y">
-        <div className="pb-6 space-y-2 md:space-y-5">
-          <PortfolioIntroductionSummary />
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            A quick intro
-          </h1>
-        </div>
-        <div className="items-start space-y-2 ">
-          <div className="prose dark:prose-dark max-w-none sm:text-justify text-sm sm:text-base py-4">
-            {children}
-          </div>
-        </div>
-      </div>
+      <Box py="4">
+        <PortfolioIntroductionSummary />
+        <Heading as="h2" py="3" fontSize={['xl']}>
+          A Quick Introduction
+        </Heading>
+        <Box>{children}</Box>
+        <Box py="4">
+          <Heading>For Contact</Heading>
+          <Link href={'mailto:ReactJsWebDev@gmail.com'}>
+            <a target="_blank" rel="noopener noreferrer">
+              ReactJsWebDev@gmail.com
+            </a>
+          </Link>
+        </Box>
+      </Box>
     </>
   )
 }

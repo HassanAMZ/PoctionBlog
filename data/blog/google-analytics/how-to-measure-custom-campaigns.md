@@ -11,8 +11,6 @@ embedId: 'null'
 
 Ad campaigns can be a great method to get people to visit your site and build your business. Google Analytics can be used to track marketing initiatives run through Google Ads or other platforms. If you're using other platforms to promote, you may manually add Custom Campaign tags to marketing URLs to allow Google Analytics to track the campaign's success.
 
-![Cover Image](/static/blog/00024.png)
-
 ### How do you keep track of a marketing campaign?
 
 Marketing initiatives come in a variety of shapes and sizes. Your company may want to advertise through text advertisements on search engine results pages, banner ads on selected publisher websites, or social media or email campaigns that inform customers about your brand and products. To drive sales and website conversions, it's customary to use a combination of these marketing efforts.

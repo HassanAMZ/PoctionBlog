@@ -13,7 +13,7 @@ const FeaturedPosts = ({ posts }) => {
         blogIDs[indexA] = (
           <article
             key={index}
-            className="flex sm:flex-col flex-col-reverse justify-between borderColorGradient rounded bg-white dark:bg-gray-900 p-2"
+            className="flex sm:flex-col flex-col-reverse justify-between borderColorGradient rounded p-2"
           >
             <div className="">
               <div className="sr-only">Published on</div>

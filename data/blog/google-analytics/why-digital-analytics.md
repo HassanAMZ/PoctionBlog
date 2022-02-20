@@ -13,8 +13,6 @@ embedId: 'null'
 
 Let's start with a definition of "digital analytics" and why it's necessary. So, what exactly is the problem with digital analytics?
 
-![Cover Image](/static/blog/00012.png)
-
 Well, most people buy things in phases.
 
 We have the concept of a purchasing funnel in marketing. Within the funnel, there are various stages that characterize consumer interactions. The steps in a basic buying funnel are:

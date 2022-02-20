@@ -13,8 +13,6 @@ embedId: 'null'
 
 Google Analytics goals allow you to link metrics in your reports to specific business objectives. This is a fantastic approach to use data to figure out if you're on track to fulfil your company objectives.
 
-![Cover Image](/static/blog/00026.png)
-
 Let's make a distinction between two types of goals before we set up a goal in Google Analytics: business goals and Google Analytics Goals.
 
 The actions you want your users to take on your website are known as business goals. A "conversion" occurs when a user completes one of your business goals. This could be anything as simple as signing up for a newsletter or purchasing a product.

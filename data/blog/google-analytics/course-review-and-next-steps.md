@@ -11,8 +11,6 @@ embedId: 'null'
 
 Congratulations on completing the course! Let's go over what we've learned so far and talk about how to acquire even more actionable insights from your data.
 
-![Cover Image](/static/blog/00028.png)
-
 Beginners' Guide to Google Analytics Review of the entire course
 Let's review everything we covered in Google Analytics for Beginners. We talked about:
 

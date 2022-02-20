@@ -13,8 +13,6 @@ embedId: 'null'
 
 You can create several "views" of the data you've collected in Google Analytics. Within each view, you can apply filters to select what data will be available. Different views might help you focus on subsets of data or grant access to specific views to other people.
 
-![Cover Image](/static/blog/00015.png)
-
 Click the "Admin" option at the top to discover what views are currently accessible for a property. Then click "View Settings" under View.
 
 ![Explanation Picture](/static/blog/00015_1.png)

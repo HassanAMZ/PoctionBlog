@@ -11,8 +11,6 @@ embedId: 'null'
 
 ## How to Distribute Reports
 
-![Cover Image](/static/blog/00019.png)
-
 ### Customizing and sharing reports
 
 Once you've identified useful information in your reports, Google Analytics provides numerous options for sharing or referring back to that report by clicking on the report name at the top of the page.

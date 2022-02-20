@@ -11,8 +11,6 @@ embedId: 'null'
 
 To track the traffic acquisition for facebook ads on google analytics for iOS14+ users. In this article, we will walk through the steps to set up the dynamic URL parameters on the facebook ads maanger.
 
-![Cover Image](/static/blog/00004.png)
-
 ## Table Of Content:
 
 1. [Origin of the issue](#origin-of-the-issue)

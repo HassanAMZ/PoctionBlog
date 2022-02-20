@@ -11,8 +11,6 @@ embedId: 'null'
 
 There are two kinds of reports in Google Analytics: “Overview” reports and “Full” reports. Let’s first walk through a guided tour of the Audience Overview report.
 
-![Cover Image](/static/blog/00017.png)
-
 ### Range of dates
 
 Every report has a date range at the top. You can use this to specify the time frame over which you want to study report data. To use the date range selection, click the date range.

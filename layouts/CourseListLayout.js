@@ -29,7 +29,7 @@ export default function CourseListLayout({ posts, title, initialDisplayPosts = [
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Search articles"
-            className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:border-gray-900 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:text-gray-100"
+            className="block w-full px-4 py-2 text-gray-900  border border-gray-300 rounded-md dark:border-gray-900 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:text-gray-100"
           />
           <svg
             className="absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300"
@@ -56,7 +56,7 @@ export default function CourseListLayout({ posts, title, initialDisplayPosts = [
               key={slug}
               className="rounded bg-gradient-to-r p-1  from-[#D8B4FE] to-[#818CF8] mb-4"
             >
-              <article className="rounded bg-white dark:bg-gray-900 space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline p-2">
+              <article className="rounded space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline p-2">
                 <dl>
                   <dt className="sr-only">Published on</dt>
                   <dd className=" flex flex-row justify-between xl:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">

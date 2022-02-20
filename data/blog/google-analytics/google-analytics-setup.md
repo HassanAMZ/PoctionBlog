@@ -13,8 +13,6 @@ embedId: 'null'
 
 Let's look at how Google Analytics accounts are organized now that you know how data is collected.
 
-![Cover Image](/static/blog/00014.png)
-
 Optionally, you can group all of your Google Analytics accounts into an "Organization." This gives you the ability to manage several Google Analytics accounts from a single location.
 
 Large companies or agencies may have many accounts, although medium and small firms typically only have one. When you establish an account, you also create a property and a view for that account within that property. Each Analytics account, on the other hand, can have many properties, each of which can have several views. This allows you to organize your Analytics data in a way that best reflects your company.

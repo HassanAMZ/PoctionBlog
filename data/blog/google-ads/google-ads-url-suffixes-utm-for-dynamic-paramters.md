@@ -9,8 +9,6 @@ coverImage: '/static/blog/00009.png'
 embedId: 'null'
 ---
 
-![Cover Image](/static/blog/00009.png)
-
 ## Table Of Content:
 
 1. [Origin of the issue](#origin-of-the-issue)

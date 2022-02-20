@@ -11,8 +11,6 @@ embedId: 'null'
 
 If you are in the niche of [web development ](https://www.upwork.com/freelance-jobs/frontend-development/), struggling to get a client and considering if your cover letter is not up to the mark, then you can use this cover letter guide to improve it. I have been using this cover letter for about 9 months now and have got about 70 Jobs on Upwork, helping me earn about 8,000$ in 9 months.
 
-![Cover Image](/static/blog/00032.png)
-
 ## Table Of Content:
 
 1. [Example Cover Letter](#example-cover-letter)

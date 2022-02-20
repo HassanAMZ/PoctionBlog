@@ -11,8 +11,6 @@ embedId: 'null'
 
 This Profile Description was inspired by a top-rated freelancer on Upwork. However, here is the breakdown of the Profile description for Graphic Designer. These 7 aspects are the most important when writing the profile description.
 
-![Cover Image](/static/blog/00029.png)
-
 ## Table Of Content:
 
 0. [Example Profile Description](#example-profile-description)

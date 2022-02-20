@@ -3,7 +3,7 @@ import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
-import kebabCase from '@/lib/utils/kebabCase'
+import { Flex, Box, Heading, Button, Container } from '@chakra-ui/react'
 
 export async function getStaticProps() {
   const tags = await getAllTags('blog')
@@ -16,31 +16,26 @@ export default function Tags({ tags }) {
   return (
     <>
       <PageSEO title={`Tags - ${siteMetadata.author}`} description="Things I blog about" />
-      <div className="flex flex-col justify-left my-4">
-        <div className="py-3 space-x-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Tags
-          </h1>
-        </div>
-        <div className="flex flex-wrap max-w-3xl">
-          {Object.keys(tags).length === 0 && 'No tags found.'}
-          {sortedTags.map((t) => {
-            return (
-              <>
-                <div key={t} className="my-1 sm:my-2 mr-5">
-                  <Tag text={t} />
-                  <Link
-                    href={`/tags/${kebabCase(t)}`}
-                    className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
-                  >
-                    {` (${tags[t]})`}
-                  </Link>
-                </div>
-              </>
-            )
-          })}
-        </div>
-      </div>
+      <Container maxW="container.md">
+        <Flex direction={'column'} justifyContent={'left'} my={4}>
+          <Heading as="h2" py="3" fontSize={['xl']}>
+            Top Tags
+          </Heading>
+
+          <Flex flexWrap={'wrap'}>
+            {Object.keys(tags).length === 0 && 'No tags found.'}
+            {sortedTags.map((tag, index) => {
+              return (
+                <Box key={tag}>
+                  <Flex justifyContent={'center'} alignItems={'center'}>
+                    <Tag text={tag} key={index} icon={` (${tags[tag]})`} />
+                  </Flex>
+                </Box>
+              )
+            })}
+          </Flex>
+        </Flex>
+      </Container>
     </>
   )
 }

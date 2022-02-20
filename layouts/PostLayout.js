@@ -1,6 +1,5 @@
-import Link from '@/components/Link'
-import PageTitle from '@/components/PageTitle'
-import SectionContainerPost from '@/components/SectionContainerPost'
+import Link from 'next/link'
+
 import { BlogSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -9,7 +8,21 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import GAPageView from '@/components/GAPageView'
 import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
-
+import {
+  Box,
+  Heading,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Flex,
+  UnorderedList,
+  ListItem,
+  Button,
+  Container,
+  Text,
+  VisuallyHidden,
+  Image,
+} from '@chakra-ui/react'
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
@@ -49,7 +62,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   }, [])
 
   return (
-    <SectionContainerPost>
+    <>
       <BlogSEO
         url={`${siteMetadata.siteUrl}/blog/${slug}`}
         authorDetails={authorDetails}
@@ -57,99 +70,128 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       />
       <ScrollTopAndComment />
 
-      <article id="singleBlogPost">
-        <div>
-          <header className="flex flex-col items-left">
-            <div className="pb-3 ">
-              <PageTitle>{title}</PageTitle>
-            </div>
-            <div className=" flex flex-row gap-2 items-left text-gray-700 pb-3 text-base dark:text-gray-400">
-              <div className="flex sm:flex-row flex-col text-xs gap-1 sm:text-base justify-center">
-                <div className="flex flex-row gap-1 sm:justify-between items-center">
-                  <Link href={instagram}>
-                    <div>{name}</div>
+      {/* <Container maxW="container.md" borderColor="gray.200" borderBottomWidth="thick" px="0">
+        <Image src={coverImage} />
+      </Container> */}
+
+      <Container maxW="container.md">
+        <Box as="article" id="singleBlogPost" py="2">
+          <Box>
+            <Flex direction="column">
+              <Heading as="h2" py="2" fontSize={['1.75rem', '2.2rem']}>
+                {title}
+              </Heading>
+
+              <Flex direction={['column', 'row', 'row']} justify="left" fontSize="xs" columnGap="2">
+                <Flex justify="left" columnGap="2">
+                  <Link href="/about">
+                    <a>
+                      <Text>{name}</Text>
+                    </a>
                   </Link>
-                  {`  •  `}
-                  <time dateTime={date}>
+                  <Box as="span">{` • `}</Box>
+                  <Text as="time" dateTime={date}>
                     {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
-                  </time>
-                  {`  •  `}
-                </div>
-                <div className="flex flex-row gap-1 items-center">
-                  <div>
-                    <span id="time"></span> min read
-                  </div>
-                  {` • `}
+                  </Text>
+                  <Box as="span">{` • `}</Box>
+                </Flex>
+                <Flex direction="row" columnGap="2">
+                  <Box as="span" id="time"></Box>
+                  <Text>min read</Text>
+
+                  <Box as="span">{` • `}</Box>
                   <GAPageView slug={slug} />
-                </div>
-              </div>
-            </div>{' '}
-            {tags && (
-              <div>
-                <div className="flex flex-wrap">
+                </Flex>
+              </Flex>
+
+              {tags && (
+                <Flex wrap="wrap">
                   {tags.map((tag) => (
                     <Tag key={tag} text={tag} />
                   ))}
-                </div>
-              </div>
-            )}
-          </header>
-          <div
-            className="divide-y divide-gray-200  dark:divide-gray-700 "
-            style={{ gridTemplateRows: 'auto 1fr' }}
-          >
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 ">
-              <div className="py-6 prose dark:prose-dark max-w-none text-left  text-sm sm:text-base">
-                {children}
-              </div>
-              <div className="py-6 text-sm text-gray-700 dark:text-gray-300">
+                </Flex>
+              )}
+            </Flex>
+            <Flex direction="column" py="2">
+              <Box as="article">{children}</Box>
+              <Flex direction="row" gap="2" justify="space-between" align="center">
                 <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Discuss on Twitter'}
+                  <a>
+                    <Text>Discuss on Twitter</Text>
+                  </a>
                 </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-              </div>
+                <Box as="span">{` • `}</Box>
+                <Link href={editUrl(fileName)}>
+                  <a>
+                    <Text>View on GitHub</Text>
+                  </a>
+                </Link>
+              </Flex>
               <Comments frontMatter={frontMatter} />
-            </div>
-            <footer>
-              <div className="text-sm font-medium leading-5 divide-gray-200  dark:divide-gray-700">
-                {(next || prev) && (
-                  <div className="flex justify-between py-4 ">
-                    {prev && (
-                      <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Previous Article
-                        </h2>
-                        <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
-                        </div>
-                      </div>
-                    )}
-                    {next && (
-                      <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Next Article
-                        </h2>
-                        <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${next.slug}`}>{next.title}</Link>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-              <div className="pt-4">
-                <Link
-                  href="/blog"
-                  className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                >
-                  &larr; Back to the blog
+
+              <Box>
+                <Box py="2">
+                  {(next || prev) && (
+                    <Flex justify="space-between">
+                      {prev && (
+                        <Flex direction="column" align="start" py="2">
+                          <Button
+                            colorScheme="teal"
+                            size="sm"
+                            w="fit-content"
+                            textTransform={'uppercase'}
+                            variant="solid"
+                          >
+                            Previous Article
+                          </Button>
+
+                          <Link href={`/blog/${prev.slug}`}>
+                            <a>
+                              <Text py="2">{prev.title}</Text>
+                            </a>
+                          </Link>
+                        </Flex>
+                      )}
+                      {next && (
+                        <Flex direction="column" align="end" py="2">
+                          <Button
+                            w="fit-content"
+                            colorScheme="teal"
+                            size="sm"
+                            textTransform={'uppercase'}
+                            variant="solid"
+                          >
+                            Next Article
+                          </Button>
+                          <Link href={`/blog/${next.slug}`}>
+                            <a>
+                              <Text py="2">{next.title}</Text>
+                            </a>
+                          </Link>
+                        </Flex>
+                      )}
+                    </Flex>
+                  )}
+                </Box>
+
+                <Link href="/blog">
+                  <a>
+                    <Button
+                      colorScheme="teal"
+                      size="sm"
+                      w="100%"
+                      textTransform={'uppercase'}
+                      variant="solid"
+                    >
+                      <Text py="2">&larr; Back to the blogs</Text>
+                    </Button>
+                  </a>
                 </Link>
-              </div>
-            </footer>
-          </div>
-        </div>
-      </article>
-    </SectionContainerPost>
+              </Box>
+            </Flex>
+          </Box>
+        </Box>
+      </Container>
+    </>
   )
 }

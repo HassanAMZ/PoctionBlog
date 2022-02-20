@@ -11,8 +11,6 @@ embedId: 'null'
 
 Google Ads is a great tool for promoting your business on Google's web domains. To measure the impact of ad campaigns on your business, integrate your Analytics account with Google Ads.
 
-![Cover Image](/static/blog/00027.png)
-
 ### How to Use Google Ads Analytics
 
 Google Ads is a text and display advertising system developed by Google that allows businesses to create text and display ads. By matching terms you can bid on with consumers' search queries, text adverts appear next to Google search results. Display advertising is text, image, animation, or video adverts that appear on the Google Display Network, which is a large collection of websites.

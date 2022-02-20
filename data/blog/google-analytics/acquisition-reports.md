@@ -11,8 +11,6 @@ embedId: 'null'
 
 Acquisition statistics may reveal how users find your website and how well your digital marketing and advertising campaigns are doing across various channels such as email, search, and display ads. These are some of Google Analytics' most useful and actionable reports.
 
-![Cover Image](/static/blog/00022.png)
-
 ### Overview of acquisition reports
 
 Acquisition reports can be found in the left-hand navigation under the "Acquisition" section. The Acquisition reports can be used to analyze the success of various marketing channels and determine which sources offer you the best traffic and conversions. This might assist you in making more informed selections about where to concentrate your marketing efforts.
