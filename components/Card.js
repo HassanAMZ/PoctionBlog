@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 import { Flex, Container, Heading, Text, Button, Image } from '@chakra-ui/react'
 
 const Card = ({ title, description, imgSrc, href, pid }) => (
