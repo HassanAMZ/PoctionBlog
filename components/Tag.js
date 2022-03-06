@@ -10,11 +10,12 @@ const Tag = ({ text, icon }) => {
     }
     return color
   }
+  let color = getDarkColor()
   return (
     <Box pr="2" py="1">
       <Link href={`/tags/${kebabCase(text)}`}>
         <a>
-          <Button size={'xs'} color={getDarkColor()} variant="outline" borderColor={getDarkColor()}>
+          <Button size="xs" variant="outline">
             <Flex
               justifyContent={'center'}
               alignItems={'center'}

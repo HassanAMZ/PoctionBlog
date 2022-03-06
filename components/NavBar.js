@@ -1,7 +1,8 @@
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from 'next/link'
-import { Box, Flex, Text, Image, Container } from '@chakra-ui/react'
+import { Box, Flex, Text, Container } from '@chakra-ui/react'
 import MobileNav from '@/components/MobileNav'
+import Image from 'next/image'
 
 const NavBar = () => {
   return (
@@ -20,13 +21,19 @@ const NavBar = () => {
             ))}
           </Flex>
           <Flex direction="row" gap="2" align="center" justify="center">
-            <Link href="/">
-              <a>
-                <Box borderRadius="100" w="8" bgColor="white">
-                  <Image src="/static/images/avatar.png" />
-                </Box>
-              </a>
-            </Link>
+            <Box borderRadius="100" w="8" bgColor="white">
+              <Link href="/">
+                <a>
+                  <Image
+                    src="/static/images/avatar.png"
+                    width="500px"
+                    height="500px"
+                    layout="responsive"
+                    objectFit="contain"
+                  />
+                </a>
+              </Link>
+            </Box>
             {/* <MobileNav /> */}
           </Flex>
         </Flex>

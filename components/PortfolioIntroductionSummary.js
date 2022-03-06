@@ -5,8 +5,15 @@ export default function PortfolioIntroductionSummary() {
   return (
     <>
       <Flex direction={'column'} gap="5" alignItems={'left'} py="2">
-        <Box width="32">
-          <Image src="/static/images/avatar.png" alt="Shahzada Ali Hassan" />
+        <Box borderRadius="100" w="32" bgColor="white">
+          <Image
+            src="/static/images/avatar.png"
+            alt="Shahzada Ali Hassan"
+            width="32"
+            height="32"
+            layout="responsive"
+            objectFit="contain"
+          />
         </Box>
         <Flex direction="column">
           <Heading as="h1" fontSize={['3xl']}>

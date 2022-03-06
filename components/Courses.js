@@ -25,7 +25,6 @@ const Courses = ({ posts }) => {
                 <GAPageView slug={slug} />
               </Flex>
             </Box>
-            {/* <Image borderRadius="full" src={coverImage} alt={title} />  */}
             <Box>
               <Heading as="h2" fontSize={['md', 'xl']}>
                 <Link href={`/blog/${slug}`}>

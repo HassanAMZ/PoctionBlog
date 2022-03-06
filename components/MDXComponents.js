@@ -10,7 +10,6 @@ import { chakra } from '@chakra-ui/react'
 export const MDXComponents = {
   Image,
   TOCInline,
-  a: CustomLink,
   pre: Pre,
   BlogNewsletterForm: BlogNewsletterForm,
   code: (props) => (
@@ -31,7 +30,19 @@ export const MDXComponents = {
   h5: (props) => <chakra.h5 fontWeight="bold" py="2" fontSize={['xl', '2xl', '2xl']} {...props} />,
   h6: (props) => <chakra.h6 fontWeight="bold" py="2" fontSize={['xl', '2xl', '2xl']} {...props} />,
 
-  ul: (props) => <chakra.ul fontSize={['sm', 'md', 'md']} {...props} />,
+  a: (props) => (
+    <chakra.a
+      fontSize={['sm', 'md', 'md']}
+      color="teal"
+      fontWeight="semibold"
+      textTransform="capitalize"
+      {...props}
+    />
+  ),
+
+  ul: (props) => (
+    <chakra.ul fontSize={['sm', 'md', 'md']} color="teal" fontWeight="semibold" {...props} />
+  ),
   li: (props) => (
     <chakra.li fontSize={['sm', 'md', 'md']} color="teal" fontWeight="semibold" {...props} />
   ),

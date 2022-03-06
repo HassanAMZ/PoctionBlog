@@ -107,10 +107,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               </Button>
             )
           }
-
+          let indexes = index + title
           return (
             <>
-              <ListItem key={index} py="2">
+              <ListItem key={indexes} py="2">
                 {/* <Box>
                   <dt className="sr-only">Published on</dt>
                   <dd className=" flex flex-row justify-between xl:flex-col text-base font-medium leading-6 text-gray-500 dark:text-gray-400">

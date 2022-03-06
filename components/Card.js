@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Flex, Container, Heading, Text, Button, Image } from '@chakra-ui/react'
+import Image from 'next/image'
+import { Flex, Container, Heading, Text, Button, Box } from '@chakra-ui/react'
 
 const Card = ({ title, description, imgSrc, href, pid }) => (
   <Flex direction="column" pb="5">
@@ -7,11 +8,25 @@ const Card = ({ title, description, imgSrc, href, pid }) => (
       {href ? (
         <Link href={href} aria-label={`Link to ${title}`}>
           <a>
-            <Image alt={title} src={imgSrc} />
+            <Image
+              alt={title}
+              src={imgSrc}
+              width="2000px"
+              height="1500px"
+              layout="responsive"
+              objectFit="contain"
+            />
           </a>
         </Link>
       ) : (
-        <Image alt={title} src={imgSrc} />
+        <Image
+          alt={title}
+          src={imgSrc}
+          width="2000px"
+          height="1500px"
+          layout="responsive"
+          objectFit="contain"
+        />
       )}
     </Container>
 
