@@ -14,7 +14,9 @@ embedId: 'null'
 1. [Origin of the issue](#origin-of-the-issue)
 2. [Solution to the ATT](#solution-to-the-att)
 3. [UTM Code](#utm-code)
-4. [Notes](#notes)
+4. [URL Suffix Code](#url-suffix-code)
+5. [Tracking Template Code](#tracking-template-code)
+6. [Notes](#notes)
 
 ### Origin of the issue
 
@@ -30,15 +32,25 @@ There is no solution to fix the Google ads reporting / conversion tracking on Go
 
 ### UTM Code
 
-We need to update the URL code for all the google ads, we are running on google ads manager. Copy the code below and paste it under Google Campaign> Settings> Additional Settings> Campaign URL options> Final URL Suffix. Click on "TEST" to make sure everything is fine.
+We need to update the URL code for all the google ads, we are running on google ads manager. Copy the code below and paste it under Google Ads> Settings> Account Settings> Tracking Options> Final URL Suffix or Tracking template, depending on your override needs. Click on "TEST" to make sure everything is fine.
+
+### URL Suffix Code
+
+```
+gclid={gclid}utm_id={campaignid}&utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}
+```
+
+![UTM Parameter Image](/static/blog/00009_1.png)
+
+### Tracking Template Code
 
 ```
 {lpurl}?utm_placement={ifcontent:{placement}}&utm_device={device}-{devicemodel}&utm_keyword={keyword}&utm_matchtype={matchtype}&utm_network={network}&utm_sourceid={sourceid}&utm_medium=cpc&utm_source=google&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}&v2={targetid}&v3={gclid}
 
 ```
 
-![UTM Parameter Image](/static/blog/00009_1.png)
+![UTM Parameter Image](/static/blog/00009_2.png)
 
 ### Notes
 
-2. Do not add the UTM parameters Google Campaign> Settings> Additional Settings> Campaign URL options> Tracking Template
+1. Click on "TEST" to make sure everything is fine.
