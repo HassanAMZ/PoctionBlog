@@ -39,9 +39,11 @@ There is no solution to fix the facebook ads reporting / conversion tracking on 
 We need to update the URL code for all the facebook ads, we are running on facebook ads manager. Copy the code below and paste it under facebook Campaign> Ad set> ad> Tracking code> URL parameters. Click on "Build a URL parameter" to make sure everything is fine.
 
 ```
-utm_source=FacebookAds&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{adset.name}}&utm_term={{ad.name}}
+utm_id={{campaign.id}}&utm_source=FacebookAds&utm_medium=cpc&utm_campaign={{campaign.name}}&utm_content={{adset.name}}&utm_term={{ad.name}}
 
 ```
+
+![UTM Parameter Image](/static/blog/00004_1.png)
 
 ### Notes
 
