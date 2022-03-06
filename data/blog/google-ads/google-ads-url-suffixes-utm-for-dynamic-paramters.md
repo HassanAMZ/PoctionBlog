@@ -37,7 +37,7 @@ We need to update the URL code for all the google ads, we are running on google 
 ### URL Suffix Code
 
 ```
-gclid={gclid}utm_id={campaignid}&utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}
+gclid={gclid}&utm_id={campaignid}&utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}
 ```
 
 ![UTM Parameter Image](/static/blog/00009_1.png)
