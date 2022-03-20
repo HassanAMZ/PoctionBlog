@@ -1,45 +1,108 @@
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from 'next/link'
-import { Box, Flex, Text, Container } from '@chakra-ui/react'
-import MobileNav from '@/components/MobileNav'
 import Image from 'next/image'
+import {
+  Box,
+  Flex,
+  Avatar,
+  HStack,
+  IconButton,
+  Button,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+  Container,
+  useDisclosure,
+  Stack,
+} from '@chakra-ui/react'
+import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
 
-const NavBar = () => {
+export default function NavBar() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  let NavLinks = headerNavLinks.map((link, index) => (
+    <Box
+      key={index}
+      px={2}
+      py={1}
+      color="white"
+      rounded={'md'}
+      _hover={{
+        textDecoration: 'none',
+        bg: 'white',
+        color: 'teal',
+      }}
+    >
+      <Link href={link.href}>
+        <a>{link.title}</a>
+      </Link>
+    </Box>
+  ))
   return (
     <Box bgColor="teal">
       <Container maxW="container.md">
-        <Flex as="header" direction="row " justify="space-between" align="center" py="3">
-          <Flex direction="row" gap="2">
-            {headerNavLinks.map((link, index) => (
-              <Link key={index} href={link.href}>
-                <a>
-                  <Text fontWeight="semi-bold" color="white">
-                    {link.title}
-                  </Text>
-                </a>
-              </Link>
-            ))}
-          </Flex>
-          <Flex direction="row" gap="2" align="center" justify="center">
-            <Box borderRadius="100" w="8" bgColor="white">
+        <Box>
+          <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+            <IconButton
+              size={'md'}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={'Open Menu'}
+              display={{ md: 'none' }}
+              onClick={isOpen ? onClose : onOpen}
+            />
+            <HStack spacing={8} alignItems={'center'}>
+              <Box
+                px={2}
+                py={1}
+                color="white"
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'white',
+                  color: 'teal',
+                }}
+              >
+                <Link href="/">
+                  <a>Shahzada Ali Hassan</a>
+                </Link>
+              </Box>
+              <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+                {NavLinks}
+              </HStack>
+            </HStack>
+            <Flex alignItems={'center'}>
+              {/* <Menu>
+                <MenuButton
+                  as={Button}
+                  rounded={'full'}
+                  variant={'link'}
+                  cursor={'pointer'}
+                  minW={0}
+                > */}
               <Link href="/">
                 <a>
-                  <Image
-                    src="/static/images/avatar.png"
-                    width="500px"
-                    height="500px"
-                    layout="responsive"
-                    objectFit="contain"
-                  />
+                  <Avatar backgroundColor={'white'} size={'sm'} src={'/static/images/avatar.png'} />
                 </a>
               </Link>
-            </Box>
-            {/* <MobileNav /> */}
+              {/* </MenuButton>
+                <MenuList>
+                <MenuItem>Link 1</MenuItem>
+                <MenuItem>Link 2</MenuItem>
+                <MenuDivider />
+                <MenuItem>Link 3</MenuItem>
+              </MenuList>
+              </Menu> */}
+            </Flex>
           </Flex>
-        </Flex>
+
+          {isOpen ? (
+            <Box pb={4} display={{ md: 'none' }}>
+              <Stack>{NavLinks}</Stack>
+            </Box>
+          ) : null}
+        </Box>
       </Container>
     </Box>
   )
 }
-
-export default NavBar
