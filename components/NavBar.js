@@ -22,22 +22,23 @@ import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   let NavLinks = headerNavLinks.map((link, index) => (
-    <Box
-      key={index}
-      px={2}
-      py={1}
-      color="white"
-      rounded={'md'}
-      _hover={{
-        textDecoration: 'none',
-        bg: 'white',
-        color: 'teal',
-      }}
-    >
-      <Link href={link.href}>
-        <a>{link.title}</a>
-      </Link>
-    </Box>
+    <Link key={index} href={link.href}>
+      <a>
+        <Box
+          px={2}
+          py={1}
+          color="white"
+          rounded={'md'}
+          _hover={{
+            textDecoration: 'none',
+            bg: 'white',
+            color: 'teal',
+          }}
+        >
+          {link.title}
+        </Box>
+      </a>
+    </Link>
   ))
   return (
     <Box bgColor="teal">
