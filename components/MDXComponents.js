@@ -17,7 +17,8 @@ export const MDXComponents = {
       fontSize={['xs', 'sm', 'md', 'md']}
       lineHeight="1.3"
       whiteSpace="pre-wrap"
-      p="2"
+      py="2"
+      wordBreak="break-word"
       {...props}
     />
   ),
