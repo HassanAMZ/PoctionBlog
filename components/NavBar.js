@@ -81,9 +81,14 @@ export default function NavBar() {
                   cursor={'pointer'}
                   minW={0}
                 > */}
-              <Link href="/">
+              <Link href="/about">
                 <a>
-                  <Avatar backgroundColor={'white'} size={'sm'} src={'/static/images/avatar.png'} />
+                  <Image
+                    alt="Shahzada Ali Hassan"
+                    src="/static/images/avatar.png"
+                    width="50px"
+                    height="50px"
+                  />
                 </a>
               </Link>
               {/* </MenuButton>

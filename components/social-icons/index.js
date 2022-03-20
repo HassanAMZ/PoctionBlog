@@ -17,7 +17,7 @@ const components = {
   instagram: Instagram,
 }
 
-const SocialIcon = ({ kind, href, size = 8 }) => {
+const SocialIcon = ({ kind, href }) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 
@@ -30,9 +30,9 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
       rel="noopener noreferrer"
       href={href}
     >
-      <span className="sr-only">{kind}</span>
+      <span className="text-white">{kind}</span>
       <SocialSvg
-        className={`fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 h-${size} w-${size}`}
+        className={`fill-current text-white dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 h-8 w-8`}
       />
     </a>
   )

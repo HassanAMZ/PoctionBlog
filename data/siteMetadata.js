@@ -10,13 +10,13 @@ const siteMetadata = {
   siteLogo: '/static/images/avatar.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/avatar.png',
-  email: 'ShahzadaAliHassan@gmail.com',
+  email: 'Reactjswebdev@gmail.com',
   github: 'https://github.com/HassanAMZ',
   twitter: 'https://twitter.com/shahzada_A',
   facebook: 'https://facebook.com/ShahzadaAliHassan',
   youtube: 'https://www.youtube.com/channel/UC8tapbraiwvk5nnQW0Eqh9g',
   linkedin: 'https://www.linkedin.com/in/hassanamz',
-  instagram: 'https://instagram.com/ShahzadaAliHassanblog',
+  instagram: 'https://instagram.com/ShahzadaAliHassan_',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics or GoogleTagManager
