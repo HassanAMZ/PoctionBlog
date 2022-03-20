@@ -46,28 +46,13 @@ export default function App({ Component, pageProps }) {
               name="google-site-verification"
               content="LOmgcQtS3n4SzA1wUbtCUBeOyVp1Kq8d4XWHvWAf51Y"
             />
-            <script
-              data-ad-client="ca-pub-1593692039645752"
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            ></script>
-
-            <MailChimpHeadCode />
           </Head>
+          <MailChimpHeadCode />
 
           <NavBar />
           <Component {...pageProps} />
 
           <Footer />
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_Tracking_ID}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-              title="GTM Script"
-            />
-          </noscript>
         </ChakraProvider>
       </ThemeProvider>
     </>

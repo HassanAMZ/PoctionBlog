@@ -1,9 +1,10 @@
+import Script from 'next/script'
 const MailChimpHeadCode = () => {
   const isProduction = process.env.NODE_ENV === 'production'
   return (
     <>
       {isProduction && (
-        <script
+        <Script
           id="mcjs"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{

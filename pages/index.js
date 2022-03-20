@@ -30,7 +30,7 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
   return (
     <Box>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <Box bgColor="gray.200" py="4">
+      <Box py="4">
         <Container maxW="container.md" py="4">
           <PortfolioIntroductionSummary />
         </Container>
@@ -38,7 +38,7 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
       <Container maxW="container.md" py="4">
         <Courses posts={posts} />
       </Container>
-      <Box bgColor="gray.200" py="4">
+      <Box py="4">
         <Container maxW="container.md">
           <RecentPosts
             posts={posts}
