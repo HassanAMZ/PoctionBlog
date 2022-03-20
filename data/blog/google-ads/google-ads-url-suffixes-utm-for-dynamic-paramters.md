@@ -45,7 +45,7 @@ gclid={gclid}&utm_id={campaignid}&utm_source=google&utm_medium=cpc&utm_campaign=
 ### Tracking Template Code
 
 ```
-{lpurl}?utm_placement={ifcontent:{placement}}&utm_device={device}-{devicemodel}&utm_keyword={keyword}&utm_matchtype={matchtype}&utm_network={network}&utm_sourceid={sourceid}&utm_medium=cpc&utm_source=google&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}&v2={targetid}&v3={gclid}
+{lpurl}?gclid={gclid}&utm_id={campaignid}&utm_source=google&utm_medium=cpc&utm_campaign={campaignid}&utm_term={adgroupid}&utm_content={creative}
 
 ```
 
