@@ -37,6 +37,9 @@ export const MDXComponents = {
       color="teal"
       fontWeight="semibold"
       textTransform="capitalize"
+      textDecoration="underline"
+      textDecorationStyle="dotted"
+      _hover={{ color: 'teal.900' }}
       {...props}
     />
   ),
