@@ -70,11 +70,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       />
       <ScrollTopAndComment />
 
-      {/* <Container maxW="container.md" borderColor="gray.200" borderBottomWidth="thick" px="0">
+      {/* <Container maxW="container.xl" borderColor="gray.200" borderBottomWidth="thick" px="0">
         <Image src={coverImage} />
       </Container> */}
 
-      <Container maxW="container.md">
+      <Container maxW="container.xl">
         <Box as="article" id="singleBlogPost" py="2">
           <Box>
             <Flex direction="column">

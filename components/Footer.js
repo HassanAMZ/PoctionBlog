@@ -39,11 +39,11 @@ export default function LargeWithLogoLeft() {
   return (
     <Box bg="teal" color="white">
       <Box bgColor="gray.200" py="4">
-        <Container maxW="container.md">
+        <Container maxW="container.xl">
           {siteMetadata.newsletter.provider !== '' && <NewsletterForm />}
         </Container>
       </Box>
-      <Container as={Stack} maxW="container.md" py={10}>
+      <Container as={Stack} maxW="container.xl" py={10}>
         <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 1fr 1fr' }} spacing={8}>
           <Stack>
             <Box>

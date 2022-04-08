@@ -16,7 +16,7 @@ export default function Tags({ tags }) {
   return (
     <>
       <PageSEO title={`Tags - ${siteMetadata.author}`} description="Things I blog about" />
-      <Container maxW="container.md">
+      <Container maxW="container.xl">
         <Flex direction={'column'} justifyContent={'left'} my={4}>
           <Heading as="h2" py="3" fontSize={['xl']}>
             Top Tags

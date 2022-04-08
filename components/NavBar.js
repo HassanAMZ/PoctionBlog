@@ -42,7 +42,7 @@ export default function NavBar() {
   ))
   return (
     <Box bgColor="teal">
-      <Container maxW="container.md">
+      <Container maxW="container.xl">
         <Box>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
             <IconButton
@@ -68,9 +68,9 @@ export default function NavBar() {
                   <a>Shahzada Ali Hassan</a>
                 </Link>
               </Box>
-              <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-                {NavLinks}
-              </HStack>
+            </HStack>
+            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+              {NavLinks}
             </HStack>
             <Flex alignItems={'center'}>
               {/* <Menu>
@@ -81,16 +81,24 @@ export default function NavBar() {
                   cursor={'pointer'}
                   minW={0}
                 > */}
-              <Link href="/about">
-                <a>
-                  <Image
-                    alt="Shahzada Ali Hassan"
-                    src="/static/images/avatar.png"
-                    width="50px"
-                    height="50px"
-                  />
-                </a>
-              </Link>
+              <Box
+                bgColor={'white'}
+                borderRadius="100px"
+                width={'50px'}
+                height="50px"
+                position="relative"
+              >
+                <Link href="/about">
+                  <a>
+                    <Image
+                      alt="Shahzada Ali Hassan"
+                      src="/static/images/avatar.png"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </a>
+                </Link>
+              </Box>
               {/* </MenuButton>
                 <MenuList>
                 <MenuItem>Link 1</MenuItem>

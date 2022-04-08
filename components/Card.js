@@ -4,7 +4,7 @@ import { Flex, Container, Heading, Text, Button, Box } from '@chakra-ui/react'
 
 const Card = ({ title, description, imgSrc, href, pid }) => (
   <Flex direction="column" pb="5">
-    <Container maxW="container.md" px="0">
+    <Container maxW="container.xl" px="0">
       {href ? (
         <Link href={href} aria-label={`Link to ${title}`}>
           <a>
@@ -30,7 +30,7 @@ const Card = ({ title, description, imgSrc, href, pid }) => (
       )}
     </Container>
 
-    <Container maxW="container.md" py="4">
+    <Container maxW="container.xl" py="4">
       <Heading as="h2" py="3" fontSize={['lg', 'xl']}>
         {href ? (
           <>

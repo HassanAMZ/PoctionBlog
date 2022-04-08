@@ -31,15 +31,15 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
     <Box>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <Box py="4">
-        <Container maxW="container.md" py="4">
+        <Container maxW="container.xl" py="4">
           <PortfolioIntroductionSummary />
         </Container>
       </Box>
-      <Container maxW="container.md" py="4">
+      <Container maxW="container.xl" py="4">
         <Courses posts={posts} />
       </Container>
       <Box py="4">
-        <Container maxW="container.md">
+        <Container maxW="container.xl">
           <RecentPosts
             posts={posts}
             initialDisplayPosts={initialDisplayPosts}
@@ -65,7 +65,7 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
           )}
         </Container>
       </Box>
-      <Container maxW="container.md">
+      <Container maxW="container.xl">
         <>
           <Flex direction={'column'} justifyContent={'left'} my={4}>
             <Heading as="h2" py="3" fontSize={['xl']}>

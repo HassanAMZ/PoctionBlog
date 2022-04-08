@@ -67,7 +67,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <Container maxW="container.md">
+      <Container maxW="container.xl">
         <Box py={['5', '6']}>
           <Heading as="h2" py="3" fontSize={['xl']}>
             {title}
