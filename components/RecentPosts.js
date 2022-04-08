@@ -88,6 +88,11 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 px="2"
                 py="1"
                 key={index}
+                fontWeight={'normal'}
+                bg={'teal.400'}
+                _hover={{ bg: 'teal.500' }}
+                border="1px"
+                borderColor={'gray.500'}
               >
                 New
               </Button>
@@ -96,12 +101,15 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             orderNumber = (
               <Button
                 size={['x-small', 'sm']}
-                colorScheme="teal"
                 textTransform={'uppercase'}
-                variant="outline"
+                variant="solid"
                 px="2"
                 py="1"
                 key={index}
+                fontWeight={'normal'}
+                _hover={{ bg: 'teal.500', color: 'white' }}
+                border="1px"
+                borderColor={'gray.500'}
               >
                 &nbsp; 0{index} &nbsp;
               </Button>

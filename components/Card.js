@@ -51,11 +51,14 @@ const Card = ({ title, description, imgSrc, href, pid }) => (
         <Link py="3" href={href} aria-label={`Link to ${title}`}>
           <a>
             <Button
-              colorScheme="teal"
-              size="sm"
-              my={'4'}
-              textTransform={'uppercase'}
-              variant="solid"
+              rounded={'full'}
+              size={'lg'}
+              fontWeight={'normal'}
+              px={6}
+              colorScheme={'teal'}
+              bg={'teal.400'}
+              _hover={{ bg: 'teal.500' }}
+              my="4"
             >
               Learn more &rarr;
             </Button>

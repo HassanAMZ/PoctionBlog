@@ -141,6 +141,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                             w="fit-content"
                             textTransform={'uppercase'}
                             variant="solid"
+                            rounded={'full'}
+                            fontWeight={'normal'}
+                            px={6}
+                            bg={'teal.400'}
+                            _hover={{ bg: 'teal.500' }}
+                            my="4"
                           >
                             Previous Article
                           </Button>
@@ -160,6 +166,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                             size="sm"
                             textTransform={'uppercase'}
                             variant="solid"
+                            rounded={'full'}
+                            fontWeight={'normal'}
+                            px={6}
+                            bg={'teal.400'}
+                            _hover={{ bg: 'teal.500' }}
+                            my="4"
                           >
                             Next Article
                           </Button>
@@ -182,6 +194,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       w="100%"
                       textTransform={'uppercase'}
                       variant="solid"
+                      rounded={'full'}
+                      fontWeight={'normal'}
+                      px={6}
+                      bg={'teal.400'}
+                      _hover={{ bg: 'teal.500' }}
+                      my="4"
                     >
                       <Text py="2">&larr; Back to the blogs</Text>
                     </Button>

@@ -1,6 +1,18 @@
 html {
   scroll-behavior: smooth;
 }
+/* Selction Text Color highlight */
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: teal;
+}
+
+::selection {
+  /* Code for Firefox */
+  color: white;
+  background: teal;
+}
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,

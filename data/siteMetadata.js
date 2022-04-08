@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: 'ShahzadaAliHassan',
+  title: 'Shahzada Ali Hassan',
   author: 'Shahzada Ali Hassan',
-  headerTitle: 'ShahzadaAliHassan',
-  description: 'Blogs and guides by ShahzadaAliHassan',
+  headerTitle: 'Shahzada Ali Hassan',
+  description: 'Blogs and guides by Shahzada Ali Hassan',
   language: 'en-us',
   siteUrl: 'https://ShahzadaAliHassan.com',
   siteDomain: 'ShahzadaAliHassan.com',

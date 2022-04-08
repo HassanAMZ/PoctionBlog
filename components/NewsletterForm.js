@@ -68,6 +68,12 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
             type="submit"
             size="sm"
             mr="2"
+            rounded={'full'}
+            fontWeight={'normal'}
+            px={6}
+            bg={'teal.400'}
+            _hover={{ bg: 'teal.500' }}
+            my="4"
             disabled={subscribed}
           >
             {subscribed ? 'Thank you!' : 'Sign up'}

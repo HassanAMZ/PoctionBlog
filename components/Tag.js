@@ -15,7 +15,15 @@ const Tag = ({ text, icon }) => {
     <Box pr="2" py="1">
       <Link href={`/tags/${kebabCase(text)}`}>
         <a>
-          <Button size="xs" variant="outline">
+          <Button
+            size="xs"
+            variant="outline"
+            fontWeight={'normal'}
+            px={6}
+            _hover={{ bg: 'teal.500', color: 'white' }}
+            border="1px"
+            borderColor="gray.500"
+          >
             <Flex
               justifyContent={'center'}
               alignItems={'center'}

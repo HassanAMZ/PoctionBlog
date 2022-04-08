@@ -56,12 +56,16 @@ export default function NavBar() {
               <Box
                 px={2}
                 py={1}
-                color="white"
+                textDecoration="none"
+                bgColor="white"
+                color="teal"
                 rounded={'md'}
+                border="1px"
                 _hover={{
                   textDecoration: 'none',
-                  bg: 'white',
-                  color: 'teal',
+                  bg: 'teal',
+                  color: 'white',
+                  border: '1px',
                 }}
               >
                 <Link href="/">

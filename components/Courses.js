@@ -46,17 +46,16 @@ const Courses = ({ posts }) => {
               <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
                 <a>
                   <Button
-                    colorScheme="teal"
-                    size="sm"
-                    my={'2'}
-                    textTransform={'uppercase'}
-                    variant="solid"
+                    rounded={'full'}
+                    size={'sm'}
+                    fontWeight={'normal'}
+                    px={6}
+                    colorScheme={'teal'}
+                    bg={'teal.400'}
+                    _hover={{ bg: 'teal.500' }}
+                    my="4"
                   >
-                    <Flex justifyContent={'center'} alignItems={'center'}>
-                      <Box textTransform={'capitalize'} fontSize={'sm'}>
-                        Get the course &rarr;
-                      </Box>
-                    </Flex>
+                    Get the course &rarr;
                   </Button>
                 </a>
               </Link>

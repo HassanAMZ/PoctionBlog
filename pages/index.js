@@ -8,7 +8,7 @@ import { getAllTags } from '@/lib/tags'
 import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 import Courses from '@/components/Courses'
 import { Flex, Box, Heading, Button, Container } from '@chakra-ui/react'
-
+import Hero from '@/components/Hero'
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
 
@@ -30,15 +30,15 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
   return (
     <Box>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <Box py="4">
-        <Container maxW="container.xl" py="4">
-          <PortfolioIntroductionSummary />
-        </Container>
-      </Box>
-      <Container maxW="container.xl" py="4">
+
+      <Container maxW="container.xl">
+        <Hero />
+      </Container>
+
+      <Container maxW="container.xl">
         <Courses posts={posts} />
       </Container>
-      <Box py="4">
+      <Box>
         <Container maxW="container.xl">
           <RecentPosts
             posts={posts}
@@ -52,10 +52,15 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
                 <a>
                   <Button
                     colorScheme="teal"
-                    size="sm"
                     my={'2'}
                     textTransform={'uppercase'}
                     variant="solid"
+                    rounded={'full'}
+                    size="sm"
+                    fontWeight={'normal'}
+                    px={6}
+                    bg={'teal.400'}
+                    _hover={{ bg: 'teal.500' }}
                   >
                     All Posts &rarr;
                   </Button>
@@ -97,6 +102,11 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
                     my={'2'}
                     textTransform={'uppercase'}
                     variant="solid"
+                    rounded={'full'}
+                    fontWeight={'normal'}
+                    px={6}
+                    bg={'teal.400'}
+                    _hover={{ bg: 'teal.500' }}
                   >
                     All Tags &rarr;
                   </Button>
