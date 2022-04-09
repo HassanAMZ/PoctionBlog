@@ -35,7 +35,10 @@ export default function Hero() {
             bg={'teal.400'}
             _hover={{ bg: 'teal.500' }}
           >
-            Hire Me
+               <Link href="/about" aria-label="all projects">
+              <a>  Hire Me</a>
+            </Link>
+          
           </Button>
 
           <Button
