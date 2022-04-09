@@ -28,7 +28,7 @@ export default function Hero() {
         <PortfolioIntroductionSummary />
         <Flex direction={{ base: 'column', sm: 'row' }} gap="2">
           <NextLink
-            href="/about"
+            href="/projects"
             aria-label="all projects"
             passHref
             width={{ base: '100%', sm: 'fit-content' }}
@@ -70,7 +70,13 @@ export default function Hero() {
           </NextLink>
         </Flex>
       </Flex>
-      <Flex justify={'center'} align={'center'} position={'relative'} w={'full'}>
+      <Flex
+        display={{ base: 'none', sm: 'none', md: 'none' }}
+        justify={'center'}
+        align={'center'}
+        position={'relative'}
+        w={'full'}
+      >
         <Blob
           w={'150%'}
           h={'150%'}
