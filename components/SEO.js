@@ -102,6 +102,7 @@ export const BlogSEO = ({
     authorList = authorDetails.map((author) => {
       return {
         '@type': 'Person',
+        url: 'https://ShahzadaAliHassan.com/static/images/avatar.png',
         name: author.name,
       }
     })
@@ -109,6 +110,7 @@ export const BlogSEO = ({
     authorList = {
       '@type': 'Person',
       name: siteMetadata.author,
+      url: 'https://ShahzadaAliHassan.com/static/images/avatar.png',
     }
   }
 
@@ -151,6 +153,7 @@ export const BlogSEO = ({
         {lastmod && <meta property="article:modified_time" content={modifiedAt} />}
         <link rel="canonical" href={`${siteMetadata.siteUrl}${router.asPath}`} />
         <script
+          id="structuredData"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData, null, 2),
