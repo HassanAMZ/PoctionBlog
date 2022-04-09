@@ -89,8 +89,8 @@ export default function NavBar() {
               <Box
                 bgColor={'white'}
                 borderRadius="100px"
-                width={'50px'}
-                height="50px"
+                width={'40px'}
+                height="40px"
                 position="relative"
               >
                 <Link href="/about">

@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import RecentPosts from '@/components/RecentPosts'
 import { getAllTags } from '@/lib/tags'
-import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
+import PreviousClient from '@/components/PreviousClient'
 import Courses from '@/components/Courses'
 import { Flex, Box, Heading, Button, Container, Link as ChakraLink } from '@chakra-ui/react'
 import Hero from '@/components/Hero'
@@ -33,6 +33,13 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
 
       <Container maxW="container.xl">
         <Hero />
+      </Container>
+
+      <Container maxW="container.xl" py="5">
+        <Heading as="h2" py="3" fontSize={['xl']}>
+          Recent Web Analytics Projects
+        </Heading>
+        <PreviousClient />
       </Container>
 
       <Container maxW="container.xl">

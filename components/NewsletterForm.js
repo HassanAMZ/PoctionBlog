@@ -46,7 +46,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
 
   return (
     <Flex direction="column" as="form" id="NewsLletterForm" onSubmit={subscribe} py="4rem">
-      <Heading as="h2" pb="1rem" fontSize={['xl']}>
+      <Heading as="h2" pb="1rem" fontSize={['xl']} color="black">
         {title}
       </Heading>
       <InputGroup>
@@ -91,9 +91,9 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
 export default NewsletterForm
 
 export const BlogNewsletterForm = ({ title }) => (
-  <div className="flex items-center justify-center">
-    <div className="p-6 bg-gray-100 dark:bg-gray-800 sm:px-14 sm:py-8">
+  <Flex align="center" justify="center">
+    <Box p="6">
       <NewsletterForm title={title} />
-    </div>
-  </div>
+    </Box>
+  </Flex>
 )

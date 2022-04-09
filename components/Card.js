@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Flex, Container, Heading, Text, Button, Box } from '@chakra-ui/react'
 
-const Card = ({ title, description, imgSrc, href, pid }) => (
+const Card = ({ title, description, imgSrc, href, pid, price }) => (
   <Flex direction="column" pb="5">
     {href ? (
       <Link href={href} aria-label={`Link to ${title}`}>
@@ -28,7 +28,7 @@ const Card = ({ title, description, imgSrc, href, pid }) => (
       />
     )}
 
-    <Heading as="h2" py="3" fontSize={['lg', 'xl']}>
+    <Heading as="h2" py="3" fontSize={['lg', 'xl']} m="3">
       {href ? (
         <>
           <Link href={href} aria-label={`Link to ${title}`}>
@@ -41,13 +41,15 @@ const Card = ({ title, description, imgSrc, href, pid }) => (
         <Text>{title}</Text>
       )}
     </Heading>
-    <Text noOfLines="3" as="p" my="4">
+    <Text noOfLines="3" as="p" m="3">
       {description}
     </Text>
+
     {href && (
-      <Link py="3" href={href} aria-label={`Link to ${title}`}>
+      <Link href={href} aria-label={`Link to ${title}`}>
         <a>
           <Button
+            m="3"
             rounded={'full'}
             size={'lg'}
             fontWeight={'normal'}
@@ -57,7 +59,7 @@ const Card = ({ title, description, imgSrc, href, pid }) => (
             _hover={{ bg: 'teal.500' }}
             my="4"
           >
-            Learn more &rarr;
+            Continue ({price}) &rarr;
           </Button>
         </a>
       </Link>
