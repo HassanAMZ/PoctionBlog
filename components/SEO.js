@@ -102,7 +102,7 @@ export const BlogSEO = ({
     authorList = authorDetails.map((author) => {
       return {
         '@type': 'Person',
-        url: 'https://ShahzadaAliHassan.com/static/images/avatar.png',
+        url: ' https://shahzadaalihassan.com/about',
         name: author.name,
       }
     })
@@ -110,7 +110,7 @@ export const BlogSEO = ({
     authorList = {
       '@type': 'Person',
       name: siteMetadata.author,
-      url: 'https://ShahzadaAliHassan.com/static/images/avatar.png',
+      url: ' https://shahzadaalihassan.com/about',
     }
   }
 
