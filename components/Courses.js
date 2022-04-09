@@ -42,17 +42,18 @@ const Courses = ({ posts }) => {
             <Box fontSize={['sm']} noOfLines={[3]}>
               {summary}
             </Box>
-            <Box>
+            <Box width={{ base: '100%', sm: 'fit-content' }}>
               <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
                 <a>
                   <Button
                     rounded={'full'}
-                    size={'sm'}
+                    size={'lg'}
                     fontWeight={'normal'}
                     px={6}
                     colorScheme={'teal'}
                     bg={'teal.400'}
-                    _hover={{ bg: 'teal.500' }}
+                    _hover={{ bg: 'teal.500', textDecoration: 'none' }}
+                    width="100%"
                     my="4"
                   >
                     Get the course &rarr;

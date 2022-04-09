@@ -54,13 +54,14 @@ export default function NavBar() {
             />
             <HStack spacing={8} alignItems={'center'}>
               <Box
-                px={2}
+                px={1}
                 py={1}
                 textDecoration="none"
                 bgColor="white"
                 color="teal"
                 rounded={'md'}
                 border="1px"
+                textAlign="center"
                 _hover={{
                   textDecoration: 'none',
                   bg: 'teal',

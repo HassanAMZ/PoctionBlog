@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -7,7 +7,7 @@ import RecentPosts from '@/components/RecentPosts'
 import { getAllTags } from '@/lib/tags'
 import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
 import Courses from '@/components/Courses'
-import { Flex, Box, Heading, Button, Container } from '@chakra-ui/react'
+import { Flex, Box, Heading, Button, Container, Link as ChakraLink } from '@chakra-ui/react'
 import Hero from '@/components/Hero'
 export const POSTS_PER_PAGE = 5
 const MAX_DISPLAY = 5
@@ -47,25 +47,28 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
             title="Recent Posts"
           />
           {posts.length > MAX_DISPLAY && (
-            <Flex justifyContent={'flex-end'} py={[2, 3]}>
-              <Link href="/blog" aria-label="all posts">
-                <a>
+            <Flex justifyContent={'flex-end'} py={[2, 3]} display={{ base: 'block', sm: 'flex' }}>
+              <NextLink
+                href="/blog"
+                aria-label="all posts"
+                width={{ base: '100%', sm: 'fit-content' }}
+              >
+                <ChakraLink>
                   <Button
-                    colorScheme="teal"
-                    my={'2'}
-                    textTransform={'uppercase'}
-                    variant="solid"
                     rounded={'full'}
-                    size="sm"
+                    size={'lg'}
                     fontWeight={'normal'}
                     px={6}
+                    colorScheme={'teal'}
                     bg={'teal.400'}
-                    _hover={{ bg: 'teal.500' }}
+                    _hover={{ bg: 'teal.500', textDecoration: 'none' }}
+                    width="100%"
+                    my="4"
                   >
                     All Posts &rarr;
                   </Button>
-                </a>
-              </Link>
+                </ChakraLink>
+              </NextLink>
             </Flex>
           )}
         </Container>
@@ -93,25 +96,28 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
             </Flex>
           </Flex>
           {
-            <Flex justifyContent={'flex-end'} py={[2, 3]}>
-              <Link href="/tags" aria-label="all posts">
-                <a>
+            <Flex justifyContent={'flex-end'} py={[2, 3]} display={{ base: 'block', sm: 'flex' }}>
+              <NextLink
+                href="/tags"
+                aria-label="all posts"
+                width={{ base: '100%', sm: 'fit-content' }}
+              >
+                <ChakraLink>
                   <Button
-                    colorScheme="teal"
-                    size="sm"
-                    my={'2'}
-                    textTransform={'uppercase'}
-                    variant="solid"
                     rounded={'full'}
+                    size={'lg'}
                     fontWeight={'normal'}
                     px={6}
+                    colorScheme={'teal'}
                     bg={'teal.400'}
-                    _hover={{ bg: 'teal.500' }}
+                    _hover={{ bg: 'teal.500', textDecoration: 'none' }}
+                    width="100%"
+                    my="2"
                   >
                     All Tags &rarr;
                   </Button>
-                </a>
-              </Link>
+                </ChakraLink>
+              </NextLink>
             </Flex>
           }
         </>
