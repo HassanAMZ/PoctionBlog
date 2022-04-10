@@ -10,10 +10,12 @@ const Courses = ({ posts }) => {
   let blogIDs = []
   posts.map((frontMatter, index) => {
     const { slug, date, title, summary, tags, blogID, coverImage } = frontMatter
+    console.log('BlogID', index, blogID)
     coursesIDs.map((coursesID, indexA) => {
       if (blogID == coursesID) {
+        console.log('Matched is the logID', indexA, coursesID)
         blogIDs[indexA] = (
-          <Flex as="article" key={indexA} direction={['column']} p="0">
+          <Flex as="article" key={indexA} direction={['column']} gap="5">
             <Box>
               <VisuallyHidden>Published on</VisuallyHidden>
               <Flex
@@ -39,9 +41,7 @@ const Courses = ({ posts }) => {
                 ))}
               </Flex>
             </Box>
-            <Box fontSize={['sm']} noOfLines={[3]}>
-              {summary}
-            </Box>
+            <Box noOfLines={[3]}>{summary}</Box>
             <Box width={{ base: '100%', sm: 'fit-content' }}>
               <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`}>
                 <a>

@@ -33,7 +33,7 @@ export default function Hero() {
             passHref
             width={{ base: '100%', sm: 'fit-content' }}
           >
-            <ChakraLink>
+            <ChakraLink textDecoration={'none !important'}>
               <Button
                 rounded={'full'}
                 size={'lg'}
@@ -55,15 +55,8 @@ export default function Hero() {
             passHref
             width={{ base: '100%', sm: 'fit-content' }}
           >
-            <ChakraLink>
-              <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
-                px={6}
-                width="100%"
-                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
-              >
+            <ChakraLink textDecoration={'none !important'}>
+              <Button rounded={'full'} size={'lg'} fontWeight={'normal'} px={6} width="100%">
                 Check the Projects
               </Button>
             </ChakraLink>

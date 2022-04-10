@@ -5,7 +5,7 @@ blogID: '00008'
 tags: ['google analytics', 'course', 'free course']
 draft: false
 summary: Google Analytics for Beginners explains how to create an account, add tracking code, and set up data filters in Google Analytics. You'll discover how to use Google Analytics' interface and reports, as well as how to create dashboards and shortcuts
-coverImage: '/static/blog/00008.png'
+coverImage: '/static/blog/.png'
 embedId: 'null'
 ---
 

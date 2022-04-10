@@ -8,12 +8,14 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import GAPageView from '@/components/GAPageView'
 import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
+import SocialIcon from '@/components/social-icons/index'
 import {
   Box,
   Heading,
   Input,
   InputGroup,
   InputRightElement,
+  Grid,
   Flex,
   UnorderedList,
   ListItem,
@@ -25,7 +27,7 @@ import {
 } from '@chakra-ui/react'
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
+  `https://twitter.com/intent/tweet?text=Just%20read%20this%20amazing%20blog%20${encodeURIComponent(
     `${siteMetadata.siteDomain}/blog/${slug}`
   )}`
 
@@ -56,7 +58,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       const wpm = 225
       const words = text.trim().split(/\s+/).length
       const time = Math.ceil(words / wpm)
-      document.getElementById('time').innerText = time
+      const timeDiv = document.getElementById('time')
+      if (timeDiv !== undefined) {
+        if (timeDiv !== null) {
+          timeDiv.innerText = time
+        }
+      }
     }
     readingTime()
   }, [])
@@ -69,33 +76,46 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         {...frontMatter}
       />
       <ScrollTopAndComment />
-
-      {/* <Container maxW="container.xl" borderColor="gray.200" borderBottomWidth="thick" px="0">
-        <Image src={coverImage} />
-      </Container> */}
-
-      <Container maxW="container.xl">
-        <Box as="article" id="singleBlogPost" py="2">
-          <Box>
-            <Flex direction="column">
-              <Heading as="h2" py="2" fontSize={['1.75rem', '2.2rem']}>
+      <Box bgColor={'gray.50'} py="5">
+        <Container maxW="container.xl">
+          <Grid templateRows="repeat(auto-fill, minmax(350px, 30vh))" placeContent={'center'}>
+            <Flex
+              align="center"
+              justify={'center'}
+              direction="column"
+              gap="5"
+              textTransform={'capitalize'}
+              fontWeight="bold"
+            >
+              <Heading as="h2" py="2" fontSize={['1.75rem', '2.2rem']} align="center">
                 {title}
               </Heading>
-
-              <Flex direction={['column', 'row', 'row']} justify="left" fontSize="xs" columnGap="2">
-                <Flex justify="left" columnGap="2">
+              {tags && (
+                <Flex wrap="wrap" align="center" justify={'center'}>
+                  {tags.map((tag) => (
+                    <Tag key={tag} text={tag} />
+                  ))}
+                </Flex>
+              )}
+              <Flex
+                direction={['column', 'column', 'row', 'row']}
+                justify="left"
+                fontSize="xs"
+                columnGap="2"
+                align="center"
+              >
+                <Flex justify="left" align="center" columnGap="2">
                   <Link href="/about">
                     <a>
-                      <Text>{name}</Text>
+                      <Text textAlign={'center'}>{name}</Text>
                     </a>
                   </Link>
                   <Box as="span">{` • `}</Box>
-                  <Text as="time" dateTime={date}>
+                  <Text textAlign={'center'} as="time" dateTime={date}>
                     {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                   </Text>
-                  <Box as="span">{` • `}</Box>
                 </Flex>
-                <Flex direction="row" columnGap="2">
+                <Flex direction="row" columnGap="2" align={'center'} justify="center">
                   <Box as="span" id="time"></Box>
                   <Text>min read</Text>
 
@@ -103,38 +123,33 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <GAPageView slug={slug} />
                 </Flex>
               </Flex>
-
-              {tags && (
-                <Flex wrap="wrap">
-                  {tags.map((tag) => (
-                    <Tag key={tag} text={tag} />
-                  ))}
+              <Flex direction="row" gap="4" justify="space-between" align="center">
+                <Flex direction="row" gap="5" justify="space-between" align="center">
+                  <a className="twitter-share-button" href={discussUrl(slug)} data-size="large">
+                    Tweet it
+                  </a>
+                  {/* <SocialIcon kind="github" href={editUrl(fileName)} /> */}
                 </Flex>
-              )}
+              </Flex>
             </Flex>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Container maxW="container.xl">
+        <Box as="article" id="singleBlogPost" py="2">
+          <Box>
             <Flex direction="column" py="2">
               <Box as="article">{children}</Box>
-              <Flex direction="row" gap="2" justify="space-between" align="center">
-                <Link href={discussUrl(slug)} rel="nofollow">
-                  <a>
-                    <Text>Discuss on Twitter</Text>
-                  </a>
-                </Link>
-                <Box as="span">{` • `}</Box>
-                <Link href={editUrl(fileName)}>
-                  <a>
-                    <Text>View on GitHub</Text>
-                  </a>
-                </Link>
-              </Flex>
-              <Comments frontMatter={frontMatter} />
+
+              {/* <Comments frontMatter={frontMatter} /> */}
 
               <Box>
                 <Box py="2">
                   {(next || prev) && (
-                    <Flex justify="space-between">
+                    <Flex justify="space-between" direction={{ base: 'column', sm: 'row' }}>
                       {prev && (
-                        <Flex direction="column" align="start" py="2">
+                        <Flex direction="column" align={{ base: 'center', sm: 'start' }} py="2">
                           <Button
                             colorScheme="teal"
                             size="sm"
@@ -159,7 +174,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                         </Flex>
                       )}
                       {next && (
-                        <Flex direction="column" align="end" py="2">
+                        <Flex direction="column" align={{ base: 'center', sm: 'end' }} py="2">
                           <Button
                             w="fit-content"
                             colorScheme="teal"
@@ -177,7 +192,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                           </Button>
                           <Link href={`/blog/${next.slug}`}>
                             <a>
-                              <Text py="2">{next.title}</Text>
+                              <Text py="2" textAlign={'end'}>
+                                {next.title}
+                              </Text>
                             </a>
                           </Link>
                         </Flex>

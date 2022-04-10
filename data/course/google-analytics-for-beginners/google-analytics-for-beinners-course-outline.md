@@ -9,7 +9,7 @@ coverImage: '/static/blog/00008.png'
 embedId: 'null'
 ---
 
-Hello, my name is Shahzada Ali Hassan. On Upwork, I work as a web analyst. Google Analytics for Beginners is a great place to start if you're new to Google Analytics. I'll walk you through the fundamentals of Universal Analytics in this course.
+Hello, my name is Shahzada Ali Hassan. At Upwork, I work as a web analyst. Google Analytics for Beginners is a great place to start if you're new to Google Analytics. I'll walk you through the fundamentals of Universal Analytics in this course.
 
 ## Welcome to Google Analytics for Beginners
 

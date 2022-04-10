@@ -35,17 +35,19 @@ export default function Home({ posts, initialDisplayPosts, pagination, tags }) {
         <Hero />
       </Container>
 
+      <Box bgColor={'gray.50'}>
+        <Container maxW="container.xl" py="5">
+          <Heading as="h2" py="3" fontSize={['xl']}>
+            Recent Web Analytics Projects
+          </Heading>
+          <PreviousClient />
+        </Container>
+      </Box>
       <Container maxW="container.xl" py="5">
-        <Heading as="h2" py="3" fontSize={['xl']}>
-          Recent Web Analytics Projects
-        </Heading>
-        <PreviousClient />
-      </Container>
-
-      <Container maxW="container.xl">
         <Courses posts={posts} />
       </Container>
-      <Box>
+
+      <Box bgColor={'gray.50'}>
         <Container maxW="container.xl">
           <RecentPosts
             posts={posts}

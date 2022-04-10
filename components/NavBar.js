@@ -7,6 +7,7 @@ import {
   Avatar,
   HStack,
   IconButton,
+  Link as ChakraLink,
   Button,
   Menu,
   MenuButton,
@@ -54,6 +55,7 @@ export default function NavBar() {
             />
             <HStack spacing={8} alignItems={'center'}>
               <Box
+                display={{ base: 'none', sm: 'block' }}
                 px={1}
                 py={1}
                 textDecoration="none"
@@ -86,24 +88,44 @@ export default function NavBar() {
                   cursor={'pointer'}
                   minW={0}
                 > */}
-              <Box
-                bgColor={'white'}
-                borderRadius="100px"
-                width={'40px'}
-                height="40px"
-                position="relative"
+
+              <Link
+                href="/projects"
+                aria-label="all projects"
+                passHref
+                width={{ base: '100%', sm: 'fit-content' }}
               >
-                <Link href="/about">
-                  <a>
-                    <Image
-                      alt="Shahzada Ali Hassan"
-                      src="/static/images/avatar.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </a>
-                </Link>
-              </Box>
+                <ChakraLink textDecoration={'none !important'}>
+                  <Button
+                    rounded={'full'}
+                    size={'md'}
+                    fontWeight={'normal'}
+                    colorScheme={'teal'}
+                    bg={'teal.400'}
+                    _hover={{ bg: 'teal.500' }}
+                    width="100%"
+                    pl="1"
+                  >
+                    <Flex justify="center" align="center" gap="3">
+                      <Box
+                        bgColor={'white'}
+                        borderRadius="100px"
+                        width={'35px'}
+                        height="35px"
+                        position="relative"
+                      >
+                        <Image
+                          alt="Shahzada Ali Hassan"
+                          src="/static/images/avatar.png"
+                          layout="fill"
+                          objectFit="contain"
+                        />
+                      </Box>
+                      <>Hire Me</>
+                    </Flex>
+                  </Button>
+                </ChakraLink>
+              </Link>
               {/* </MenuButton>
                 <MenuList>
                 <MenuItem>Link 1</MenuItem>
