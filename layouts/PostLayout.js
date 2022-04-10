@@ -15,6 +15,7 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+  Link as ChakraLink,
   Grid,
   Flex,
   UnorderedList,
@@ -150,21 +151,30 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     <Flex justify="space-between" direction={{ base: 'column', sm: 'row' }}>
                       {prev && (
                         <Flex direction="column" align={{ base: 'center', sm: 'start' }} py="2">
-                          <Button
-                            colorScheme="teal"
-                            size="sm"
-                            w="fit-content"
-                            textTransform={'uppercase'}
-                            variant="solid"
-                            rounded={'full'}
-                            fontWeight={'normal'}
-                            px={6}
-                            bg={'teal.400'}
-                            _hover={{ bg: 'teal.500' }}
-                            my="4"
+                          <Link
+                            href={`/blog/${next.slug}`}
+                            aria-label="Next Blog"
+                            passHref
+                            width={{ base: '100%', sm: 'fit-content' }}
                           >
-                            Previous Article
-                          </Button>
+                            <ChakraLink textDecoration={'none !important'}>
+                              <Button
+                                colorScheme="teal"
+                                size="sm"
+                                w="fit-content"
+                                textTransform={'uppercase'}
+                                variant="solid"
+                                rounded={'full'}
+                                fontWeight={'normal'}
+                                px={6}
+                                bg={'teal.400'}
+                                _hover={{ bg: 'teal.500' }}
+                                my="4"
+                              >
+                                Previous Article
+                              </Button>
+                            </ChakraLink>
+                          </Link>
 
                           <Link href={`/blog/${prev.slug}`}>
                             <a>
@@ -175,21 +185,30 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       )}
                       {next && (
                         <Flex direction="column" align={{ base: 'center', sm: 'end' }} py="2">
-                          <Button
-                            w="fit-content"
-                            colorScheme="teal"
-                            size="sm"
-                            textTransform={'uppercase'}
-                            variant="solid"
-                            rounded={'full'}
-                            fontWeight={'normal'}
-                            px={6}
-                            bg={'teal.400'}
-                            _hover={{ bg: 'teal.500' }}
-                            my="4"
+                          <Link
+                            href={`/blog/${next.slug}`}
+                            aria-label="Next Blog"
+                            passHref
+                            width={{ base: '100%', sm: 'fit-content' }}
                           >
-                            Next Article
-                          </Button>
+                            <ChakraLink textDecoration={'none !important'}>
+                              <Button
+                                w="fit-content"
+                                colorScheme="teal"
+                                size="sm"
+                                textTransform={'uppercase'}
+                                variant="solid"
+                                rounded={'full'}
+                                fontWeight={'normal'}
+                                px={6}
+                                bg={'teal.400'}
+                                _hover={{ bg: 'teal.500' }}
+                                my="4"
+                              >
+                                Next Article
+                              </Button>
+                            </ChakraLink>
+                          </Link>
                           <Link href={`/blog/${next.slug}`}>
                             <a>
                               <Text py="2" textAlign={'end'}>
