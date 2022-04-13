@@ -26,11 +26,6 @@ import {
   VisuallyHidden,
   Image,
 } from '@chakra-ui/react'
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) =>
-  `https://twitter.com/intent/tweet?text=Just%20read%20this%20amazing%20blog%20${encodeURIComponent(
-    `${siteMetadata.siteDomain}/blog/${slug}`
-  )}`
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
@@ -124,14 +119,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <GAPageView slug={slug} />
                 </Flex>
               </Flex>
-              <Flex direction="row" gap="4" justify="space-between" align="center">
-                <Flex direction="row" gap="5" justify="space-between" align="center">
-                  <a className="twitter-share-button" href={discussUrl(slug)} data-size="large">
-                    Tweet it
-                  </a>
-                  {/* <SocialIcon kind="github" href={editUrl(fileName)} /> */}
-                </Flex>
-              </Flex>
             </Flex>
           </Grid>
         </Container>
@@ -152,7 +139,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       {prev && (
                         <Flex direction="column" align={{ base: 'center', sm: 'start' }} py="2">
                           <Link
-                            href={`/blog/${next.slug}`}
+                            href={`/blog/${prev.slug}`}
                             aria-label="Next Blog"
                             passHref
                             width={{ base: '100%', sm: 'fit-content' }}
@@ -185,13 +172,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       )}
                       {next && (
                         <Flex direction="column" align={{ base: 'center', sm: 'end' }} py="2">
-                          <Link
-                            href={`/blog/${next.slug}`}
-                            aria-label="Next Blog"
-                            passHref
-                            width={{ base: '100%', sm: 'fit-content' }}
-                          >
-                            <ChakraLink textDecoration={'none !important'}>
+                          <Link href={`/blog/${next.slug}`}>
+                            <a>
                               <Button
                                 w="fit-content"
                                 colorScheme="teal"
@@ -207,7 +189,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                               >
                                 Next Article
                               </Button>
-                            </ChakraLink>
+                            </a>
                           </Link>
                           <Link href={`/blog/${next.slug}`}>
                             <a>
