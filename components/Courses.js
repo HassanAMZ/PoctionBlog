@@ -10,10 +10,8 @@ const Courses = ({ posts }) => {
   let blogIDs = []
   posts.map((frontMatter, index) => {
     const { slug, date, title, summary, tags, blogID, coverImage } = frontMatter
-    console.log('BlogID', index, blogID)
     coursesIDs.map((coursesID, indexA) => {
       if (blogID == coursesID) {
-        console.log('Matched is the logID', indexA, coursesID)
         blogIDs[indexA] = (
           <Flex as="article" key={indexA} direction={['column']} gap="5">
             <Box>
