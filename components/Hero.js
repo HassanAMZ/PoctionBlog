@@ -11,10 +11,11 @@ import {
   IconButton,
   createIcon,
   IconProps,
+  Link as ChakraLink,
   useColorModeValue,
 } from '@chakra-ui/react'
 import PortfolioIntroductionSummary from '@/components/PortfolioIntroductionSummary'
-import Link from 'next/link'
+import NextLink from 'next/link'
 export default function Hero() {
   return (
     <Stack
@@ -26,32 +27,49 @@ export default function Hero() {
       <Flex direction="column" rowGap="5">
         <PortfolioIntroductionSummary />
         <Flex direction={{ base: 'column', sm: 'row' }} gap="2">
-          <Button
-            rounded={'full'}
-            size={'lg'}
-            fontWeight={'normal'}
-            px={6}
-            colorScheme={'teal'}
-            bg={'teal.400'}
-            _hover={{ bg: 'teal.500' }}
+          <NextLink
+            href="/projects"
+            aria-label="all projects"
+            passHref
+            width={{ base: '100%', sm: 'fit-content' }}
           >
-            Hire Me
-          </Button>
+            <ChakraLink textDecoration={'none !important'}>
+              <Button
+                rounded={'full'}
+                size={'lg'}
+                fontWeight={'normal'}
+                px={6}
+                colorScheme={'teal'}
+                bg={'teal.400'}
+                _hover={{ bg: 'teal.500' }}
+                width="100%"
+              >
+                Hire Me
+              </Button>
+            </ChakraLink>
+          </NextLink>
 
-          <Button
-            rounded={'full'}
-            size={'lg'}
-            fontWeight={'normal'}
-            px={6}
-            leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
+          <NextLink
+            href="/projects"
+            aria-label="all projects"
+            passHref
+            width={{ base: '100%', sm: 'fit-content' }}
           >
-            <Link href="/projects" aria-label="all projects">
-              <a>Check the Projects</a>
-            </Link>
-          </Button>
+            <ChakraLink textDecoration={'none !important'}>
+              <Button rounded={'full'} size={'lg'} fontWeight={'normal'} px={6} width="100%">
+                Check the Projects
+              </Button>
+            </ChakraLink>
+          </NextLink>
         </Flex>
       </Flex>
-      <Flex justify={'center'} align={'center'} position={'relative'} w={'full'}>
+      <Flex
+        display={{ base: 'none', sm: 'none', md: 'none' }}
+        justify={'center'}
+        align={'center'}
+        position={'relative'}
+        w={'full'}
+      >
         <Blob
           w={'150%'}
           h={'150%'}

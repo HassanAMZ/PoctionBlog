@@ -38,6 +38,7 @@ export default function App({ Component, pageProps }) {
         `,
         }}
       />
+      <MailChimpHeadCode />
       <ThemeProvider attribute="class">
         <ChakraProvider theme={theme}>
           <Head>
@@ -47,7 +48,6 @@ export default function App({ Component, pageProps }) {
               content="LOmgcQtS3n4SzA1wUbtCUBeOyVp1Kq8d4XWHvWAf51Y"
             />
           </Head>
-          <MailChimpHeadCode />
 
           <NavBar />
           <Component {...pageProps} />

@@ -5,7 +5,7 @@ import { PageSEO } from '@/components/SEO'
 import { GtmEvent } from '@/lib/googleTagManagerEvents'
 import { useEffect } from 'react'
 
-import { Flex } from '@chakra-ui/react'
+import { Container, Grid, GridItem } from '@chakra-ui/react'
 
 const Projects = () => {
   const [allKeys, allTitle, allDescription, allImgSrc, allHref, allPid] = [[], [], [], [], [], []]
@@ -30,20 +30,29 @@ const Projects = () => {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <Flex direction="column">
-        <Flex direction="column">
-          {projectsData.map((d) => (
-            <Card
-              key={d.title}
-              title={d.title}
-              description={d.description}
-              imgSrc={d.imgSrc}
-              href={d.href}
-              pid={d.pid}
-            />
+      <Container maxW="container.xl" p={{ base: '0', sm: 'auto' }}>
+        <Grid
+          templateColumns="repeat(auto-fit, minmax(300px, 1fr));"
+          justify="center"
+          align="left"
+          placeContent="center"
+          gap={6}
+        >
+          {projectsData.map(({ title, description, imgSrc, href, price, pid }) => (
+            <GridItem bg="teal.50" p={{ base: '0', sm: '1' }} key={title}>
+              <Card
+                key={pid}
+                title={title}
+                description={description}
+                imgSrc={imgSrc}
+                href={href}
+                pid={pid}
+                price={price}
+              />
+            </GridItem>
           ))}
-        </Flex>
-      </Flex>
+        </Grid>
+      </Container>
     </>
   )
 }

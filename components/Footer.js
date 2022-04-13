@@ -38,7 +38,7 @@ const NavLinks = headerNavLinks.map((link, index) => (
 export default function LargeWithLogoLeft() {
   return (
     <Box bg="teal" color="white">
-      <Box bgColor="gray.200" py="4">
+      <Box bgColor="gray.50" py="4">
         <Container maxW="container.xl">
           {siteMetadata.newsletter.provider !== '' && <NewsletterForm />}
         </Container>

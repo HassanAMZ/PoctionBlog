@@ -39,7 +39,7 @@ input:-webkit-autofill:focus {
 /* This will work on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: grey;
+  scrollbar-color: teal;
 }
 
 /* Targtes on Chrome, Edge, and Safari */
@@ -52,8 +52,8 @@ input:-webkit-autofill:focus {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: grey;
-  border-radius: 20px;
+  background-color: teal;
+  border-radius: 0px;
 }
 
 /* image Floating animtion */

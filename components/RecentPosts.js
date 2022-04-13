@@ -115,11 +115,11 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               </Button>
             )
           }
-          let indexes = index + title
+
           return (
-            <>
+            <Box key={index}>
               <ListItem
-                key={indexes}
+                key={index}
                 py="2"
                 _hover={{
                   color: 'teal.500',
@@ -133,36 +133,34 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                   </dd>
                 </Box> */}
 
-                <>
-                  <Link href={`/blog/${slug}`}>
-                    <a>
+                <Link href={`/blog/${slug}`}>
+                  <a>
+                    <Flex
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="space-between"
+                      gap="2"
+                    >
                       <Flex
                         direction="row"
                         alignItems="center"
                         justifyContent="space-between"
-                        gap="2"
+                        gap="3"
                       >
-                        <Flex
-                          direction="row"
-                          alignItems="center"
-                          justifyContent="space-between"
-                          gap="3"
+                        <Box> {orderNumber}</Box>
+                        <Heading
+                          as="h2"
+                          fontSize={['sm', 'md', 'xl']}
+                          textTransform="capitalize"
+                          noOfLines={'1'}
                         >
-                          <Box> {orderNumber}</Box>
-                          <Heading
-                            as="h2"
-                            fontSize={['sm', 'md', 'xl']}
-                            textTransform="capitalize"
-                            noOfLines={'1'}
-                          >
-                            {title}
-                          </Heading>
-                        </Flex>
-                        <ExternalLinkIcon />
+                          {title}
+                        </Heading>
                       </Flex>
-                    </a>
-                  </Link>
-                </>
+                      <ExternalLinkIcon />
+                    </Flex>
+                  </a>
+                </Link>
 
                 {/* <div className="flex flex-wrap">
                       {tags.map((tag) => (
@@ -174,7 +172,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                   </div> */}
               </ListItem>
               <Divider />
-            </>
+            </Box>
           )
         })}
       </UnorderedList>
