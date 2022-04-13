@@ -33,35 +33,34 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   const displayPosts =
     initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
 
-  const [
-    allBlogPostIDs,
-    allBlogPostSlugs,
-    date,
-    titleList,
-    summary,
-    tags,
-    coverImage,
-    blogDetails,
-  ] = [[], [], [], [], [], [], [], {}]
-  displayPosts.map((frontMatter, index) => {
-    blogDetails[index] = frontMatter
-    allBlogPostIDs[index] = frontMatter.blogID
-    allBlogPostSlugs[index] = frontMatter.slug
-    date[index] = frontMatter.date
-    titleList[index] = frontMatter.title
-    summary[index] = frontMatter.summary
-    tags[index] = frontMatter.tags
-    coverImage[index] = frontMatter.coverImage
-  })
-
   useEffect(() => {
-    GtmEvent('allBlogPosts', 'allBlogPosts', allBlogPostIDs, {
-      allBlogPostIDs,
-      allBlogPostSlugs,
-      date,
-      titleList,
-      tags,
-      coverImage,
+    const [
+      useEffectAllBlogPostIDs,
+      useEffectAllBlogPostSlugs,
+      useEffectDate,
+      useEffectTitleList,
+      useEffectSummary,
+      useEffectTags,
+      useEffectCoverImage,
+      useEffectBlogDetails,
+    ] = [[], [], [], [], [], [], [], {}]
+    displayPosts.map((frontMatter, index) => {
+      useEffectBlogDetails[index] = frontMatter
+      useEffectAllBlogPostIDs[index] = frontMatter.blogID
+      useEffectAllBlogPostSlugs[index] = frontMatter.slug
+      useEffectDate[index] = frontMatter.date
+      useEffectTitleList[index] = frontMatter.title
+      useEffectSummary[index] = frontMatter.summary
+      useEffectTags[index] = frontMatter.tags
+      useEffectCoverImage[index] = frontMatter.coverImage
+    })
+    GtmEvent('allBlogPosts', 'allBlogPosts', useEffectAllBlogPostIDs, {
+      useEffectAllBlogPostIDs,
+      useEffectAllBlogPostSlugs,
+      useEffectDate,
+      useEffectTitleList,
+      useEffectTags,
+      useEffectCoverImage,
     })
   }, [])
 
