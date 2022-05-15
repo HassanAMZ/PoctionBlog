@@ -47,6 +47,7 @@ export default function App({ Component, pageProps }) {
               name="google-site-verification"
               content="LOmgcQtS3n4SzA1wUbtCUBeOyVp1Kq8d4XWHvWAf51Y"
             />
+            <meta name="facebook-domain-verification" content="q7pnrs4y8q9edgwklib62l042vp5b0" />
           </Head>
 
           <NavBar />
